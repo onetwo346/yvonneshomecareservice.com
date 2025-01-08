@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yvonne's Home Care Service</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+
+    header {
+      background-color: #6b8e23;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+
+    header p {
+      margin: 5px 0;
+      font-size: 1.2rem;
+    }
+
+    nav {
+      position: sticky;
+      top: 0;
+      background-color: #d3e4cd;
+      text-align: center;
+      padding: 10px 0;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    nav a {
+      margin: 0 15px;
+      color: #333;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #6b8e23;
+    }
+
+    .section {
+      padding: 20px;
+      text-align: center;
+    }
+
+    .about, .services, .contact {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .home {
+      padding: 50px 20px;
+      background: url('background-image.jpg') no-repeat center center/cover;
+      text-align: center;
+      color: white;
+      position: relative;
+    }
+
+    .home::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 1;
+    }
+
+    .home h2, .home p, .home button {
+      position: relative;
+      z-index: 2;
+    }
+
+    .home h2 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+
+    .home p {
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+    }
+
+    .home button {
+      padding: 10px 20px;
+      font-size: 1rem;
+      color: white;
+      background-color: #6b8e23;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .home button:hover {
+      background-color: #557a1d;
+    }
+
+    .about h2, .services h2, .contact h2 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+
+    .services ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .services li {
+      background: #d3e4cd;
+      margin: 10px 0;
+      padding: 10px;
+      border-radius: 5px;
+      text-align: left;
+    }
+
+    .services li::before {
+      content: '✓';
+      color: #6b8e23;
+      font-weight: bold;
+      margin-right: 10px;
+    }
+
+    footer {
+      background-color: #6b8e23;
+      color: white;
+      text-align: center;
+      padding: 10px 0;
+      margin-top: 20px;
+    }
+
+    footer p {
+      margin: 5px 0;
+    }
+
+    footer a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Yvonne's Home Care Service</h1>
+    <p>Providing Compassionate Care in the Comfort of Your Home</p>
+  </header>
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About Us</a>
+    <a href="#services">Our Services</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="home" class="section home">
+    <h2>Welcome to Yvonne's Home Care Service</h2>
+    <p>Your loved ones deserve the best care. Let us be their support system.</p>
+    <button onclick="document.getElementById('services').scrollIntoView({ behavior: 'smooth' });">Explore Services</button>
+  </section>
+
+  <section id="about" class="section about">
+    <h2>About Us</h2>
+    <p>At Yvonne's Home Care Service, we are committed to providing personalized and compassionate care to ensure our clients’ comfort and well-being. Whether it’s personal care, companionship, or assistance with daily activities, our team is here to help.</p>
+    <p><img src="grandpa.jpg" alt="Grandpa" width="150" height="150"></p>
+    <p>Don't just take our word for it, hear what our satisfied clients have to say:</p>
+    <blockquote>"Yvonne's Home Care Service has been a blessing for our family. The caregivers are compassionate and dedicated." - Sarah J.</blockquote>
+    <blockquote>"Professional, reliable, and caring. I highly recommend them." - Mark T.</blockquote>
+  </section>
+
+  <section id="services" class="section services">
+    <h2>Our Services</h2>
+    <ul>
+      <li><strong>Personal Care:</strong> Assistance with bathing, dressing, and grooming.</li>
+      <li><strong>Medication Management:</strong> Reminders and support to ensure proper medication intake.</li>
+      <li><strong>Household Help:</strong> Light housekeeping, laundry, and meal preparation.</li>
+      <li><strong>Companionship:</strong> Emotional support and engaging activities.</li>
+      <li><strong>Transportation:</strong> Help with errands and attending appointments.</li>
+    </ul>
+  </section>
+
+  <section id="contact" class="section contact">
+    <h2>Contact Us</h2>
+    <p><strong>Yvonne Nkansah</strong><br>Founder & Certified Home Care Specialist</p>
+    <p>📞 <a href="tel:6469724202">646-972-4202</a></p>
+    <p>✉️ <a href="mailto:yvonnen409@gmail.com">yvonnen409@gmail.com</a></p>
+    <p><strong>Serving all Surrounding Areas</strong></p>
+  </section>
+
+  <footer>
+    <p>&copy; 2024 Yvonne's Home Care Service. All rights reserved.</p>
+    <p>Website designed by <a href="mailto:yvonnen409@gmail.com">Kofi Fosu</a>.</p>
+    <p>Follow us on 
+      <a href="https://www.facebook.com/YvonneHomeCare">Facebook</a>, 
+      <a href="https://www.twitter.com/YvonneHomeCare">Twitter</a>, 
+      <a href="https://www.instagram.com/YvonneHomeCare">Instagram</a>
+    </p>
+    <p>Subscribe to our newsletter for updates and tips!</p>
+  </footer>
+
+</body>
+</html>
