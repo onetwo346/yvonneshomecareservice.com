@@ -1,220 +1,479 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Yvonne's Home Care Service</title>
-  <style>
-    body {
-      font-family: 'Arial', sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f9f9f9;
-      color: #333;
-    }
-
-    header {
-      background-color: #6b8e23;
-      color: white;
-      padding: 20px;
-      text-align: center;
-    }
-
-    header h1 {
-      margin: 0;
-      font-size: 2.5rem;
-    }
-
-    header p {
-      margin: 5px 0;
-      font-size: 1.2rem;
-    }
-
-    nav {
-      position: sticky;
-      top: 0;
-      background-color: #d3e4cd;
-      text-align: center;
-      padding: 10px 0;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    }
-
-    nav a {
-      margin: 0 15px;
-      color: #333;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    nav a:hover {
-      color: #6b8e23;
-    }
-
-    .section {
-      padding: 20px;
-      text-align: center;
-    }
-
-    .about, .services, .contact {
-      max-width: 800px;
-      margin: 0 auto;
-    }
-
-    .home {
-      padding: 50px 20px;
-      background: url('background-image.jpg') no-repeat center center/cover;
-      text-align: center;
-      color: white;
-      position: relative;
-    }
-
-    .home::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.5);
-      z-index: 1;
-    }
-
-    .home h2, .home p, .home button {
-      position: relative;
-      z-index: 2;
-    }
-
-    .home h2 {
-      font-size: 2.5rem;
-      margin-bottom: 10px;
-    }
-
-    .home p {
-      font-size: 1.2rem;
-      margin-bottom: 20px;
-    }
-
-    .home button {
-      padding: 10px 20px;
-      font-size: 1rem;
-      color: white;
-      background-color: #6b8e23;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      transition: background-color 0.3s;
-    }
-
-    .home button:hover {
-      background-color: #557a1d;
-    }
-
-    .about h2, .services h2, .contact h2 {
-      font-size: 2rem;
-      margin-bottom: 10px;
-    }
-
-    .services ul {
-      list-style: none;
-      padding: 0;
-    }
-
-    .services li {
-      background: #d3e4cd;
-      margin: 10px 0;
-      padding: 10px;
-      border-radius: 5px;
-      text-align: left;
-    }
-
-    .services li::before {
-      content: '✓';
-      color: #6b8e23;
-      font-weight: bold;
-      margin-right: 10px;
-    }
-
-    footer {
-      background-color: #6b8e23;
-      color: white;
-      text-align: center;
-      padding: 10px 0;
-      margin-top: 20px;
-    }
-
-    footer p {
-      margin: 5px 0;
-    }
-
-    footer a {
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    footer a:hover {
-      text-decoration: underline;
-    }
-  </style>
+  <meta name="description" content="Yvonne's Home Care Service provides compassionate in-home care for seniors and individuals needing assistance with daily activities.">
+  <meta name="keywords" content="home care, senior care, personal care, companion care, in-home care, elderly care">
+  <meta name="author" content="Yvonne Nkansah">
+  <title>Yvonne's Home Care Service | Professional In-Home Care</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/images/favicon.png">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- AOS Animation Library -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
+  <!-- Modal -->
+  <div class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title">Thank You!</h3>
+        <button class="modal-close">&times;</button>
+      </div>
+      <div class="modal-body">
+        <p class="modal-message">Your message has been sent successfully!</p>
+      </div>
+      <div class="modal-footer">
+        <button class="btn">Close</button>
+      </div>
+    </div>
+  </div>
 
+  <!-- Header -->
   <header>
-    <h1>Yvonne's Home Care Service</h1>
-    <p>Providing Compassionate Care in the Comfort of Your Home</p>
+    <div class="container">
+      <div class="header-content">
+        <div class="logo-container">
+          <img src="assets/images/logo.svg" alt="Home Care Logo" class="logo-img">
+          <div class="logo-text">
+            <h1>Yvonne's Home Care</h1>
+            <p>Professional In-Home Care Services</p>
+          </div>
+        </div>
+        <div class="header-contact">
+          <a href="tel:6469724202" class="header-phone"><i class="fas fa-phone"></i> (646) 972-4202</a>
+        </div>
+      </div>
+    </div>
   </header>
 
+  <!-- Navigation -->
   <nav>
-    <a href="#home">Home</a>
-    <a href="#about">About Us</a>
-    <a href="#services">Our Services</a>
-    <a href="#contact">Contact</a>
+    <div class="container">
+      <button class="mobile-toggle">
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#about">About Us</a>
+        <a href="#services">Our Services</a>
+        <a href="#care-gallery">Care Gallery</a>
+        <a href="#testimonials">Testimonials</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
   </nav>
 
-  <section id="home" class="section home">
-    <h2>Welcome to Yvonne's Home Care Service</h2>
-    <p>Your loved ones deserve the best care. Let us be their support system.</p>
-    <button onclick="document.getElementById('services').scrollIntoView({ behavior: 'smooth' });">Explore Services</button>
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="hero-content" data-aos="fade-right">
+      <h2>Professional Home Care Services</h2>
+      <p>Compassionate care delivered with dignity and respect in the comfort of your own home. We're dedicated to improving quality of life for your loved ones.</p>
+      <a href="#services" class="btn">Discover How We Can Help</a>
+    </div>
+    <img src="https://images.pexels.com/photos/7551617/pexels-photo-7551617.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Caregiver helping senior woman" class="hero-image" data-aos="fade-left">
   </section>
 
-  <section id="about" class="section about">
-    <h2>About Us</h2>
-    <p>At Yvonne's Home Care Service, we are committed to providing personalized and compassionate care to ensure our clients’ comfort and well-being. Whether it’s personal care, companionship, or assistance with daily activities, our team is here to help.</p>
-    <p><img src="grandpa.jpg" alt="Grandpa" width="150" height="150"></p>
-    <p>Don't just take our word for it, hear what our satisfied clients have to say:</p>
-    <blockquote>"Yvonne's Home Care Service has been a blessing for our family. The caregivers are compassionate and dedicated." - Sarah J.</blockquote>
-    <blockquote>"Professional, reliable, and caring. I highly recommend them." - Mark T.</blockquote>
+  <!-- About Section -->
+  <section id="about" class="section">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <h2 class="text-gradient">About Us</h2>
+        <p>At Yvonne's Home Care Service, we are committed to providing personalized and compassionate care to ensure our clients' comfort and well-being.</p>
+      </div>
+      
+      <div class="about-grid">
+        <div class="about-card glass-card" data-aos="fade-up" data-aos-delay="100">
+          <img src="assets/images/founder.svg" alt="Yvonne Nkansah">
+          <h3>Yvonne Nkansah</h3>
+          <p>Founder & Certified Home Care Specialist</p>
+          <p>With over 10 years of experience in home care services, Yvonne is dedicated to providing the highest quality care for your loved ones.</p>
+        </div>
+        
+        <div class="about-card glass-card" data-aos="fade-up" data-aos-delay="200">
+          <img src="assets/images/mission.svg" alt="Our Mission">
+          <h3>Our Mission</h3>
+          <p>To enhance the quality of life for our clients by providing personalized care that promotes independence, dignity, and well-being in the comfort of their own homes.</p>
+        </div>
+        
+        <div class="about-card glass-card" data-aos="fade-up" data-aos-delay="300">
+          <img src="assets/images/values.svg" alt="Our Values">
+          <h3>Our Values</h3>
+          <p>Compassion, Respect, Integrity, and Excellence guide everything we do. We treat each client as a member of our own family.</p>
+        </div>
+      </div>
+    </div>
   </section>
 
-  <section id="services" class="section services">
-    <h2>Our Services</h2>
-    <ul>
-      <li><strong>Personal Care:</strong> Assistance with bathing, dressing, and grooming.</li>
-      <li><strong>Medication Management:</strong> Reminders and support to ensure proper medication intake.</li>
-      <li><strong>Household Help:</strong> Light housekeeping, laundry, and meal preparation.</li>
-      <li><strong>Companionship:</strong> Emotional support and engaging activities.</li>
-      <li><strong>Transportation:</strong> Help with errands and attending appointments.</li>
-    </ul>
+  <!-- Services Section -->
+  <section id="services" class="section">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <h2 class="text-gradient">Our Services</h2>
+        <p>We offer a comprehensive range of home care services tailored to meet the unique needs of each client.</p>
+      </div>
+      
+      <div class="services-grid">
+        <div class="service-card glass-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="service-icon">
+            <i class="fas fa-hands-helping"></i>
+          </div>
+          <h3>Personal Care</h3>
+          <p>Assistance with bathing, dressing, grooming, and other personal hygiene needs to help maintain dignity and comfort.</p>
+        </div>
+        
+        <div class="service-card glass-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="service-icon">
+            <i class="fas fa-pills"></i>
+          </div>
+          <h3>Medication Management</h3>
+          <p>Reminders and support to ensure proper medication intake according to prescribed schedules and dosages.</p>
+        </div>
+        
+        <div class="service-card glass-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="service-icon">
+            <i class="fas fa-home"></i>
+          </div>
+          <h3>Household Help</h3>
+          <p>Light housekeeping, laundry, and meal preparation to maintain a clean, comfortable, and safe living environment.</p>
+        </div>
+        
+        <div class="service-card glass-card" data-aos="fade-up" data-aos-delay="400">
+          <div class="service-icon">
+            <i class="fas fa-heart"></i>
+          </div>
+          <h3>Companionship</h3>
+          <p>Emotional support, engaging activities, and meaningful conversation to combat loneliness and enhance quality of life.</p>
+        </div>
+        
+        <div class="service-card glass-card" data-aos="fade-up" data-aos-delay="500">
+          <div class="service-icon">
+            <i class="fas fa-car"></i>
+          </div>
+          <h3>Transportation</h3>
+          <p>Assistance with errands, shopping, and attending medical appointments to maintain independence and access to community resources.</p>
+        </div>
+        
+        <div class="service-card glass-card" data-aos="fade-up" data-aos-delay="600">
+          <div class="service-icon">
+            <i class="fas fa-clock"></i>
+          </div>
+          <h3>Respite Care</h3>
+          <p>Temporary relief for family caregivers, allowing them to take a break while ensuring their loved ones receive proper care.</p>
+        </div>
+      </div>
+    </div>
   </section>
 
+  <!-- Care in Action Section -->
+  <section id="care-gallery" class="section">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <h2 class="text-gradient">Our Care in Action</h2>
+        <p>See how our dedicated caregivers provide personalized support to our clients in various aspects of daily living.</p>
+      </div>
+      
+      <div class="care-gallery">
+        <div class="care-item glass-card" data-aos="fade-up" data-aos-delay="100">
+          <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Medication Assistance & Companionship">
+          <div class="care-caption">
+            <h3>Medication Assistance</h3>
+            <p>Our caregivers ensure clients take the right medications at the right time while providing companionship.</p>
+          </div>
+        </div>
+        
+        <div class="care-item glass-card" data-aos="fade-up" data-aos-delay="200">
+          <img src="https://img.freepik.com/free-photo/senior-woman-with-caregiver-kitchen_23-2149008515.jpg" alt="Meal Preparation & Kitchen Assistance">
+          <div class="care-caption">
+            <h3>Meal Preparation</h3>
+            <p>Nutritious meals prepared with care, taking into account dietary restrictions and preferences.</p>
+          </div>
+        </div>
+        
+        <div class="care-item glass-card" data-aos="fade-up" data-aos-delay="300">
+          <img src="https://img.freepik.com/free-photo/nurse-helping-senior-woman-with-walker-outdoors_23-2149008527.jpg" alt="Outdoor Activities & Mobility Assistance">
+          <div class="care-caption">
+            <h3>Outdoor Activities</h3>
+            <p>We help clients enjoy fresh air and maintain an active lifestyle with mobility assistance.</p>
+          </div>
+        </div>
+        
+        <div class="care-item glass-card" data-aos="fade-up" data-aos-delay="400">
+          <img src="https://images.unsplash.com/photo-1624727828489-a1e03b79bba8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80" alt="Personal Care & Bathing Assistance">
+          <div class="care-caption">
+            <h3>Personal Care</h3>
+            <p>Dignified assistance with bathing, grooming, and other personal hygiene needs.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section id="testimonials" class="section testimonials">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <h2 class="text-gradient">Client Testimonials</h2>
+        <p>Don't just take our word for it. Here's what families we've helped have to say about our services.</p>
+      </div>
+      
+      <div class="testimonial-slider" data-aos="fade-up">
+        <div class="testimonial-card glass-card">
+          <div class="testimonial-content">
+            <p>"The home care service has been a blessing for our family. The caregivers are compassionate, dedicated, and truly care about my mother's well-being. I can finally have peace of mind knowing she's in good hands."</p>
+          </div>
+          <div class="testimonial-author">
+            <img src="https://images.pexels.com/photos/762020/pexels-photo-762020.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Sarah J.">
+            <div class="author-info">
+              <h4>Sarah Johnson</h4>
+              <p>Daughter of Client</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="testimonial-card glass-card">
+          <div class="testimonial-content">
+            <p>"Professional, reliable, and caring. The staff goes above and beyond to ensure my father receives the best care possible. I highly recommend their services to anyone looking for quality home care."</p>
+          </div>
+          <div class="testimonial-author">
+            <img src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Mark T.">
+            <div class="author-info">
+              <h4>Mark Thompson</h4>
+              <p>Son of Client</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="testimonial-card glass-card">
+          <div class="testimonial-content">
+            <p>"As someone who values independence, I was hesitant about home care. But the care team has been respectful of my wishes while providing the support I need. They've helped me maintain my dignity and quality of life."</p>
+          </div>
+          <div class="testimonial-author">
+            <img src="https://images.pexels.com/photos/2050994/pexels-photo-2050994.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Eleanor P.">
+            <div class="author-info">
+              <h4>Eleanor Parker</h4>
+              <p>Client</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="testimonial-card glass-card">
+          <div class="testimonial-content">
+            <p>"Finding quality care for my aunt was challenging until we discovered this exceptional service. Their personalized approach and attention to detail has made all the difference. My aunt looks forward to her caregiver's visits and has shown remarkable improvement in her overall well-being."</p>
+          </div>
+          <div class="testimonial-author">
+            <img src="https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="James D.">
+            <div class="author-info">
+              <h4>James Davis</h4>
+              <p>Nephew of Client</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="testimonial-card glass-card">
+          <div class="testimonial-content">
+            <p>"After my surgery, I needed temporary assistance at home. Yvonne's team provided exceptional care during my recovery. They were punctual, professional, and genuinely concerned about my comfort. I'm grateful for their support during a challenging time in my life."</p>
+          </div>
+          <div class="testimonial-author">
+            <img src="https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Rebecca L.">
+            <div class="author-info">
+              <h4>Rebecca Lewis</h4>
+              <p>Recovery Client</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="testimonial-card glass-card">
+          <div class="testimonial-content">
+            <p>"The peace of mind that comes from knowing my grandmother is in capable, caring hands is priceless. Yvonne's caregivers have become like family to us. They go beyond basic care tasks and truly engage with her, bringing joy and companionship into her daily life."</p>
+          </div>
+          <div class="testimonial-author">
+            <img src="https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Amanda M.">
+            <div class="author-info">
+              <h4>Amanda Martinez</h4>
+              <p>Granddaughter of Client</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="slider-nav">
+        <button class="active"></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
   <section id="contact" class="section contact">
-    <h2>Contact Us</h2>
-    <p><strong>Yvonne Nkansah</strong><br>Founder & Certified Home Care Specialist</p>
-    <p>📞 <a href="tel:6469724202">646-972-4202</a></p>
-    <p>✉️ <a href="mailto:yvonnen409@gmail.com">yvonnen409@gmail.com</a></p>
-    <p><strong>Serving all Surrounding Areas</strong></p>
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <h2 class="text-gradient">Contact Us</h2>
+        <p>Have questions or ready to discuss your care needs? Reach out to us today.</p>
+      </div>
+      
+      <div class="contact-grid">
+        <div class="contact-info" data-aos="fade-up" data-aos-delay="100">
+          <div class="contact-item glass-card">
+            <div class="contact-icon">
+              <i class="fas fa-user"></i>
+            </div>
+            <div class="contact-text">
+              <h4>Yvonne Nkansah</h4>
+              <p>Founder & Certified Home Care Specialist</p>
+            </div>
+          </div>
+          
+          <div class="contact-item glass-card">
+            <div class="contact-icon">
+              <i class="fas fa-phone"></i>
+            </div>
+            <div class="contact-text">
+              <h4>Phone</h4>
+              <p><a href="tel:6469724202">646-972-4202</a></p>
+            </div>
+          </div>
+          
+          <div class="contact-item glass-card">
+            <div class="contact-icon">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <div class="contact-text">
+              <h4>Email</h4>
+              <p><a href="mailto:yvonnen409@gmail.com">yvonnen409@gmail.com</a></p>
+            </div>
+          </div>
+          
+          <div class="contact-item glass-card">
+            <div class="contact-icon">
+              <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <div class="contact-text">
+              <h4>Service Area</h4>
+              <p>Serving all surrounding areas</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="contact-form glass-card" data-aos="fade-up" data-aos-delay="200">
+          <form id="contact-form">
+            <div class="form-group">
+              <label for="name">Your Name</label>
+              <input type="text" id="name" name="name" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="email">Your Email</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="phone">Phone Number</label>
+              <input type="tel" id="phone" name="phone">
+            </div>
+            
+            <div class="form-group">
+              <label for="message">Your Message</label>
+              <textarea id="message" name="message" required></textarea>
+            </div>
+            
+            <button type="submit" class="btn">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </div>
   </section>
 
+  <!-- Newsletter Section -->
+  <section class="newsletter">
+    <div class="container">
+      <h3 data-aos="fade-up">Subscribe to Our Newsletter</h3>
+      <p data-aos="fade-up" data-aos-delay="100">Stay updated with the latest news, care tips, and special offers from Yvonne's Home Care Service.</p>
+      
+      <form id="newsletter-form" class="newsletter-form" data-aos="fade-up" data-aos-delay="200">
+        <input type="email" placeholder="Your Email Address" required>
+        <button type="submit">Subscribe</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
   <footer>
-    <p>&copy; 2024 Yvonne's Home Care Service. All rights reserved.</p>
-    <p>Website designed by <a href="mailto:yvonnen409@gmail.com">Kofi Fosu</a>.</p>
-    <p>Follow us on 
-      <a href="https://www.facebook.com/YvonneHomeCare">Facebook</a>, 
-      <a href="https://www.twitter.com/YvonneHomeCare">Twitter</a>, 
-      <a href="https://www.instagram.com/YvonneHomeCare">Instagram</a>
-    </p>
-    <p>Subscribe to our newsletter for updates and tips!</p>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4>Yvonne's Home Care</h4>
+          <p>Providing compassionate and professional home care services to help individuals maintain their independence and quality of life in the comfort of their own homes.</p>
+        </div>
+        
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#services">Our Services</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul class="footer-links">
+            <li><a href="#services">Personal Care</a></li>
+            <li><a href="#services">Medication Management</a></li>
+            <li><a href="#services">Household Help</a></li>
+            <li><a href="#services">Companionship</a></li>
+            <li><a href="#services">Transportation</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-col">
+          <h4>Connect With Us</h4>
+          <p>Follow us on social media for updates, tips, and more.</p>
+          <div class="social-links">
+            <a href="https://www.facebook.com/YvonneHomeCare" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.twitter.com/YvonneHomeCare" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com/YvonneHomeCare" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/company/yvonne-home-care" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2025 Yvonne's Home Care Service. All rights reserved.</p>
+        <p>Website designed by <a href="mailto:yvonnen409@gmail.com">Kofi Fosu</a></p>
+      </div>
+    </div>
   </footer>
 
+  <!-- Scroll to Top Button -->
+  <a href="#" class="scroll-top">
+    <i class="fas fa-arrow-up"></i>
+  </a>
+
+  <!-- AOS Animation Library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  
+  <!-- Custom JavaScript -->
+  <script src="assets/js/main.js"></script>
 </body>
 </html>
