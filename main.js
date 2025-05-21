@@ -192,4 +192,156 @@ document.addEventListener('DOMContentLoaded', function() {
         // Clean URL
         window.history.replaceState({}, document.title, window.location.pathname);
     }
+    
+    // Pop-up displays for About Us, Services, and Care Gallery items
+    const aboutCards = document.querySelectorAll('.about-card');
+    const serviceCards = document.querySelectorAll('.service-card');
+    const careItems = document.querySelectorAll('.care-item');
+    
+    // Function to create and show a detail modal for clicked items
+    function showDetailModal(title, content, imageSrc = null) {
+        // Create modal elements
+        const detailModal = document.createElement('div');
+        detailModal.className = 'detail-modal';
+        
+        const modalContent = document.createElement('div');
+        modalContent.className = 'detail-modal-content glass-card';
+        
+        const modalHeader = document.createElement('div');
+        modalHeader.className = 'detail-modal-header';
+        
+        const modalTitle = document.createElement('h3');
+        modalTitle.textContent = title;
+        
+        const closeBtn = document.createElement('button');
+        closeBtn.innerHTML = '&times;';
+        closeBtn.className = 'detail-modal-close';
+        
+        const modalBody = document.createElement('div');
+        modalBody.className = 'detail-modal-body';
+        
+        // Add image if provided
+        if (imageSrc) {
+            const modalImage = document.createElement('img');
+            modalImage.src = imageSrc;
+            modalImage.alt = title;
+            modalImage.className = 'detail-modal-image';
+            modalBody.appendChild(modalImage);
+        }
+        
+        const modalText = document.createElement('div');
+        modalText.className = 'detail-modal-text';
+        modalText.innerHTML = content;
+        modalBody.appendChild(modalText);
+        
+        // Assemble modal
+        modalHeader.appendChild(modalTitle);
+        modalHeader.appendChild(closeBtn);
+        modalContent.appendChild(modalHeader);
+        modalContent.appendChild(modalBody);
+        detailModal.appendChild(modalContent);
+        
+        // Add to body
+        document.body.appendChild(detailModal);
+        
+        // Show modal with animation
+        setTimeout(() => {
+            detailModal.classList.add('active');
+        }, 10);
+        
+        // Close modal when clicking the close button
+        closeBtn.addEventListener('click', () => {
+            detailModal.classList.remove('active');
+            setTimeout(() => {
+                document.body.removeChild(detailModal);
+            }, 300);
+        });
+        
+        // Close modal when clicking outside
+        detailModal.addEventListener('click', (e) => {
+            if (e.target === detailModal) {
+                detailModal.classList.remove('active');
+                setTimeout(() => {
+                    document.body.removeChild(detailModal);
+                }, 300);
+            }
+        });
+    }
+    
+    // Add click event to About Cards
+    aboutCards.forEach(card => {
+        card.style.cursor = 'pointer';
+        card.addEventListener('click', () => {
+            const title = card.querySelector('h3').textContent;
+            const paragraphs = card.querySelectorAll('p');
+            let content = '';
+            paragraphs.forEach(p => {
+                content += `<p>${p.textContent}</p>`;
+            });
+            const imageSrc = card.querySelector('img').src;
+            showDetailModal(title, content, imageSrc);
+        });
+    });
+    
+    // Add click event to Service Cards
+    serviceCards.forEach(card => {
+        card.style.cursor = 'pointer';
+        card.addEventListener('click', () => {
+            const title = card.querySelector('h3').textContent;
+            const content = card.querySelector('p').textContent;
+            const iconClass = card.querySelector('.service-icon i').className;
+            
+            let expandedContent = `<p>${content}</p>`;
+            // Add more detailed content based on service type
+            if (title === 'Personal Care') {
+                expandedContent += `<p>Our personal care services include assistance with daily activities such as bathing, dressing, grooming, mobility support, and toileting. Our caregivers are trained to provide dignified care while promoting independence.</p>`;
+            } else if (title === 'Medication Management') {
+                expandedContent += `<p>We help ensure medications are taken correctly and on time. Our caregivers can provide medication reminders, assist with organizing pill boxes, and monitor for potential side effects.</p>`;
+            } else if (title === 'Household Help') {
+                expandedContent += `<p>Our household services include light cleaning, laundry, meal preparation, grocery shopping, and organizing. We ensure your home remains a clean, safe, and comfortable environment.</p>`;
+            } else if (title === 'Companionship') {
+                expandedContent += `<p>Our companionship services focus on meaningful social interaction through conversation, shared activities, games, hobbies, and walks. We strive to reduce isolation and enhance emotional well-being.</p>`;
+            } else if (title === 'Transportation') {
+                expandedContent += `<p>We provide safe transportation and accompaniment to medical appointments, social events, shopping trips, and other outings. Our caregivers can help with mobility and ensure clients get where they need to go safely.</p>`;
+            } else if (title === 'Respite Care') {
+                expandedContent += `<p>Our respite care services provide family caregivers with temporary relief from caregiving responsibilities. We offer flexible scheduling options from a few hours to several days to ensure your loved one receives uninterrupted care.</p>`;
+            } else if (title === 'Colostomy Care') {
+                expandedContent += `<p>Our caregivers are specially trained in colostomy care procedures, including proper bag emptying and changing techniques, skin cleaning and inspection, odor management, and monitoring for complications. We provide this care with dignity and attention to client comfort.</p>`;
+            }
+            
+            // Create modal with an icon instead of image
+            const iconHtml = `<div class="detail-modal-icon"><i class="${iconClass}"></i></div>`;
+            showDetailModal(title, expandedContent, null);
+            
+            // Add icon manually after modal is created
+            const modalBody = document.querySelector('.detail-modal-body');
+            if (modalBody) {
+                modalBody.insertAdjacentHTML('afterbegin', iconHtml);
+            }
+        });
+    });
+    
+    // Add click event to Care Items
+    careItems.forEach(item => {
+        item.style.cursor = 'pointer';
+        item.addEventListener('click', () => {
+            const title = item.querySelector('h3').textContent;
+            const content = item.querySelector('p').textContent;
+            const imageSrc = item.querySelector('img').src;
+            
+            let expandedContent = `<p>${content}</p>`;
+            // Add more detailed content based on care type
+            if (title === 'Medication Assistance') {
+                expandedContent += `<p>Our medication assistance includes organizing pill boxes, providing timely reminders, helping with proper dosage, and monitoring for side effects. We keep detailed records of medication schedules and any observations to share with healthcare providers.</p>`;
+            } else if (title === 'Meal Preparation') {
+                expandedContent += `<p>Our meal preparation services include planning nutritious meals according to dietary requirements, grocery shopping, cooking, serving, and cleanup. We accommodate special diets and food preferences to ensure proper nutrition and enjoyable meals.</p>`;
+            } else if (title === 'Outdoor Activities') {
+                expandedContent += `<p>We encourage outdoor engagement through accompanied walks, gardening assistance, patio time, and community outings. These activities promote physical exercise, vitamin D exposure, and connection with nature, which are beneficial for physical and mental well-being.</p>`;
+            } else if (title === 'Personal Care') {
+                expandedContent += `<p>Our personal care assistance includes bathing, dressing, grooming, oral hygiene, and toileting. We approach these intimate care needs with respect, preserving dignity and comfort while adjusting to individual preferences and routines.</p>`;
+            }
+            
+            showDetailModal(title, expandedContent, imageSrc);
+        });
+    });
 });

@@ -841,6 +841,222 @@ footer {
   font-size: 0.9rem;
 }
 
+/* Modal Styles */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1001;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+.modal.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-content {
+  background: white;
+  padding: 0;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  transform: translateY(-50px);
+  transition: all 0.3s ease;
+}
+
+.modal.active .modal-content {
+  transform: translateY(0);
+}
+
+.modal-header {
+  padding: 15px 20px;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--primary-color);
+  color: white;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.modal-title {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.modal-close {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: white;
+}
+
+.modal-body {
+  padding: 20px;
+}
+
+.modal-footer {
+  padding: 15px 20px;
+  border-top: 1px solid #eee;
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* Detail Modal Styles for About, Services and Care Gallery */
+.detail-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1001;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+.detail-modal.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.detail-modal-content {
+  background: white;
+  padding: 0;
+  border-radius: 15px;
+  width: 90%;
+  max-width: 600px;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  transform: scale(0.9);
+  transition: all 0.3s ease;
+}
+
+.detail-modal.active .detail-modal-content {
+  transform: scale(1);
+}
+
+.detail-modal-header {
+  padding: 15px 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--primary-color);
+  color: white;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.detail-modal-header h3 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.detail-modal-close {
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: white;
+  transition: all 0.2s ease;
+}
+
+.detail-modal-close:hover {
+  transform: scale(1.1);
+}
+
+.detail-modal-body {
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.detail-modal-image {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.detail-modal-icon {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 15px;
+  border-radius: 50%;
+  background: var(--primary-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 2.5rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.detail-modal-text {
+  color: #333;
+}
+
+.detail-modal-text p {
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+.detail-modal-text p:last-child {
+  margin-bottom: 0;
+}
+
+/* Add cursor pointer to cards */
+.about-card, .service-card, .care-item {
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.about-card:hover, .service-card:hover, .care-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Mobile styles for detail modal */
+@media (max-width: 768px) {
+  .detail-modal-content {
+    width: 95%;
+    max-height: 80vh;
+  }
+  
+  .detail-modal-body {
+    padding: 20px 15px;
+  }
+  
+  .detail-modal-icon {
+    width: 60px;
+    height: 60px;
+    font-size: 2rem;
+  }
+}
+
 /* Modal */
 .modal {
   position: fixed;
