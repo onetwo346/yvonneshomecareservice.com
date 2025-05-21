@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Generate Testimonial Images</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+    }
+    
+    .testimonial-image {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 60px;
+      font-weight: bold;
+      color: white;
+      margin: 20px;
+    }
+    
+    .sarah {
+      background: linear-gradient(135deg, #6b8e23, #4a90e2);
+    }
+    
+    .mark {
+      background: linear-gradient(135deg, #4a90e2, #6b8e23);
+    }
+    
+    .eleanor {
+      background: linear-gradient(135deg, #9370db, #4a90e2);
+    }
+    
+    .instructions {
+      max-width: 600px;
+      margin: 20px;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      background-color: #f9f9f9;
+    }
+  </style>
+</head>
+<body>
+  <h1>Testimonial Image Generator</h1>
+  
+  <div class="instructions">
+    <p>Right-click on each image and select "Save image as..." to save them as:</p>
+    <ul>
+      <li>testimonial1.jpg (Sarah)</li>
+      <li>testimonial2.jpg (Mark)</li>
+      <li>testimonial3.jpg (Eleanor)</li>
+    </ul>
+    <p>Save them to the assets/images folder.</p>
+  </div>
+  
+  <div class="testimonial-image sarah">SJ</div>
+  <div class="testimonial-image mark">MT</div>
+  <div class="testimonial-image eleanor">EP</div>
+  
+  <script>
+    // This script allows you to right-click and save the divs as images
+    // In a real implementation, you would use a canvas to generate actual images
+    document.querySelectorAll('.testimonial-image').forEach(el => {
+      el.addEventListener('contextmenu', function(e) {
+        alert('Right-click and select "Save image as..." to save this image');
+      });
+    });
+  </script>
+</body>
+</html>

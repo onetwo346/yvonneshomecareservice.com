@@ -43,6 +43,35 @@
     </div>
   </div>
 
+  <!-- Chatbot -->
+  <div class="chatbot-container">
+    <div class="chatbot-toggle">
+      <i class="fas fa-comments"></i>
+    </div>
+    <div class="chatbot-box">
+      <div class="chatbot-header">
+        <h4>Care Assistant</h4>
+        <button class="chatbot-close">&times;</button>
+      </div>
+      <div class="chatbot-messages">
+        <div class="message bot-message">
+          <div class="message-avatar">
+            <img src="assets/images/logo.svg" alt="Care Assistant">
+          </div>
+          <div class="message-content">
+            <p>Hello! I'm your Care Assistant. How can I help you today?</p>
+          </div>
+        </div>
+      </div>
+      <div class="chatbot-input">
+        <input type="text" placeholder="Type your message here..." id="chatbot-input-field">
+        <button class="chatbot-send">
+          <i class="fas fa-paper-plane"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+
   <!-- Header -->
   <header>
     <div class="container">
@@ -470,10 +499,18 @@
     <i class="fas fa-arrow-up"></i>
   </a>
 
-  <!-- AOS Animation Library -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-  
-  <!-- Custom JavaScript -->
+  <!-- Custom JS -->
   <script src="assets/js/main.js"></script>
+  <script src="assets/js/chatbot.js"></script>
+
+  <!-- AOS Animation Init -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 800,
+      easing: 'ease-in-out',
+      once: true
+    });
+  </script>
 </body>
 </html>
