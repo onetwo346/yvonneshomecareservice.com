@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Client Portal - Yvonne's Home Care</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    .portal-container {
+      display: flex;
+      min-height: 100vh;
+    }
+    
+    .portal-hero {
+      flex: 1;
+      background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+      color: white;
+      padding: 60px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .portal-hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url('pattern.svg') center/cover;
+      opacity: 0.1;
+    }
+    
+    .portal-hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+    
+    .portal-form-container {
+      width: 100%;
+      max-width: 500px;
+      padding: 60px 40px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      background: white;
+    }
+    
+    .form-toggle {
+      display: flex;
+      margin-bottom: 30px;
+      border-bottom: 1px solid #eee;
+    }
+    
+    .form-toggle button {
+      flex: 1;
+      padding: 15px;
+      border: none;
+      background: none;
+      font-size: 16px;
+      font-weight: 600;
+      color: #666;
+      cursor: pointer;
+      position: relative;
+    }
+    
+    .form-toggle button.active {
+      color: var(--primary-color);
+    }
+    
+    .form-toggle button.active::after {
+      content: '';
+      position: absolute;
+      bottom: -1px;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background: var(--primary-color);
+    }
+    
+    .form-container {
+      display: none;
+    }
+    
+    .form-container.active {
+      display: block;
+      animation: fadeIn 0.3s ease;
+    }
+    
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    
+    .form-group {
+      margin-bottom: 20px;
+    }
+    
+    .form-group label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 500;
+      color: #444;
+    }
+    
+    .form-group input {
+      width: 100%;
+      padding: 12px 15px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      font-size: 15px;
+      transition: border-color 0.3s ease;
+    }
+    
+    .form-group input:focus {
+      border-color: var(--primary-color);
+      outline: none;
+      box-shadow: 0 0 0 3px rgba(107, 142, 35, 0.1);
+    }
+    
+    .forgot-password {
+      display: block;
+      text-align: right;
+      margin: -10px 0 20px;
+      color: var(--primary-color);
+      font-size: 14px;
+      text-decoration: none;
+    }
+    
+    .btn-portal {
+      width: 100%;
+      padding: 14px;
+      background: var(--primary-color);
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    
+    .btn-portal:hover {
+      background: var(--primary-dark);
+    }
+    
+    .divider {
+      text-align: center;
+      margin: 25px 0;
+      color: #999;
+      position: relative;
+    }
+    
+    .divider::before,
+    .divider::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      width: 45%;
+      height: 1px;
+      background: #eee;
+    }
+    
+    .divider::before {
+      left: 0;
+    }
+    
+    .divider::after {
+      right: 0;
+    }
+    
+    .social-login {
+      display: flex;
+      gap: 15px;
+      margin-bottom: 25px;
+    }
+    
+    .social-btn {
+      flex: 1;
+      padding: 12px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      background: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    
+    .social-btn:hover {
+      background: #f9f9f9;
+      border-color: #ccc;
+    }
+    
+    .social-btn i {
+      font-size: 20px;
+      margin-right: 8px;
+    }
+    
+    .terms {
+      font-size: 13px;
+      color: #777;
+      text-align: center;
+      margin-top: 20px;
+    }
+    
+    .terms a {
+      color: var(--primary-color);
+      text-decoration: none;
+    }
+    
+    @media (max-width: 992px) {
+      .portal-container {
+        flex-direction: column;
+      }
+      
+      .portal-hero {
+        padding: 40px 20px;
+        text-align: center;
+      }
+      
+      .portal-form-container {
+        max-width: 100%;
+        padding: 40px 20px;
+      }
+    }
+  </style>
+</head>
+<body class="portal-page">
+  <div class="portal-container">
+    <div class="portal-hero">
+      <div class="portal-hero-content">
+        <h1>Welcome Back!</h1>
+        <p>Access your personalized care dashboard to stay updated on your loved one's care plan, messages, and important updates.</p>
+        <div class="features">
+          <div class="feature">
+            <i class="fas fa-check-circle"></i>
+            <span>View care updates in real-time</span>
+          </div>
+          <div class="feature">
+            <i class="fas fa-check-circle"></i>
+            <span>Message your care team</span>
+          </div>
+          <div class="feature">
+            <i class="fas fa-check-circle"></i>
+            <span>Access important documents</span>
+          </div>
+          <div class="feature">
+            <i class="fas fa-check-circle"></i>
+            <span>Update care preferences</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="portal-form-container">
+      <div class="form-toggle">
+        <button class="active" data-form="login">Sign In</button>
+        <button data-form="register">Create Account</button>
+      </div>
+      
+      <!-- Login Form -->
+      <form id="loginForm" class="form-container active">
+        <h2>Sign In to Your Account</h2>
+        <p class="subtitle">Welcome back! Please enter your details.</p>
+        
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="loginEmail" placeholder="Enter your email" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" id="loginPassword" placeholder="Enter your password" required>
+          <a href="#" class="forgot-password">Forgot password?</a>
+        </div>
+        
+        <button type="submit" class="btn-portal">Sign In</button>
+        
+        <div class="divider">or continue with</div>
+        
+        <div class="social-login">
+          <button type="button" class="social-btn">
+            <i class="fab fa-google"></i>
+            <span>Google</span>
+          </button>
+          <button type="button" class="social-btn">
+            <i class="fab fa-apple"></i>
+            <span>Apple</span>
+          </button>
+        </div>
+      </form>
+      
+      <!-- Registration Form -->
+      <form id="registerForm" class="form-container">
+        <h2>Create an Account</h2>
+        <p class="subtitle">Join our care community today.</p>
+        
+        <div class="form-group">
+          <label for="fullName">Full Name</label>
+          <input type="text" id="fullName" placeholder="Enter your full name" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="registerEmail">Email Address</label>
+          <input type="email" id="registerEmail" placeholder="Enter your email" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="registerPassword">Password</label>
+          <input type="password" id="registerPassword" placeholder="Create a password" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="confirmPassword">Confirm Password</label>
+          <input type="password" id="confirmPassword" placeholder="Confirm your password" required>
+        </div>
+        
+        <button type="submit" class="btn-portal">Create Account</button>
+        
+        <p class="terms">By creating an account, you agree to our <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>.</p>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    // Toggle between login and registration forms
+    const toggleButtons = document.querySelectorAll('.form-toggle button');
+    const forms = document.querySelectorAll('.form-container');
+    
+    toggleButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        // Remove active class from all buttons and forms
+        toggleButtons.forEach(btn => btn.classList.remove('active'));
+        forms.forEach(form => form.classList.remove('active'));
+        
+        // Add active class to clicked button and corresponding form
+        button.classList.add('active');
+        const formId = button.getAttribute('data-form') + 'Form';
+        document.getElementById(formId).classList.add('active');
+      });
+    });
+    
+    // Form submission handling
+    document.getElementById('loginForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      // Add login logic here
+      console.log('Login form submitted');
+    });
+    
+    document.getElementById('registerForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      // Add registration logic here
+      console.log('Registration form submitted');
+    });
+  </script>
+</body>
+</html>
