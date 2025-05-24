@@ -1,525 +1,3873 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Yvonne's Home Care Service provides compassionate in-home care for seniors and individuals needing assistance with daily activities.">
-  <meta name="keywords" content="home care, senior care, personal care, companion care, in-home care, elderly care">
-  <meta name="author" content="Yvonne Nkansah">
-  <title>Yvonne's Home Care Service | Professional In-Home Care</title>
-  
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="favicon.png">
-  
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  
-  <!-- AOS Animation Library -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
-  
-  <!-- Custom CSS -->
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="description" content="RICH&BLACK STUDIO - Ghana's premier music studio representing Central Region's finest artists and sounds" />
+    <meta name="keywords" content="music, studio, Ghana, Central Region, ACJ, RICH&BLACK" />
+    <meta name="theme-color" content="#0a0a0a" />
+    <title>RICH&BLACK STUDIO | Ghana's Premier Music Studio</title>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-LH2EW6V2RP"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+      gtag('config', 'G-LH2EW6V2RP');
+    </script>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      }
+
+      :root {
+        /* Primary Colors */
+        --primary-color: #6366f1; /* Indigo */
+        --primary-light: #818cf8;
+        --primary-dark: #4f46e5;
+        
+        /* Secondary Colors */
+        --secondary-color: #ec4899; /* Pink */
+        --secondary-light: #f472b6;
+        --secondary-dark: #db2777;
+        
+        /* Accent Colors */
+        --accent-color: #10b981; /* Emerald */
+        --accent-light: #34d399;
+        --accent-dark: #059669;
+        
+        /* Text Colors */
+        --text-color: #f3f4f6;
+        --text-secondary: #d1d5db;
+        --text-muted: #9ca3af;
+        
+        /* Background Colors */
+        --bg-primary: #0f172a; /* Dark blue/slate */
+        --bg-secondary: #1e293b;
+        --bg-tertiary: #334155;
+        
+        /* Glass Effects */
+        --glass-bg: rgba(255, 255, 255, 0.05);
+        --glass-bg-hover: rgba(255, 255, 255, 0.08);
+        --glass-border: rgba(255, 255, 255, 0.1);
+        --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+        
+        /* Gradients */
+        --gradient-cosmic: linear-gradient(135deg, #6366f1, #ec4899);
+        --gradient-cosmic-alt: linear-gradient(135deg, #4f46e5, #be185d);
+        --gradient-text: linear-gradient(90deg, #6366f1, #ec4899, #10b981);
+        
+        /* Animations */
+        --transition-fast: 0.2s ease;
+        --transition-normal: 0.3s ease;
+        --transition-slow: 0.5s ease;
+        
+        /* Borders */
+        --border-radius-sm: 0.375rem;
+        --border-radius-md: 0.75rem;
+        --border-radius-lg: 1.5rem;
+      }
+
+      body {
+        background: radial-gradient(ellipse at bottom, #1B2735 0%, #090A0F 100%);
+        color: var(--text-color);
+        line-height: 1.6;
+        transition: all 0.3s ease;
+        overflow-x: hidden;
+        font-weight: 400;
+        min-height: 100vh;
+        position: relative;
+      }
+
+      /* Stars background animation */
+      @keyframes animateBg {
+        0% { background-position: 0% 0%; }
+        100% { background-position: 100% 100%; }
+      }
+
+      /* Cosmic pulse animation */
+      @keyframes cosmicPulse {
+        0% { box-shadow: 0 0 0 0 rgba(99, 102, 241, 0.4); }
+        70% { box-shadow: 0 0 0 10px rgba(99, 102, 241, 0); }
+        100% { box-shadow: 0 0 0 0 rgba(99, 102, 241, 0); }
+      }
+
+      /* Header styles */
+      header {
+        background: rgba(15, 23, 42, 0.9);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border-bottom: 1px solid var(--glass-border);
+        padding: 0.8rem 2rem;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        box-shadow: var(--glass-shadow);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+      }
+
+      .header-content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        max-width: 1400px;
+        margin-bottom: 0.8rem;
+      }
+      
+      .header-top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        padding-bottom: 0.5rem;
+      }
+
+      .logo-container {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+      }
+
+      .logo {
+        width: 60px;
+        height: 60px;
+        object-fit: cover;
+        border-radius: var(--border-radius-md);
+        box-shadow: 0 0 20px rgba(99, 102, 241, 0.4);
+        transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+        animation: cosmicPulse 2s infinite;
+      }
+
+      .logo:hover {
+        transform: scale(1.05) rotate(5deg);
+        box-shadow: 0 0 25px rgba(236, 72, 153, 0.6);
+      }
+
+      .brand-text {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .brand-name {
+        font-size: 1.5rem;
+        font-weight: 800;
+        letter-spacing: 0.05em;
+        background: var(--gradient-text);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        margin: 0;
+      }
+
+      .region-tagline {
+        font-size: 0.85rem;
+        color: var(--text-secondary);
+        font-weight: 500;
+      }
+
+      .header-socials {
+        display: flex;
+        gap: 1rem;
+      }
+
+      .social-link {
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: var(--glass-bg);
+        border-radius: 50%;
+        color: var(--text-color);
+        font-size: 1.2rem;
+        transition: all var(--transition-normal);
+        border: 1px solid var(--glass-border);
+      }
+
+      .social-link:hover {
+        background: var(--glass-bg-hover);
+        transform: translateY(-3px);
+        color: var(--primary-light);
+        border-color: var(--primary-light);
+        box-shadow: 0 10px 20px rgba(99, 102, 241, 0.2);
+      }
+
+      /* Navigation */
+      nav {
+        width: 100%;
+        max-width: 1400px;
+        background: var(--glass-bg);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        padding: 0.75rem;
+        border-radius: var(--border-radius-md);
+        box-shadow: var(--glass-shadow);
+      }
+
+      nav ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        padding: 0;
+      }
+
+      nav ul li {
+        position: relative;
+      }
+
+      nav ul li a {
+        color: var(--text-color);
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 0.95rem;
+        padding: 0.75rem 1.25rem;
+        border-radius: var(--border-radius-sm);
+        transition: all var(--transition-normal);
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        position: relative;
+        overflow: hidden;
+        z-index: 1;
+      }
+
+      nav ul li a::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: var(--gradient-cosmic);
+        opacity: 0;
+        z-index: -1;
+        transition: opacity var(--transition-normal);
+        border-radius: var(--border-radius-sm);
+      }
+
+      nav ul li a:hover {
+        color: white;
+        transform: translateY(-2px);
+      }
+
+      nav ul li a:hover::before {
+        opacity: 1;
+      }
+
+      nav ul li a.active {
+        background: var(--gradient-cosmic);
+        color: white;
+        box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+      }
+
+      /* Section styles */
+      section {
+        padding: 4rem 2rem;
+        margin: 3rem auto;
+        max-width: 1400px;
+        background: rgba(15, 23, 42, 0.5);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border-radius: var(--border-radius-lg);
+        box-shadow: var(--glass-shadow);
+        border: 1px solid var(--glass-border);
+        position: relative;
+        overflow: hidden;
+        transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+      }
+
+      section::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 1px;
+        background: linear-gradient(90deg, transparent, var(--primary-light), transparent);
+        z-index: 1;
+      }
+
+      section:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+      }
+
+      /* Typography */
+      h1, h2, h3 {
+        color: var(--text-color);
+        margin-bottom: 2rem;
+        font-weight: 700;
+        line-height: 1.2;
+      }
+
+      h2 {
+        font-size: clamp(2rem, 5vw, 2.5rem);
+        text-align: center;
+        position: relative;
+        margin-bottom: 3rem;
+        background: var(--gradient-text);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        display: inline-block;
+        width: 100%;
+      }
+
+      h2::after {
+        content: '';
+        position: absolute;
+        bottom: -1rem;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80px;
+        height: 3px;
+        background: var(--gradient-cosmic);
+        border-radius: 3px;
+      }
+
+      /* Announcement Section */
+      #announcement {
+        background: linear-gradient(135deg, #ff6f61, #e65a50);
+        color: #fff;
+        padding: 30px;
+        text-align: center;
+        border-radius: 12px;
+        margin: 20px auto;
+        max-width: 800px;
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+      }
+
+      #announcement h2 {
+        color: #fff;
+        font-size: 2rem;
+        margin-bottom: 15px;
+      }
+
+      #announcement p {
+        font-size: 1.1rem;
+        margin-bottom: 10px;
+      }
+
+      #announcement .highlight {
+        font-weight: bold;
+        font-style: italic;
+      }
+
+      /* Hero Section */
+      #hero {
+        position: relative;
+        background: linear-gradient(135deg, rgba(0, 0, 0, 0.9), rgba(10, 10, 10, 0.9)),
+                  url('IMG_3731.gif');
+        background-size: cover;
+        background-position: center;
+        text-align: center;
+        padding: 120px 20px;
+        border-radius: 24px;
+        overflow: hidden;
+        background-attachment: fixed;
+      }
+
+      #hero::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(135deg, rgba(0, 0, 0, 0.7), rgba(10, 10, 10, 0.8));
+        z-index: 1;
+      }
+
+      #hero h1, #hero p, #hero #countdown {
+        position: relative;
+        z-index: 2;
+        color: var(--text-color);
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+      }
+
+      #hero h1 {
+        font-size: clamp(3rem, 8vw, 4.5rem);
+        margin-bottom: 1.5rem;
+        font-weight: 700;
+        line-height: 1.2;
+        animation: fadeInUp 1s ease-out;
+      }
+
+      #hero p {
+        font-size: clamp(1.2rem, 3vw, 1.8rem);
+        margin-bottom: 2rem;
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+        animation: fadeInUp 1.2s ease-out;
+      }
+
+      #countdown {
+        font-size: 1.6rem;
+        font-weight: bold;
+        background: linear-gradient(135deg, var(--primary-color), #ff4757);
+        padding: 1rem 2rem;
+        border-radius: 16px;
+        display: inline-block;
+        animation: pulse 2s infinite;
+        box-shadow: 0 8px 32px rgba(255, 111, 97, 0.3);
+      }
+
+      /* Blog/News Section */
+      #blog {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+      }
+      .blog-card {
+        width: 100%;
+        margin: 0 auto;
+      }
+
+      /* Blog/News Section */
+      #blog {
+        padding: 50px 20px;
+        margin: 30px auto;
+        max-width: 1200px; /* Centered content with max-width */
+        background: #fff;
+        border-radius: 12px;
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+      }
+
+      .blog-card {
+        background: #2c2c2c;
+        border-radius: 12px;
+        padding: 20px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        cursor: pointer;
+      }
+
+      .blog-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+      }
+
+      .blog-card h3 {
+        color: #fff;
+        font-size: 1.4rem;
+        margin-bottom: 10px;
+      }
+
+      .blog-card p {
+        color: #ccc;
+        font-size: 0.95rem;
+      }
+
+      /* Mixtape Card Styles */
+      .mixtape-card {
+        padding: 20px;
+        border-radius: 20px;
+        background: rgba(255, 255, 255, 0.1);
+        box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.25);
+        backdrop-filter: blur(8px);
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+
+      .mixtape-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 12px 48px 0 rgba(31, 38, 135, 0.3);
+      }
+
+      .mixtape-card h3 {
+        font-size: 1.25rem;
+        font-family: 'Inter', sans-serif;
+        background: linear-gradient(90deg, #6a82fb, #fc5c7d);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        color: transparent;
+      }
+
+      .mixtape-card p {
+        color: #fff;
+        font-weight: 500;
+        margin-top: 3px;
+      }
+
+      .mixtape-card img {
+        width: 80px;
+        height: 80px;
+        object-fit: cover;
+        border-radius: 14px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.18);
+      }
+
+      .mixtape-card span {
+        margin-left: auto;
+        font-size: 1.5rem;
+        color: #fff;
+        transition: transform 0.3s;
+      }
+
+      /* Tracklist styles */
+      .mixtape-tracklist {
+        display: none;
+        margin-top: 1rem;
+        padding: 1rem;
+        background: var(--glass-bg);
+        border: var(--glass-border);
+        border-radius: var(--border-radius);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+      }
+
+      .mixtape-tracklist a {
+        display: flex;
+        align-items: center;
+        padding: 0.75rem;
+        margin: 0.5rem 0;
+        color: var(--text-color);
+        text-decoration: none;
+        transition: var(--transition);
+        border-radius: var(--border-radius);
+      }
+
+      .mixtape-tracklist a:hover {
+        background: rgba(255, 255, 255, 0.05);
+        transform: translateX(5px);
+      }
+
+      .mixtape-tracklist a.active {
+        color: var(--primary-color);
+        background: rgba(255, 111, 97, 0.1);
+      }
+
+      .mixtape-tracklist a i {
+        margin-right: 1rem;
+        font-size: 1.2rem;
+      }
+
+      /* Sikasem Tracklist styles */
+      .sikasem-tracklist {
+        display: none;
+        margin-top: 1rem;
+        padding: 1rem;
+        background: var(--glass-bg);
+        border: var(--glass-border);
+        border-radius: var(--border-radius);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+      }
+
+      .sikasem-tracklist a {
+        display: flex;
+        align-items: center;
+        padding: 0.75rem;
+        margin: 0.5rem 0;
+        color: var(--text-color);
+        text-decoration: none;
+        transition: var(--transition);
+        border-radius: var(--border-radius);
+      }
+
+      .sikasem-tracklist a:hover {
+        background: rgba(255, 255, 255, 0.05);
+        transform: translateX(5px);
+      }
+
+      .sikasem-tracklist a.active {
+        color: var(--primary-color);
+        background: rgba(255, 111, 97, 0.1);
+      }
+
+      .sikasem-tracklist a i {
+        margin-right: 1rem;
+        font-size: 1.2rem;
+      }
+
+      /* Videos Section */
+      #videos {
+        padding: 50px 20px;
+        margin: 30px auto;
+        max-width: 1200px;
+        background: #fff;
+        border-radius: 12px;
+        box-shadow: 0 6px 12px rgba(0,0,0,0.10);
+      }
+      #videos h2 {
+        color: #1a1a1a;
+        margin-bottom: 25px;
+        font-size: 2.2rem;
+        text-align: center;
+        font-weight: 600;
+      }
+      .video-carousel {
+        position: relative;
+        max-width: 640px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .video-slide-container {
+        width: 100%;
+        overflow: hidden;
+        position: relative;
+        min-height: 300px;
+      }
+      .video-slide {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        transition: opacity 0.5s;
+      }
+      .video-slide.active {
+        display: flex;
+      }
+      .carousel-arrow {
+        background: #ff6f61;
+        color: #fff;
+        border: none;
+        border-radius: 50%;
+        width: 48px;
+        height: 48px;
+        font-size: 2rem;
+        cursor: pointer;
+        margin: 0 12px;
+        box-shadow: 0 2px 8px rgba(255,111,97,0.15);
+        transition: background 0.2s;
+        z-index: 2;
+      }
+      .carousel-arrow:hover {
+        background: #e65a50;
+      }
+      .carousel-dots {
+        display: flex;
+        justify-content: center;
+        margin-top: 18px;
+        gap: 10px;
+      }
+      .carousel-dot {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background: #ccc;
+        border: none;
+        cursor: pointer;
+        transition: background 0.2s;
+      }
+      .carousel-dot.active {
+        background: #ff6f61;
+      }
+
+      /* Artist Section */
+      .artist {
+        margin-bottom: 30px;
+        text-align: center;
+      }
+
+      .artist img {
+        width: 100%;
+        max-width: 250px;
+        height: auto;
+        border-radius: 12px;
+        transition: transform 0.3s;
+      }
+
+      .artist img:hover {
+        transform: scale(1.03);
+      }
+
+      /* Music Player */
+      .cosmic-music-player {
+        background: var(--glass-bg);
+        backdrop-filter: blur(10px);
+        padding: 24px;
+        border-radius: 20px;
+        color: var(--text-color);
+        text-align: center;
+        max-width: 600px;
+        margin: 0 auto;
+        box-shadow: 0 16px 48px rgba(0, 0, 0, 0.2);
+        border: 1px solid var(--glass-border);
+        transition: all 0.3s ease;
+      }
+
+      .music-studio-heading {
+        font-size: 1.8rem;
+        color: var(--primary-color);
+        margin-bottom: 20px;
+        font-weight: 700;
+        background: linear-gradient(135deg, var(--primary-color), #ff4757);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+      }
+
+      .cosmic-music-player:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 20px 64px rgba(0, 0, 0, 0.3);
+      }
+
+      .current-song {
+        font-size: 1.1rem;
+        margin-bottom: 15px;
+        color: #fff;
+      }
+
+      .progress-bar {
+        width: 100%;
+        height: 5px;
+        background: #333;
+        border-radius: 5px;
+        margin-bottom: 15px;
+        position: relative;
+      }
+
+      .progress {
+        height: 100%;
+        width: 0;
+        background: #ff6f61;
+        border-radius: 5px;
+        transition: width 0.3s linear;
+      }
+
+      .time-display {
+        display: flex;
+        justify-content: space-between;
+        font-size: 0.9rem;
+        color: #ccc;
+        margin-bottom: 15px;
+      }
+
+      .controls {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+      }
+
+      .controls button {
+        background: #ff6f61;
+        border: none;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        color: #fff;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: background 0.3s;
+      }
+
+      .controls button:hover {
+        background: #e65a50;
+      }
+
+      .playlist {
+        margin-top: 20px;
+      }
+
+      .playlist ul {
+        list-style: none;
+        padding: 0;
+      }
+
+      .playlist ul li {
+        margin: 10px 0;
+      }
+
+      .playlist ul li a {
+        color: #ccc;
+        text-decoration: none;
+        font-size: 1rem;
+        padding: 5px 10px;
+        border-radius: 5px;
+        display: block;
+        transition: background 0.3s, color 0.3s;
+      }
+
+      .playlist ul li a:hover,
+      .playlist ul li a.active {
+        background: #ff6f61;
+        color: #fff;
+      }
+
+      /* Hidden Sections */
+      .hidden-section {
+        display: none;
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out;
+      }
+
+      .hidden-section.visible {
+        display: block;
+        opacity: 1;
+      }
+
+      /* Popup Styles */
+      .popup {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: #1a1a1a;
+        color: #fff;
+        padding: 25px;
+        border-radius: 12px;
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        z-index: 1000;
+        max-width: 400px;
+        text-align: center;
+      }
+
+      .popup.active {
+        display: block;
+      }
+
+      .popup h4 {
+        color: #ff6f61;
+        margin-bottom: 15px;
+        font-size: 1.3rem;
+      }
+
+      .popup .close-btn {
+        background: #ff6f61;
+        border: none;
+        padding: 8px 15px;
+        border-radius: 5px;
+        color: #fff;
+        cursor: pointer;
+        margin-top: 15px;
+        transition: background 0.3s;
+      }
+
+      .popup .close-btn:hover {
+        background: #e65a50;
+      }
+
+      .overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.7);
+        z-index: 999;
+      }
+
+      .overlay.active {
+        display: block;
+      }
+
+      /* Footer */
+      footer {
+        background: #1a1a1a;
+        color: #fff;
+        text-align: center;
+        padding: 20px;
+        font-size: 0.9rem;
+      }
+
+      .social-links a {
+        color: #fff;
+        margin: 0 10px;
+        text-decoration: none;
+        transition: color 0.3s;
+      }
+
+      .social-links a:hover {
+        color: #ff6f61;
+      }
+
+      /* Animations */
+      @keyframes fadeIn {
+        0% { opacity: 0; }
+        100% { opacity: 1; }
+      }
+
+      @keyframes pulse {
+        0% { transform: scale(1); }
+        50% { transform: scale(1.05); }
+        100% { transform: scale(1); }
+      }
+
+      /* Responsive Design */
+      @media (max-width: 900px) {
+        nav ul {
+          flex-direction: row !important;
+          gap: 12px !important;
+        }
+        #hero, #blog, #videos, #about, #artists, #contact {
+          padding: 28px 6vw;
+          margin: 18px 0;
+        }
+        .video-carousel {
+          max-width: 98vw;
+        }
+      }
+      @media (max-width: 600px) {
+        header {
+          padding: 18px 2vw;
+        }
+        .logo {
+          width: 75px;
+        }
+        h1, #typewriter-headline {
+          font-size: 1.5rem !important;
+        }
+        nav ul li a {
+          font-size: 0.98rem;
+          padding: 5px 7px;
+        }
+        #hero {
+          min-height: 260px;
+        }
+        .video-slide-container {
+          min-height: 180px;
+        }
+        .carousel-arrow {
+          width: 36px;
+          height: 36px;
+          font-size: 1.3rem;
+        }
+        .video-slide h3 {
+          font-size: 1rem;
+        }
+        .blog-card, .video-card {
+          padding: 10px 4px;
+        }
+        .video-slide video {
+          min-height: 120px;
+        }
+      }
+      @media (max-width: 400px) {
+        .video-slide h3 {
+          font-size: 0.9rem;
+        }
+        nav ul li a {
+          font-size: 0.93rem;
+          padding: 4px 4px;
+        }
+      }
+
+      /* Responsive Music Player & Mixtape Enhancements */
+      @media (max-width: 900px) {
+        .music-flex-row {
+          flex-direction: column !important;
+          gap: 24px !important;
+        }
+        .cosmic-music-player, .mixtape-card {
+          max-width: 100% !important;
+          margin: 0 auto 18px auto !important;
+        }
+      }
+      @media (max-width: 600px) {
+        .cosmic-music-player, .mixtape-card {
+          padding: 10px !important;
+        }
+        .cosmic-music-player h3 {
+          font-size: 1.1rem !important;
+        }
+        .playlist ul li a {
+          font-size: 0.95rem !important;
+          padding: 8px 10px !important;
+        }
+        .controls button {
+          width: 48px !important;
+          height: 48px !important;
+          font-size: 1.1rem !important;
+        }
+        .mixtape-card img {
+          width: 60px !important;
+          height: 60px !important;
+        }
+        .mixtape-card h3 {
+          font-size: 1rem !important;
+        }
+      }
+      @media (max-width: 400px) {
+        .cosmic-music-player, .mixtape-card {
+          padding: 4px !important;
+        }
+        .controls button {
+          width: 40px !important;
+          height: 40px !important;
+        }
+        .playlist ul li a {
+          font-size: 0.9rem !important;
+        }
+      }
+      /* Prevent horizontal scroll */
+      body {
+        overflow-x: hidden;
+      }
+      .music-flex-row {
+        display: flex;
+        gap: 32px;
+        align-items: flex-start;
+        flex-wrap: wrap;
+      }
+      .cosmic-music-player, .mixtape-card {
+        box-sizing: border-box;
+        width: 100%;
+        max-width: 500px;
+      }
+
+      /* Dark Mode */
+      .dark-mode {
+        background-color: #121212;
+        color: #ffffff;
+      }
+
+      .dark-mode header, .dark-mode footer {
+        background-color: #1a1a1a;
+      }
+
+      .dark-mode section {
+        background-color: #1e1e1e;
+        color: #ffffff;
+        box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+      }
+
+      .dark-mode h2 {
+        color: #ffffff;
+      }
+
+      /* No JavaScript Fallback */
+      .no-js section.hidden-section {
+        display: block;
+        opacity: 1;
+      }
+
+      .no-js #countdown {
+        display: none;
+      }
+
+      .no-js .cosmic-music-player {
+        display: none;
+      }
+
+      .no-js .no-js-fallback {
+        display: block;
+        text-align: center;
+        padding: 20px;
+        color: #666;
+      }
+
+      /* Hero Section Styles */
+      #hero {
+        position: relative;
+        min-height: 80vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        padding: 0;
+        margin-top: 0;
+        border-radius: 0 0 var(--border-radius-lg) var(--border-radius-lg);
+      }
+
+      .hero-content {
+        position: relative;
+        z-index: 5;
+        text-align: center;
+        max-width: 800px;
+        padding: 2rem;
+      }
+
+      #typewriter-headline {
+        font-size: clamp(2rem, 5vw, 3.5rem);
+        font-weight: 800;
+        background: var(--gradient-text);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        margin-bottom: 1.5rem;
+        min-height: 3.5em;
+        letter-spacing: 1px;
+        line-height: 1.2;
+        text-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+      }
+
+      .hero-description {
+        font-size: 1.2rem;
+        color: var(--text-secondary);
+        margin-bottom: 2rem;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .auth-buttons {
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+      }
+
+      .auth-btn {
+        padding: 0.6rem 1.2rem;
+        background: var(--gradient-cosmic);
+        color: white;
+        border: none;
+        border-radius: var(--border-radius-md);
+        font-weight: 600;
+        cursor: pointer;
+        transition: all var(--transition-normal);
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        box-shadow: 0 2px 8px rgba(99, 102, 241, 0.2);
+      }
+
+      .auth-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+      }
+      
+      .user-menu {
+        position: relative;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        cursor: pointer;
+        padding: 0.5rem;
+        border-radius: var(--border-radius-md);
+        transition: all var(--transition-normal);
+        background: var(--glass-bg);
+      }
+      
+      .user-menu:hover {
+        background: var(--glass-bg-hover);
+      }
+      
+      .user-avatar {
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 2px solid var(--primary-light);
+      }
+      
+      .username-display {
+        font-weight: 600;
+        color: var(--text-color);
+      }
+      
+      .user-dropdown {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 200px;
+        background: rgba(30, 41, 59, 0.95);
+        backdrop-filter: blur(10px);
+        border-radius: var(--border-radius-md);
+        box-shadow: var(--glass-shadow);
+        padding: 0.5rem;
+        display: none;
+        z-index: 101;
+        margin-top: 0.5rem;
+        border: 1px solid var(--glass-border);
+      }
+      
+      .user-menu:hover .user-dropdown {
+        display: block;
+      }
+      
+      .user-dropdown-item {
+        padding: 0.75rem 1rem;
+        color: var(--text-color);
+        border-radius: var(--border-radius-sm);
+        transition: all var(--transition-fast);
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+      }
+      
+      .user-dropdown-item:hover {
+        background: var(--glass-bg-hover);
+        color: var(--primary-light);
+      }
+      
+      .notification-badge {
+        background: var(--secondary-color);
+        color: white;
+        border-radius: 50%;
+        width: 20px;
+        height: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.7rem;
+        font-weight: bold;
+        margin-left: auto;
+      }
+
+      #cta-btn::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+        transition: all 0.6s;
+      }
+
+      #cta-btn:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 30px rgba(99, 102, 241, 0.4);
+      }
+
+      #cta-btn:hover::before {
+        left: 100%;
+      }
+
+      /* Cosmic Background */
+      #cosmic-bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        z-index: 1;
+      }
+
+      /* Hero Slideshow */
+      .hero-slideshow {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+        overflow: hidden;
+      }
+
+      .slide-img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        opacity: 0;
+        transition: opacity 1.5s ease, transform 8s ease;
+        transform: scale(1.05);
+        filter: brightness(0.7) contrast(1.1);
+      }
+
+      .slide-img.active {
+        opacity: 1;
+        z-index: 1;
+        transform: scale(1);
+      }
+
+      /* Cosmic Overlay */
+      .cosmic-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: radial-gradient(ellipse at center, rgba(15, 23, 42, 0.2) 0%, rgba(15, 23, 42, 0.8) 100%);
+        z-index: 2;
+      }
+
+      /* Floating Particles */
+      .particles {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        z-index: 3;
+      }
+
+      .particle {
+        position: absolute;
+        display: block;
+        pointer-events: none;
+        width: 6px;
+        height: 6px;
+        background: white;
+        border-radius: 50%;
+        box-shadow: 0 0 10px 2px rgba(99, 102, 241, 0.8);
+        animation-name: float-particle;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+      }
+
+      @keyframes float-particle {
+        0% {
+          transform: translateY(0) rotate(0deg);
+          opacity: 1;
+          border-radius: 50%;
+        }
+        100% {
+          transform: translateY(-1000px) rotate(720deg);
+          opacity: 0;
+          border-radius: 50%;
+        }
+      }
+      @media (max-width:600px) {
+        .hero-slideshow { min-height:180px; }
+      }
+
+      /* Always keep nav horizontal, even on mobile */
+      nav ul {
+        flex-direction: row !important;
+        gap: 20px !important;
+      }
+      @media (max-width: 900px) {
+        nav ul {
+          flex-direction: row !important;
+          gap: 12px !important;
+        }
+      }
+      @media (max-width: 600px) {
+        nav ul {
+          flex-direction: row !important;
+          gap: 8px !important;
+        }
+        nav ul li a {
+          font-size: 0.98rem;
+          padding: 5px 7px;
+        }
+      }
+      @media (max-width: 400px) {
+        nav ul {
+          flex-direction: row !important;
+          gap: 4px !important;
+        }
+        nav ul li a {
+          font-size: 0.93rem;
+          padding: 4px 4px;
+        }
+      }
+    </style>
+    <!-- Google Fonts for Professional Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="stylesheet" href="social.css" />
+    <link rel="stylesheet" href="auth-comments.css">
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="admin.css">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="favicon.png" sizes="32x32">
+    
+    <style>
+      /* Music Player Styles */
+      .music-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+        justify-content: space-between;
+      }
+      
+      .music-player-wrapper {
+        flex: 2;
+        min-width: 320px;
+      }
+      
+      .mixtapes-container {
+        flex: 1;
+        min-width: 280px;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+      }
+      
+      .cosmic-music-player {
+        background: rgba(15, 23, 42, 0.7);
+        border-radius: var(--border-radius-md);
+        padding: 1.5rem;
+        box-shadow: var(--glass-shadow);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border: 1px solid var(--glass-border);
+        overflow: hidden;
+      }
+      
+      .player-header {
+        display: flex;
+        align-items: center;
+        margin-bottom: 1.5rem;
+        gap: 1rem;
+      }
+      
+      .studio-logo {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background: var(--gradient-cosmic);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 700;
+        font-size: 0.9rem;
+        color: white;
+        position: relative;
+      }
+      
+      .studio-logo-pulse {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        background: var(--gradient-cosmic);
+        opacity: 0.6;
+        animation: pulse 2s infinite;
+      }
+      
+      .music-studio-heading {
+        font-size: 1.4rem;
+        font-weight: 700;
+        background: var(--gradient-text);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        margin: 0;
+        font-family: 'Space Grotesk', sans-serif;
+        letter-spacing: 0.5px;
+      }
+      
+      .player-visualization {
+        height: 60px;
+        margin-bottom: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      
+      .visualization-bars {
+        display: flex;
+        align-items: flex-end;
+        height: 40px;
+        gap: 3px;
+        width: 100%;
+      }
+      
+      .bar {
+        background: var(--primary-light);
+        width: 100%;
+        height: 5px;
+        border-radius: 2px;
+        opacity: 0.7;
+        transition: height 0.2s ease;
+      }
+      
+      .current-song-container {
+        background: rgba(255, 255, 255, 0.05);
+        padding: 0.75rem 1rem;
+        border-radius: var(--border-radius-sm);
+        margin-bottom: 1rem;
+      }
+      
+      .current-song {
+        color: var(--text-color);
+        font-weight: 500;
+        font-size: 1.1rem;
+      }
+      
+      .progress-container {
+        margin-bottom: 1.5rem;
+      }
+      
+      .progress-bar {
+        height: 6px;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 3px;
+        overflow: hidden;
+        margin-bottom: 0.5rem;
+        cursor: pointer;
+      }
+      
+      .progress {
+        height: 100%;
+        background: var(--gradient-cosmic);
+        width: 0;
+        border-radius: 3px;
+      }
+      
+      .time-display {
+        display: flex;
+        justify-content: space-between;
+        color: var(--text-muted);
+        font-size: 0.85rem;
+      }
+      
+      .controls {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        margin-bottom: 1.5rem;
+      }
+      
+      .controls button {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        border: none;
+        background: var(--glass-bg);
+        color: var(--text-color);
+        font-size: 1.2rem;
+        cursor: pointer;
+        transition: all var(--transition-normal);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      }
+      
+      .controls button:hover {
+        background: var(--primary-color);
+        color: white;
+        transform: translateY(-3px);
+        box-shadow: 0 8px 16px rgba(99, 102, 241, 0.3);
+      }
+      
+      .controls button svg {
+        width: 24px;
+        height: 24px;
+      }
+      
+      .playlist-container h4 {
+        font-size: 1.1rem;
+        color: var(--text-color);
+        margin-bottom: 1rem;
+        font-weight: 600;
+      }
+      
+      .playlist {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+      
+      .playlist li {
+        margin-bottom: 0.5rem;
+      }
+      
+      .playlist li a {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.75rem 1rem;
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: var(--border-radius-sm);
+        color: var(--text-secondary);
+        text-decoration: none;
+        transition: all var(--transition-normal);
+      }
+      
+      .playlist li a:hover, .playlist li a.active {
+        background: rgba(99, 102, 241, 0.2);
+        transform: translateX(5px);
+      }
+      
+      .playlist li a.active {
+        background: rgba(99, 102, 241, 0.3);
+        color: white;
+      }
+      
+      .track-info {
+        display: flex;
+        flex-direction: column;
+      }
+      
+      .track-title {
+        font-weight: 600;
+        color: var(--text-color);
+        margin-bottom: 0.25rem;
+      }
+      
+      .track-artist {
+        font-size: 0.85rem;
+        color: var(--text-muted);
+      }
+      
+      .track-duration {
+        font-size: 0.85rem;
+        color: var(--text-muted);
+      }
+      
+      /* Mixtape Card Styles */
+      .mixtape-card {
+        background: rgba(15, 23, 42, 0.7);
+        border-radius: var(--border-radius-md);
+        overflow: hidden;
+        box-shadow: var(--glass-shadow);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border: 1px solid var(--glass-border);
+        transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+      }
+      
+      .mixtape-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+      }
+      
+      .mixtape-header {
+        padding: 1.25rem;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        cursor: pointer;
+      }
+      
+      .mixtape-cover-container {
+        width: 60px;
+        height: 60px;
+        border-radius: var(--border-radius-sm);
+        overflow: hidden;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      }
+      
+      .mixtape-cover {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform var(--transition-normal);
+      }
+      
+      .mixtape-header:hover .mixtape-cover {
+        transform: scale(1.1);
+      }
+      
+      .mixtape-info {
+        flex: 1;
+      }
+      
+      .mixtape-title {
+        font-size: 1.2rem;
+        font-weight: 700;
+        margin: 0 0 0.25rem 0;
+        background: linear-gradient(90deg, #6366f1, #ec4899);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      
+      .mixtape-title.sikasem {
+        background: linear-gradient(90deg, #ec4899, #10b981);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      
+      .mixtape-artist {
+        font-size: 0.9rem;
+        color: var(--text-muted);
+        margin: 0;
+      }
+      
+      .mixtape-arrow {
+        font-size: 1rem;
+        color: var(--text-muted);
+        transition: transform var(--transition-normal);
+      }
+      
+      .mixtape-tracklist {
+        list-style: none;
+        padding: 0 1.25rem 1.25rem;
+        margin: 0;
+        display: none;
+      }
+      
+      .mixtape-tracklist li {
+        margin-bottom: 0.5rem;
+      }
+      
+      .mixtape-tracklist a {
+        display: block;
+        padding: 0.75rem 1rem;
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: var(--border-radius-sm);
+        color: var(--text-color);
+        text-decoration: none;
+        transition: all var(--transition-normal);
+      }
+      
+      .mixtape-tracklist a:hover, .mixtape-tracklist a.active {
+        background: rgba(99, 102, 241, 0.2);
+        transform: translateX(5px);
+      }
+      
+      .mixtape-tracklist a.active {
+        background: rgba(99, 102, 241, 0.3);
+      }
+      
+      .featuring {
+        color: var(--text-muted);
+        font-size: 0.9rem;
+        font-weight: normal;
+      }
+      
+      /* Blog/News Section Styles */
+      #blog {
+        padding: 4rem 2rem;
+      }
+      
+      .blog-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 30px;
+        margin-top: 40px;
+      }
+      
+      .blog-card {
+        background: rgba(15, 23, 42, 0.6);
+        backdrop-filter: blur(10px);
+        border-radius: 16px;
+        overflow: hidden;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.05);
+        transition: transform 0.3s, box-shadow 0.3s;
+        cursor: pointer;
+        position: relative;
+      }
+      
+      .blog-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+      }
+
+      .blog-card-glow {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 3px;
+        background: linear-gradient(90deg, var(--primary-color), var(--secondary-color), var(--accent-color));
+        background-size: 200% 200%;
+        animation: gradientFlow 3s ease infinite;
+        z-index: 1;
+      }
+      
+      .blog-card-img {
+        width: 100%;
+        height: 180px;
+        object-fit: cover;
+        filter: brightness(0.8);
+        transition: filter 0.3s;
+      }
+
+      .blog-card:hover .blog-card-img {
+        filter: brightness(1);
+      }
+      
+      .blog-card-content {
+        padding: 20px;
+        position: relative;
+      }
+
+      .blog-card-badge {
+        position: absolute;
+        top: -12px;
+        right: 20px;
+        background: var(--primary-color);
+        color: white;
+        padding: 4px 12px;
+        border-radius: 20px;
+        font-size: 0.8rem;
+        font-weight: 600;
+        box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+      }
+
+      .event-badge {
+        background: var(--secondary-color);
+        box-shadow: 0 4px 12px rgba(236, 72, 153, 0.3);
+      }
+
+      .tracks-badge {
+        background: var(--accent-color);
+        box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+      }
+      
+      .blog-card h3 {
+        font-size: 1.4rem;
+        margin-bottom: 10px;
+        color: var(--text-color);
+        font-family: 'Space Grotesk', sans-serif;
+        background: linear-gradient(90deg, #fff, #d1d5db);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      
+      .blog-card p {
+        color: var(--text-secondary);
+        margin-bottom: 15px;
+        line-height: 1.6;
+      }
+      
+      .blog-card-footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 20px;
+        padding-top: 15px;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+      }
+      
+      .blog-date {
+        color: var(--text-muted);
+        font-size: 0.9rem;
+      }
+
+      .blog-date i {
+        margin-right: 5px;
+        color: var(--primary-light);
+      }
+      
+      .read-more {
+        color: var(--primary-color);
+        text-decoration: none;
+        font-weight: 500;
+        transition: color 0.2s, transform 0.2s;
+        display: inline-flex;
+        align-items: center;
+        gap: 5px;
+      }
+      
+      .read-more:hover {
+        color: var(--primary-light);
+        transform: translateX(3px);
+      }
+      
+      .highlight {
+        color: var(--primary-light);
+        font-weight: 500;
+      }
+
+      @keyframes gradientFlow {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+      }
+      
+      /* Video Section Styles */
+      .video-carousel {
+        position: relative;
+        max-width: 900px;
+        margin: 0 auto;
+      }
+      
+      .video-slide-container {
+        border-radius: var(--border-radius-md);
+        overflow: hidden;
+        box-shadow: var(--glass-shadow);
+      }
+      
+      .video-slide {
+        display: none;
+        padding: 1rem;
+        background: rgba(15, 23, 42, 0.7);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+      }
+      
+      .video-slide.active {
+        display: block;
+      }
+      
+      .video-slide video {
+        border-radius: var(--border-radius-sm);
+        width: 100%;
+        max-height: 500px;
+        object-fit: cover;
+      }
+      
+      .video-slide h3 {
+        text-align: center;
+        margin: 1rem 0 0.5rem;
+        font-size: 1.2rem;
+        color: var(--text-color);
+      }
+      
+      .carousel-arrow {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 50px;
+        height: 50px;
+        background: rgba(15, 23, 42, 0.8);
+        border: none;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 1.5rem;
+        cursor: pointer;
+        z-index: 10;
+        transition: all var(--transition-normal);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      }
+      
+      .carousel-arrow.left {
+        left: -25px;
+      }
+      
+      .carousel-arrow.right {
+        right: -25px;
+      }
+      
+      .carousel-arrow:hover {
+        background: var(--primary-color);
+        transform: translateY(-50%) scale(1.1);
+      }
+      
+      .carousel-dots {
+        display: flex;
+        justify-content: center;
+        margin-top: 1.5rem;
+        gap: 0.5rem;
+      }
+      
+      .carousel-dot {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.2);
+        border: none;
+        cursor: pointer;
+        transition: all var(--transition-normal);
+      }
+      
+      .carousel-dot.active {
+        background: var(--primary-color);
+        transform: scale(1.2);
+      }
+      
+      /* Footer Styles */
+      footer {
+        background: rgba(15, 23, 42, 0.9);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        padding: 3rem 2rem;
+        text-align: center;
+        margin-top: 4rem;
+        border-top: 1px solid var(--glass-border);
+      }
+      
+      .footer-content {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+        text-align: left;
+      }
+      
+      .footer-column h4 {
+        color: var(--text-color);
+        font-size: 1.2rem;
+        margin-bottom: 1.5rem;
+        position: relative;
+        display: inline-block;
+      }
+      
+      .footer-column h4::after {
+        content: '';
+        position: absolute;
+        bottom: -0.5rem;
+        left: 0;
+        width: 40px;
+        height: 2px;
+        background: var(--primary-color);
+      }
+      
+      .footer-column ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+      
+      .footer-column ul li {
+        margin-bottom: 0.75rem;
+      }
+      
+      .footer-column ul li a {
+        color: var(--text-secondary);
+        text-decoration: none;
+        transition: color var(--transition-normal);
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+      
+      .footer-column ul li a:hover {
+        color: var(--primary-light);
+      }
+      
+      .footer-column p {
+        color: var(--text-secondary);
+        line-height: 1.6;
+      }
+      
+      .footer-bottom {
+        margin-top: 3rem;
+        padding-top: 1.5rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 1rem;
+      }
+      
+      .footer-copyright {
+        color: var(--text-muted);
+        font-size: 0.9rem;
+      }
+      
+      .social-links {
+        display: flex;
+        gap: 1rem;
+      }
+      
+      .social-links a {
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: var(--glass-bg);
+        border-radius: 50%;
+        color: var(--text-color);
+        font-size: 1.2rem;
+        transition: all var(--transition-normal);
+        border: 1px solid var(--glass-border);
+      }
+      
+      .social-links a:hover {
+        background: var(--primary-color);
+        color: white;
+        transform: translateY(-3px);
+        box-shadow: 0 8px 16px rgba(99, 102, 241, 0.3);
+      }
+      
+      /* Responsive Adjustments */
+      @media (max-width: 1024px) {
+        .music-container {
+          flex-direction: column;
+        }
+        
+        .music-player-wrapper, .mixtapes-container {
+          width: 100%;
+        }
+      }
+      
+      @media (max-width: 768px) {
+        section {
+          padding: 3rem 1.5rem;
+        }
+        
+        .header-content {
+          flex-direction: column;
+          text-align: center;
+          gap: 1rem;
+        }
+        
+        .brand-text {
+          align-items: center;
+        }
+        
+        #typewriter-headline {
+          font-size: clamp(1.5rem, 5vw, 2.5rem);
+          min-height: 6em;
+        }
+        
+        .hero-description {
+          font-size: 1rem;
+        }
+        
+        .carousel-arrow {
+          width: 40px;
+          height: 40px;
+          font-size: 1.2rem;
+        }
+        
+        .carousel-arrow.left {
+          left: -10px;
+        }
+        
+        .carousel-arrow.right {
+          right: -10px;
+        }
+        
+        .footer-content {
+          grid-template-columns: 1fr;
+          text-align: center;
+        }
+        
+        .footer-column h4::after {
+          left: 50%;
+          transform: translateX(-50%);
+        }
+        
+        .footer-bottom {
+          flex-direction: column;
+          text-align: center;
+        }
+      }
+      
+      @media (max-width: 480px) {
+        section {
+          padding: 2rem 1rem;
+        }
+        
+        .controls button {
+          width: 40px;
+          height: 40px;
+        }
+        
+        .mixtape-header {
+          padding: 1rem;
+        }
+        
+        .mixtape-cover-container {
+          width: 50px;
+          height: 50px;
+        }
+        
+        .mixtape-title {
+          font-size: 1rem;
+        }
+      }
+    </style>
 </head>
-<body>
-  <!-- Modal -->
-  <div class="modal">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h3 class="modal-title">Thank You!</h3>
-        <button class="modal-close">&times;</button>
-      </div>
-      <div class="modal-body">
-        <p class="modal-message">Your message has been sent successfully!</p>
-      </div>
-      <div class="modal-footer">
-        <button class="btn">Close</button>
-      </div>
-    </div>
-  </div>
-
-  <!-- Chatbot -->
-  <div class="chatbot-container">
-    <div class="chatbot-toggle">
-      <i class="fas fa-comments"></i>
-    </div>
-    <div class="chatbot-box">
-      <div class="chatbot-header">
-        <h4>Care Assistant</h4>
-        <button class="chatbot-close">&times;</button>
-      </div>
-      <div class="chatbot-messages">
-        <div class="message bot-message">
-          <div class="message-avatar">
-            <img src="logo.svg" alt="Care Assistant">
-          </div>
-          <div class="message-content">
-            <p>Hello! I'm your Care Assistant. How can I help you today?</p>
-          </div>
+<body class="no-js">
+    <!-- Admin Portal (shown when logged in as admin) -->
+    <div id="admin-portal" class="admin-portal" style="display: none;">
+        <div class="admin-header">
+            <div class="admin-logo">
+                <h1>Rich & Black Admin</h1>
+            </div>
+            <div class="admin-user">
+                <span id="admin-name">Administrator</span>
+                <button id="admin-logout" class="admin-logout-btn" style="background: #ef4444; color: white; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer; font-weight: bold; font-size: 16px;">LOGOUT</button>
+            </div>
         </div>
-      </div>
-      <div class="chatbot-input">
-        <input type="text" placeholder="Type your message here..." id="chatbot-input-field">
-        <button class="chatbot-send">
-          <i class="fas fa-paper-plane"></i>
-        </button>
-      </div>
-    </div>
-  </div>
-
-  <!-- Header -->
-  <header>
-    <div class="container">
-      <div class="header-content">
-        <div class="logo-container">
-          <img src="logo.svg" alt="Home Care Logo" class="logo-img">
-          <div class="logo-text">
-            <h1>Yvonne's Home Care</h1>
-            <p>Professional In-Home Care Services</p>
-          </div>
+        
+        <div class="admin-container">
+            <div class="admin-sidebar">
+                <nav class="admin-nav">
+                    <a href="#" class="admin-nav-link active" data-section="dashboard-section">Dashboard</a>
+                    <a href="#" class="admin-nav-link" data-section="users-section">Users</a>
+                    <a href="#" class="admin-nav-link" data-section="posts-section">Posts</a>
+                    <a href="#" class="admin-nav-link" data-section="music-section">Music</a>
+                    <a href="#" class="admin-nav-link" data-section="notifications-section">Notifications</a>
+                    <a href="#" class="admin-nav-link" data-section="settings-section">Settings</a>
+                </nav>
+            </div>
+            
+            <div class="admin-content">
+                <!-- Dashboard Section -->
+                <section id="dashboard-section" class="admin-section active">
+                    <h2>Dashboard</h2>
+                    <div class="admin-stats">
+                        <div class="stat-card">
+                            <div class="stat-icon"><i class="fas fa-users"></i></div>
+                            <div class="stat-info">
+                                <h3>Total Users</h3>
+                                <div class="stat-value" id="total-users">0</div>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon"><i class="fas fa-file-alt"></i></div>
+                            <div class="stat-info">
+                                <h3>Total Posts</h3>
+                                <div class="stat-value" id="total-posts">0</div>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon"><i class="fas fa-music"></i></div>
+                            <div class="stat-info">
+                                <h3>Total Songs</h3>
+                                <div class="stat-value" id="total-songs">0</div>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon"><i class="fas fa-comments"></i></div>
+                            <div class="stat-info">
+                                <h3>Total Comments</h3>
+                                <div class="stat-value" id="total-comments">0</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="quick-actions">
+                        <h3>Quick Actions</h3>
+                        <div class="action-buttons">
+                            <button class="admin-action-btn" data-section="posts-section">
+                                <i class="fas fa-plus"></i> New Post
+                            </button>
+                            <button class="admin-action-btn" data-section="music-section">
+                                <i class="fas fa-music"></i> Upload Music
+                            </button>
+                            <button class="admin-action-btn" data-section="users-section">
+                                <i class="fas fa-user-cog"></i> Manage Users
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="recent-activity">
+                        <h3>Recent Activity</h3>
+                        <div class="activity-list" id="recent-activity">
+                            <!-- Activity items will be loaded here -->
+                        </div>
+                    </div>
+                </section>
+                
+                <!-- Users Section -->
+                <section id="users-section" class="admin-section">
+                    <h2>Manage Users</h2>
+                    <div class="section-actions">
+                        <input type="text" placeholder="Search users..." class="search-input">
+                        <button class="admin-btn">Add New User</button>
+                    </div>
+                    <div class="users-list" id="users-list">
+                        <!-- Users will be loaded here -->
+                    </div>
+                </section>
+                
+                <!-- Posts Section -->
+                <section id="posts-section" class="admin-section">
+                    <h2>Manage Posts</h2>
+                    <div class="admin-post-form-container">
+                        <h3>Create New Post</h3>
+                        <form id="admin-post-form" class="admin-form">
+                            <div class="form-group">
+                                <label for="admin-post-content">Post Content</label>
+                                <textarea id="admin-post-content" placeholder="What's on your mind?" required></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label>Post Type</label>
+                                <div class="radio-group">
+                                    <label>
+                                        <input type="radio" name="post-type" value="text" checked> Text
+                                    </label>
+                                    <label>
+                                        <input type="radio" name="post-type" value="photo"> Photo
+                                    </label>
+                                    <label>
+                                        <input type="radio" name="post-type" value="music"> Music
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form-group" id="media-upload" style="display: none;">
+                                <label for="post-media">Upload Media</label>
+                                <input type="file" id="post-media">
+                            </div>
+                            <button type="submit" class="admin-btn">Create Post</button>
+                        </form>
+                    </div>
+                    
+                    <h3>All Posts</h3>
+                    <div class="posts-list" id="all-posts">
+                        <!-- Posts will be loaded here -->
+                    </div>
+                </section>
+                
+                <!-- Music Section -->
+                <section id="music-section" class="admin-section">
+                    <h2>Music Library</h2>
+                    <div class="upload-music-container">
+                        <h3>Upload New Music</h3>
+                        <form id="upload-music-form" class="admin-form">
+                            <div class="form-group">
+                                <label for="music-title">Song Title</label>
+                                <input type="text" id="music-title" placeholder="Enter song title" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="music-artist">Artist</label>
+                                <input type="text" id="music-artist" placeholder="Enter artist name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="music-genre">Genre</label>
+                                <select id="music-genre" required>
+                                    <option value="">Select genre</option>
+                                    <option value="Hip Hop">Hip Hop</option>
+                                    <option value="R&B">R&B</option>
+                                    <option value="Rap">Rap</option>
+                                    <option value="Pop">Pop</option>
+                                    <option value="Rock">Rock</option>
+                                    <option value="Jazz">Jazz</option>
+                                    <option value="Electronic">Electronic</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="music-file">Music File</label>
+                                <input type="file" id="music-file" accept="audio/*" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="cover-art">Cover Art (Optional)</label>
+                                <input type="file" id="cover-art" accept="image/*">
+                            </div>
+                            <button type="submit" class="admin-btn">Upload Music</button>
+                        </form>
+                    </div>
+                    
+                    <h3>Music Library</h3>
+                    <div class="music-library" id="music-library">
+                        <!-- Music items will be loaded here -->
+                    </div>
+                </section>
+                
+                <!-- Notifications Section -->
+                <section id="notifications-section" class="admin-section">
+                    <h2>Notifications</h2>
+                    <div class="section-actions">
+                        <button class="admin-btn">Send New Notification</button>
+                        <button class="admin-btn">Mark All as Read</button>
+                    </div>
+                    <div class="notifications-list" id="admin-notifications">
+                        <!-- Notifications will be loaded here -->
+                    </div>
+                </section>
+                
+                <!-- Settings Section -->
+                <section id="settings-section" class="admin-section">
+                    <h2>Settings</h2>
+                    <form id="admin-settings-form" class="admin-form">
+                        <div class="form-group">
+                            <label for="site-name">Site Name</label>
+                            <input type="text" id="site-name" value="Rich & Black">
+                        </div>
+                        <div class="form-group">
+                            <label for="site-description">Site Description</label>
+                            <textarea id="site-description">The official Rich & Black music platform</textarea>
+                        </div>
+                        <div class="form-group">
+                            <label>Site Theme</label>
+                            <div class="radio-group">
+                                <label>
+                                    <input type="radio" name="site-theme" value="dark" checked> Dark
+                                </label>
+                                <label>
+                                    <input type="radio" name="site-theme" value="light"> Light
+                                </label>
+                            </div>
+                        </div>
+                        <button type="submit" class="admin-btn">Save Settings</button>
+                    </form>
+                </section>
+            </div>
         </div>
-        <div class="header-contact">
-          <a href="tel:6469724202" class="header-phone"><i class="fas fa-phone"></i> (646) 972-4202</a>
-        </div>
-      </div>
     </div>
-  </header>
+    
 
-  <!-- Navigation -->
-  <nav>
-    <div class="container">
-      <button class="mobile-toggle">
+    <!-- Dashboard (shown after login) -->
+    <div id="dashboard" class="dashboard" style="display: none;">
+        <div class="dashboard-header">
+            <div class="user-info">
+                <img id="user-avatar" src="" alt="User Avatar" class="user-avatar">
+                <div class="user-details">
+                    <h2 id="user-name"></h2>
+                    <p id="user-bio"></p>
+                </div>
+            </div>
+            <nav class="dashboard-nav">
+                <a href="#" class="active" data-section="feed">Feed</a>
+                <a href="#" data-section="profile">Profile</a>
+                <a href="#" data-section="messages">Messages</a>
+                <a href="#" data-section="notifications">Notifications</a>
+            </nav>
+        </div>
+        
+        <div class="dashboard-content">
+            <!-- Feed Section -->
+            <section id="feed" class="dashboard-section active">
+                <!-- Posts will be loaded here -->
+            </section>
+            
+            <!-- Profile Section -->
+            <section id="profile" class="dashboard-section">
+                <div class="profile-stats">
+                    <div class="stat">
+                        <span class="stat-count" id="posts-count">0</span>
+                        <span class="stat-label">Posts</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-count" id="followers-count">0</span>
+                        <span class="stat-label">Followers</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-count" id="following-count">0</span>
+                        <span class="stat-label">Following</span>
+                    </div>
+                </div>
+                <div class="profile-actions">
+                    <button id="edit-profile-btn">Edit Profile</button>
+                </div>
+                <div id="user-posts">
+                    <!-- User's posts will be loaded here -->
+                </div>
+            </section>
+            
+            <!-- Messages Section -->
+            <section id="messages" class="dashboard-section">
+                <div class="messages-list">
+                    <!-- Messages will be loaded here -->
+                </div>
+                <div class="message-view">
+                    <!-- Selected message conversation will be shown here -->
+                </div>
+            </section>
+            
+            <!-- Notifications Section -->
+            <section id="notifications" class="dashboard-section">
+                <!-- Notifications will be loaded here -->
+            </section>
+        </div>
+    </div>
+    <!-- Social Media Sidebar Toggle (visible when logged in) -->
+    <button id="sidebar-toggle" class="sidebar-toggle">
         <i class="fas fa-bars"></i>
-      </button>
-      <div class="nav-links">
-        <a href="#home">Home</a>
-        <a href="#about">About Us</a>
-        <a href="#services">Our Services</a>
-        <a href="#care-gallery">Care Gallery</a>
-        <a href="#testimonials">Testimonials</a>
-        <a href="#contact">Contact</a>
-      </div>
+    </button>
+    
+    <!-- Social Media Container -->
+    <div id="social-container" class="social-container">
+        <!-- Sidebar Navigation -->
+        <div id="sidebar" class="sidebar">
+            <div class="sidebar-header">
+                <div class="sidebar-user">
+                    <img id="sidebar-avatar" src="https://i.pravatar.cc/150?img=1" alt="User Avatar" class="sidebar-avatar">
+                    <div>
+                        <div id="sidebar-username" class="sidebar-username">booms</div>
+                        <div class="sidebar-status">Online</div>
+                    </div>
+                </div>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <a href="#" class="sidebar-nav-item active" data-target="feed">
+                    <i class="fas fa-home"></i>
+                    <span>Feed</span>
+                </a>
+                <a href="#" class="sidebar-nav-item" data-target="profile">
+                    <i class="fas fa-user"></i>
+                    <span>Profile</span>
+                </a>
+                <a href="#" class="sidebar-nav-item" data-target="friends">
+                    <i class="fas fa-users"></i>
+                    <span>Friends</span>
+                    <span class="sidebar-nav-badge">1</span>
+                </a>
+                <a href="#" class="sidebar-nav-item" data-target="messages">
+                    <i class="fas fa-comment-alt"></i>
+                    <span>Messages</span>
+                    <span class="sidebar-nav-badge">2</span>
+                </a>
+                <a href="#" class="sidebar-nav-item" data-target="notifications">
+                    <i class="fas fa-bell"></i>
+                    <span>Notifications</span>
+                    <span class="sidebar-nav-badge">3</span>
+                </a>
+                <a href="#" class="sidebar-nav-item" data-target="settings">
+                    <i class="fas fa-cog"></i>
+                    <span>Settings</span>
+                </a>
+            </nav>
+            
+            <div class="sidebar-footer">
+                <a href="#" class="sidebar-nav-item" id="sidebar-logout">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span>Logout</span>
+                </a>
+            </div>
+        </div>
+        
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Feed Section -->
+            <div id="feed-container" class="feed-container">
+                <div class="post-create">
+                    <div class="post-create-header">
+                        <img src="https://i.pravatar.cc/150?img=1" alt="User Avatar" class="post-create-avatar">
+                        <form id="post-create-form">
+                            <textarea id="post-content" class="post-create-input" placeholder="What's on your mind?"></textarea>
+                            <div class="post-create-actions">
+                                <div class="post-create-types">
+                                    <button type="button" class="post-type-btn">
+                                        <i class="fas fa-image"></i>
+                                        <span>Photo</span>
+                                    </button>
+                                    <button type="button" class="post-type-btn">
+                                        <i class="fas fa-music"></i>
+                                        <span>Music</span>
+                                    </button>
+                                    <button type="button" class="post-type-btn">
+                                        <i class="fas fa-video"></i>
+                                        <span>Video</span>
+                                    </button>
+                                </div>
+                                <button type="submit" class="post-submit-btn">Post</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                
+                <div id="posts-list">
+                    <!-- Posts will be loaded dynamically -->
+                </div>
+            </div>
+            
+            <!-- Profile Section -->
+            <div id="profile-container" class="profile-container">
+                <div class="profile-header">
+                    <img src="https://source.unsplash.com/random/1200x300" alt="Cover Photo" class="profile-cover">
+                    <div class="profile-info">
+                        <img src="https://i.pravatar.cc/150?img=1" alt="Profile Picture" class="profile-avatar">
+                        <div class="profile-details">
+                            <h2 class="profile-name">Booms</h2>
+                            <div class="profile-username">@booms</div>
+                            <p class="profile-bio">Music enthusiast and creator. Representing Ghana Central Region.</p>
+                            <div class="profile-stats">
+                                <div class="profile-stat">
+                                    <div class="stat-count">42</div>
+                                    <div class="stat-label">Posts</div>
+                                </div>
+                                <div class="profile-stat">
+                                    <div class="stat-count">128</div>
+                                    <div class="stat-label">Following</div>
+                                </div>
+                                <div class="profile-stat">
+                                    <div class="stat-count">214</div>
+                                    <div class="stat-label">Followers</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="profile-actions">
+                            <button class="profile-action-btn primary">Edit Profile</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div id="profile-posts">
+                    <!-- Profile posts will be loaded dynamically -->
+                </div>
+            </div>
+            
+            <!-- Messages Section -->
+            <div id="messages-container" class="messages-container">
+                <div class="messages-sidebar">
+                    <div class="messages-header">
+                        <div class="messages-title">Messages</div>
+                        <input type="text" class="messages-search" placeholder="Search conversations...">
+                    </div>
+                    <div class="messages-list">
+                        <div class="message-contact active">
+                            <img src="https://i.pravatar.cc/150?img=2" alt="Contact Avatar" class="message-contact-avatar">
+                            <div class="message-contact-info">
+                                <div class="message-contact-name">ACJ</div>
+                                <div class="message-contact-preview">When are you coming to the studio?</div>
+                            </div>
+                            <div class="message-contact-time">2m</div>
+                            <div class="message-contact-badge">1</div>
+                        </div>
+                        <div class="message-contact">
+                            <img src="https://i.pravatar.cc/150?img=3" alt="Contact Avatar" class="message-contact-avatar">
+                            <div class="message-contact-info">
+                                <div class="message-contact-name">PAAED</div>
+                                <div class="message-contact-preview">The new track sounds amazing!</div>
+                            </div>
+                            <div class="message-contact-time">1h</div>
+                            <div class="message-contact-badge">1</div>
+                        </div>
+                        <div class="message-contact">
+                            <img src="https://i.pravatar.cc/150?img=4" alt="Contact Avatar" class="message-contact-avatar">
+                            <div class="message-contact-info">
+                                <div class="message-contact-name">Music_Lover</div>
+                                <div class="message-contact-preview">Can't wait for your next release!</div>
+                            </div>
+                            <div class="message-contact-time">1d</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="messages-chat">
+                    <div class="chat-header">
+                        <img src="https://i.pravatar.cc/150?img=2" alt="Contact Avatar" class="chat-avatar">
+                        <div class="chat-user-info">
+                            <div class="chat-username">ACJ</div>
+                            <div class="chat-status">Online</div>
+                        </div>
+                        <div class="chat-actions">
+                            <button class="chat-action">
+                                <i class="fas fa-phone"></i>
+                            </button>
+                            <button class="chat-action">
+                                <i class="fas fa-video"></i>
+                            </button>
+                            <button class="chat-action">
+                                <i class="fas fa-info-circle"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="chat-messages">
+                        <div class="chat-message received">
+                            <div class="chat-message-content">Hey, how's it going?</div>
+                            <div class="chat-message-time">10:30 AM</div>
+                        </div>
+                        <div class="chat-message sent">
+                            <div class="chat-message-content">Good! Working on some new tracks.</div>
+                            <div class="chat-message-time">10:32 AM</div>
+                        </div>
+                        <div class="chat-message received">
+                            <div class="chat-message-content">Awesome! When are you coming to the studio?</div>
+                            <div class="chat-message-time">10:33 AM</div>
+                        </div>
+                    </div>
+                    <div class="chat-input-container">
+                        <input type="text" class="chat-input" placeholder="Type a message...">
+                        <button class="chat-send">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-  </nav>
+    <header>
+        <div class="header-top">
+            <div class="logo-container">
+                <img src="IMG_3717.jpeg" alt="RICH&BLACK STUDIO Logo" class="logo" />
+                <div class="brand-text">
+                    <h1 class="brand-name">RICH&BLACK STUDIO</h1>
+                    <p class="region-tagline">Representing Ghana Central Region</p>
+                </div>
+            </div>
+            <div class="auth-buttons">
+                <button id="login-btn" class="auth-btn"><i class="fas fa-sign-in-alt"></i> Login</button>
+                <button id="signup-btn" class="auth-btn"><i class="fas fa-user-plus"></i> Sign Up</button>
+                <div id="user-menu-btn" class="user-menu" style="display: none;">
+                    <img id="user-avatar" src="" alt="User Avatar" class="user-avatar">
+                    <span id="username-display" class="username-display"></span>
+                    <div class="user-dropdown">
+                        <div class="user-dropdown-item">
+                            <i class="fas fa-user"></i> Profile
+                        </div>
+                        <div class="user-dropdown-item">
+                            <i class="fas fa-bell"></i> Notifications
+                            <span class="notification-badge">3</span>
+                        </div>
+                        <div class="user-dropdown-item">
+                            <i class="fas fa-users"></i> Friends
+                            <span class="notification-badge">2</span>
+                        </div>
+                        <div class="user-dropdown-item">
+                            <i class="fas fa-heart"></i> Favorites
+                        </div>
+                        <div class="user-dropdown-item">
+                            <i class="fas fa-cog"></i> Settings
+                        </div>
+                        <div id="logout-btn" class="user-dropdown-item">
+                            <i class="fas fa-sign-out-alt"></i> Logout
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home" class="active"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="#blog"><i class="fas fa-newspaper"></i> News</a></li>
+                <li><a href="#videos"><i class="fas fa-video"></i> Videos</a></li>
+                <li><a href="#music"><i class="fas fa-music"></i> Music</a></li>
+                <li><a href="#about"><i class="fas fa-info-circle"></i> About</a></li>
+                <li><a href="#artists"><i class="fas fa-user-friends"></i> Artists</a></li>
+                <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
+                <li><a href="#games"><i class="fas fa-gamepad"></i> Games</a></li>
+            </ul>
+        </nav>
+    </header>
 
-  <!-- Hero Section -->
-  <section id="home" class="hero">
-    <div class="hero-content" data-aos="fade-right">
-      <h2>Private Home Care Service</h2>
-      <p>Compassionate care delivered with dignity and respect in the comfort of your own home. We're dedicated to improving quality of life for your loved ones.</p>
-      <a href="#services" class="btn">Discover How We Can Help</a>
+    <section id="home">
+        <div id="hero">
+            <!-- Hero Slideshow Background -->
+            <div class="hero-slideshow">
+                <img src="IMG_3731.gif" class="slide-img active" alt="Slideshow Image 1">
+                <img src="gif1.png" class="slide-img" alt="Slideshow Image 2">
+                <img src="gif2.png" class="slide-img" alt="Slideshow Image 3">
+            </div>
+            
+            <!-- Cosmic Overlay -->
+            <div class="cosmic-overlay"></div>
+            
+            <!-- Floating Particles -->
+            <div class="particles" id="particles"></div>
+            
+            <!-- Hero Content -->
+            <div class="hero-content">
+                <h1 id="typewriter-headline"></h1>
+                <p class="hero-description">Experience the future of sound with Ghana's premier music studio. We blend tradition with innovation to create unforgettable sonic experiences.</p>
+                <button id="cta-btn">Listen to the Latest Drop</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="blog">
+        <h2>Latest News</h2>
+        <div class="blog-grid">
+            <!-- Featured Announcement Card -->
+            <div class="blog-card announcement-card" data-popup="immediate-release">
+                <div class="blog-card-glow"></div>
+                <img src="sikasem.jpg" alt="Sikasem Release" class="blog-card-img">
+                <div class="blog-card-content">
+                    <div class="blog-card-badge">Just Released</div>
+                    <h3>Sikasem - Out Now</h3>
+                    <p>Acclaimed artist ACJ has just released his latest track, <span class="highlight">"Sikasem"</span>. This powerful new song showcases ACJ's unique sound and is now available to stream on our music player and all major digital platforms.</p>
+                    <div class="blog-card-footer">
+                        <span class="blog-date"><i class="far fa-calendar-alt"></i> May 23, 2025</span>
+                        <a href="#music" class="read-more">Listen Now <i class="fas fa-headphones"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Upcoming Event Card -->
+            <div class="blog-card" data-popup="upcoming-event">
+                <div class="blog-card-glow"></div>
+                <img src="event.jpg" alt="Upcoming Event" class="blog-card-img" onerror="this.src='https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'; this.onerror=null;">
+                <div class="blog-card-content">
+                    <div class="blog-card-badge event-badge">Live Event</div>
+                    <h3>Accra Live Concert</h3>
+                    <p>Join us for an unforgettable night of music and culture at our live concert in Accra on June 15th. Experience the best of Ghana's music scene with performances by ACJ and special guests.</p>
+                    <div class="blog-card-footer">
+                        <span class="blog-date"><i class="far fa-calendar-alt"></i> June 15, 2025</span>
+                        <a href="#" class="read-more">Get Tickets <i class="fas fa-ticket-alt"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- New Songs Card -->
+            <div class="blog-card" data-popup="new-songs">
+                <div class="blog-card-glow"></div>
+                <img src="songs.jpg" alt="New Songs" class="blog-card-img" onerror="this.src='https://images.unsplash.com/photo-1511379938547-c1f69419868d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'; this.onerror=null;">
+                <div class="blog-card-content">
+                    <div class="blog-card-badge tracks-badge">New Tracks</div>
+                    <h3>Latest Releases</h3>
+                    <p>Our latest songs are out now! Stream <span class="highlight">"Cash Down"</span>, <span class="highlight">"Paid"</span>, and <span class="highlight">"A Lot"</span> in our music player or download them from your favorite digital platform.</p>
+                    <div class="blog-card-footer">
+                        <span class="blog-date"><i class="far fa-calendar-alt"></i> Available Now</span>
+                        <a href="#music" class="read-more">Listen Now <i class="fas fa-headphones"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="videos">
+        <h2>Videos</h2>
+        <div class="video-carousel">
+            <button class="carousel-arrow left" aria-label="Previous Video">&#10094;</button>
+            <div class="video-slide-container">
+                <div class="video-slide active">
+                    <video src="v1.mp4" controls poster="" style="width:100%;min-height:220px;border-radius:8px;background:#111;"></video>
+                    <h3>Studio Video 1</h3>
+                </div>
+                <div class="video-slide">
+                    <video src="v2.mp4" controls poster="" style="width:100%;min-height:220px;border-radius:8px;background:#111;"></video>
+                    <h3>Studio Video 2</h3>
+                </div>
+                <div class="video-slide">
+                    <video src="v3.mp4" controls poster="" style="width:100%;min-height:220px;border-radius:8px;background:#111;"></video>
+                    <h3>Studio Video 3</h3>
+                </div>
+                <div class="video-slide">
+                    <video src="v4.mp4" controls poster="" style="width:100%;min-height:220px;border-radius:8px;background:#111;"></video>
+                    <h3>Studio Video 4</h3>
+                </div>
+                <div class="video-slide">
+                    <video src="v5.mp4" controls poster="" style="width:100%;min-height:220px;border-radius:8px;background:#111;"></video>
+                    <h3>Studio Video 5</h3>
+                </div>
+                <div class="video-slide">
+                    <video src="v6.mp4" controls poster="" style="width:100%;min-height:220px;border-radius:8px;background:#111;"></video>
+                    <h3>Studio Video 6</h3>
+                </div>
+                <div class="video-slide">
+                    <video src="v7.mp4" controls poster="" style="width:100%;min-height:220px;border-radius:8px;background:#111;"></video>
+                    <h3>Studio Video 7</h3>
+                </div>
+            </div>
+            <button class="carousel-arrow right" aria-label="Next Video">&#10095;</button>
+        </div>
+        <div class="carousel-dots"></div>
+    </section>
+
+    <section id="about" class="hidden-section">
+        <h2>About Us</h2>
+        <p>Welcome to Rich and Black where creativity meets culture. Our label is dedicated to showcasing the vibrant talents of artists who embody the spirit of innovation and authenticity. Join us on a journey that celebrates diversity, passion, and the rich tapestry of sounds that define our unique identity.</p>
+    </section>
+
+    <section id="artists" class="hidden-section">
+        <h2>Our Artist</h2>
+        <div class="artist">
+            <img src="acj.jpg" alt="R&B-ACJ" />
+            <h3>R&B-ACJ</h3>
+            <p>R&B-ACJ is a talented artist from the Central Region, known for his unique sound and captivating performances.</p>
+        </div>
+        <div class="artist">
+            <img src="yoona.jpg" alt="acj, artist at RICH&BLACK STUDIO" />
+            <h3>acj</h3>
+            <p> king of soulful melodies.</p>
+        </div>
+    </section>
+
+    <section id="music">
+        <h2>Music</h2>
+        <div class="music-container">
+            <div class="music-player-wrapper">
+                <div class="cosmic-music-player">
+                    <div class="player-header">
+                        <div class="studio-logo">
+                            <div class="studio-logo-pulse"></div>
+                            <span>R&B</span>
+                        </div>
+                        <h3 class="music-studio-heading">RICH&BLACK STUDIO</h3>
+                    </div>
+                    
+                    <div class="player-visualization">
+                        <div class="visualization-bars">
+                            <div class="bar"></div>
+                            <div class="bar"></div>
+                            <div class="bar"></div>
+                            <div class="bar"></div>
+                            <div class="bar"></div>
+                            <div class="bar"></div>
+                            <div class="bar"></div>
+                            <div class="bar"></div>
+                            <div class="bar"></div>
+                            <div class="bar"></div>
+                            <div class="bar"></div>
+                            <div class="bar"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="current-song-container">
+                        <div class="current-song" id="current-song">Select a track to play</div>
+                    </div>
+                    
+                    <div class="progress-container">
+                        <div class="progress-bar">
+                            <div class="progress" id="progress"></div>
+                        </div>
+                        <div class="time-display">
+                            <span id="current-time">0:00</span>
+                            <span id="duration">0:00</span>
+                        </div>
+                    </div>
+                    
+                    <div class="controls">
+                        <button id="play" aria-label="Play">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
+                                <path d="M8 5v14l11-7z"/>
+                            </svg>
+                        </button>
+                        <button id="pause" aria-label="Pause">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
+                                <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/>
+                            </svg>
+                        </button>
+                        <button id="stop" aria-label="Stop">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
+                                <path d="M6 6h12v12H6z"/>
+                            </svg>
+                        </button>
+                        <button id="shuffle" aria-label="Shuffle">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
+                                <path d="M10.59 9.17L5.41 4 4 5.41l5.17 5.17 1.42-1.41zM14.5 4l2.04 2.04L4 18.59 5.41 20 17.96 7.46 20 9.5V4h-5.5zm.33 9.41l-1.41 1.41 3.13 3.13L14.5 20H20v-5.5l-2.04 2.04-3.13-3.13z"/>
+                            </svg>
+                        </button>
+                    </div>
+                    
+                    <div class="playlist-container">
+                        <h4>Playlist</h4>
+                        <ul id="playlist" class="playlist">
+                            <li>
+                                <a href="#" data-src="acj-cashdown.mp3">
+                                    <div class="track-info">
+                                        <span class="track-title">Cash Down</span>
+                                        <span class="track-artist">ACJ</span>
+                                    </div>
+                                    <span class="track-duration">3:42</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" data-src="acj-paid.mp3">
+                                    <div class="track-info">
+                                        <span class="track-title">Paid</span>
+                                        <span class="track-artist">ACJ</span>
+                                    </div>
+                                    <span class="track-duration">3:15</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" data-src="acj-alot.mp3">
+                                    <div class="track-info">
+                                        <span class="track-title">A Lot</span>
+                                        <span class="track-artist">ACJ</span>
+                                    </div>
+                                    <span class="track-duration">4:05</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mixtapes-container">
+                <!-- BROTHERHOOD Mixtape Interactive Card -->
+                <div class="mixtape-card" id="brotherhood-mixtape">
+                    <div class="mixtape-header" onclick="toggleMixtapeTracks()">
+                        <div class="mixtape-cover-container">
+                            <img src="bro.jpg" alt="BROTHERHOOD Cover" class="mixtape-cover">
+                        </div>
+                        <div class="mixtape-info">
+                            <h3 class="mixtape-title">BROTHERHOOD</h3>
+                            <p class="mixtape-artist">by ACJ</p>
+                        </div>
+                        <span id="mixtape-arrow" class="mixtape-arrow">▼</span>
+                    </div>
+                    <ul id="brotherhood-tracklist" class="mixtape-tracklist">
+                        <li><a href="#" onclick="playMixtapeSong(event, 'ACJ - Story.mp3', 'Story (feat. Alpha Khalifa)')"><strong>Story</strong> <span class="featuring">(feat. Alpha Khalifa)</span></a></li>
+                        <li><a href="#" onclick="playMixtapeSong(event, 'ACJ - High Life.mp3', 'High Life (ACJ only)')"><strong>High Life</strong> <span class="featuring">(ACJ only)</span></a></li>
+                        <li><a href="#" onclick="playMixtapeSong(event, 'ACJ Ft. Kwame Nkrumah - Chill.mp3', 'Chill.. (feat. Kwame Nkrumah)')"><strong>Chill..</strong> <span class="featuring">(feat. Kwame Nkrumah)</span></a></li>
+                        <li><a href="#" onclick="playMixtapeSong(event, 'ACJ - Sika Dur.mp3', 'Sika Duro (feat. Smen)')"><strong>Sika Duro</strong> <span class="featuring">(feat. Smen)</span></a></li>
+                        <li><a href="#" onclick="playMixtapeSong(event, 'ACJ - Compassion.mp3', 'Compassion.. (feat. Jo Carter)')"><strong>Compassion..</strong> <span class="featuring">(feat. Jo Carter)</span></a></li>
+                        <li><a href="#" onclick="playMixtapeSong(event, 'ACJ - Time.mp3', 'Time (feat. Paaed x Agona Yoona)')"><strong>Time</strong> <span class="featuring">(feat. Paaed x Agona Yoona)</span></a></li>
+                    </ul>
+                </div>
+
+                <!-- ACJ-Sikasem Interactive Card -->
+                <div class="mixtape-card" id="sikasem-song">
+                    <div class="mixtape-header" onclick="toggleSikasemTracks()">
+                        <div class="mixtape-cover-container">
+                            <img src="sikasem.jpg" alt="ACJ-Sikasem Cover" class="mixtape-cover">
+                        </div>
+                        <div class="mixtape-info">
+                            <h3 class="mixtape-title sikasem">ACJ-Sikasem</h3>
+                            <p class="mixtape-artist">by ACJ</p>
+                        </div>
+                        <span id="sikasem-arrow" class="mixtape-arrow">▼</span>
+                    </div>
+                    <ul id="sikasem-tracklist" class="mixtape-tracklist">
+                        <li><a href="#" onclick="playMixtapeSong(event, 'ACJ - Sikasem.mp3', 'Sikasem')"><strong>Sikasem</strong></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="no-js-fallback" style="display: none;">
+            <p>JavaScript is disabled. Please enable JavaScript to use the music player, or download the tracks directly from our digital store.</p>
+        </div>
+        
+        <!-- Comments Section for Music -->
+        <div class="comments-section">
+            <div class="comments-header">
+                <h3 class="comments-title">Fan Comments</h3>
+                <div class="comments-sort">
+                    <span>Sort by: Latest</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+            </div>
+            
+            <form class="comment-form disabled" data-content-type="songs" data-content-id="main-playlist">
+                <textarea placeholder="Share your thoughts about these tracks..." required></textarea>
+                <div class="comment-form-footer">
+                    <div class="comment-form-info">Login to comment</div>
+                    <button type="submit" disabled>Post Comment</button>
+                </div>
+            </form>
+            
+            <div class="comments-container" data-content-type="songs" data-content-id="main-playlist"></div>
+            
+            <!-- Online Users Section -->
+            <div class="online-users">
+                <div class="online-users-header">
+                    <div class="online-users-title">
+                        <i class="fas fa-circle"></i> Online Fans
+                    </div>
+                    <div class="online-users-count">0</div>
+                </div>
+                <div class="online-users-list" id="online-users-list"></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="games" style="padding: 50px 20px; margin: 30px auto; max-width: 600px; background: #fff; border-radius: 12px; box-shadow: 0 6px 12px rgba(0,0,0,0.1); text-align: center;">
+        <h2>Featured Game</h2>
+        <a href="https://xowars.space/" target="_blank" rel="noopener noreferrer" style="display: inline-block; text-decoration: none;">
+            <img src="xowars.jpg" alt="XOWars Game Logo" style="width:120px; height:120px; border-radius:16px; box-shadow:0 4px 16px rgba(255,111,97,0.15); margin-bottom:18px; transition:transform 0.2s;">
+            <h3 style="margin:10px 0 0 0; font-size:1.4rem; color:#ff6f61; font-family:'Poppins',sans-serif;">Play XOWars</h3>
+            <p style="color:#333; font-size:1.05rem; margin:8px 0 0 0;">Challenge your friends in this xo wars.</p>
+        </a>
+    </section>
+
+    <section id="contact" class="hidden-section">
+        <h2>Contact Us</h2>
+        <p>For inquiries, collaborations, or feedback, reach out to us at: <a href="mailto:info@richandblack.studio">info@richandblack.studio</a>.</p>
+        <div class="social-links">
+            <!-- Social links removed as requested -->
+        </div>
+    </section>
+
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-column">
+                <h4>RICH&BLACK STUDIO</h4>
+                <p>Ghana's premier music studio representing the Central Region. We blend tradition with innovation to create unforgettable sonic experiences.</p>
+                <div class="footer-social">
+                    <!-- Social links removed as requested -->
+                </div>
+            </div>
+            <div class="footer-column">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#home"><i class="fas fa-chevron-right"></i> Home</a></li>
+                    <li><a href="#blog"><i class="fas fa-chevron-right"></i> News</a></li>
+                    <li><a href="#videos"><i class="fas fa-chevron-right"></i> Videos</a></li>
+                    <li><a href="#music"><i class="fas fa-chevron-right"></i> Music</a></li>
+                    <li><a href="#about"><i class="fas fa-chevron-right"></i> About Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Contact Us</h4>
+                <ul>
+                    <li><a href="#" id="reveal-email"><i class="fas fa-envelope"></i> <span id="email-placeholder">Click to reveal email</span><span id="actual-email" style="display: none;">cosmoscoderr@gmail.com</span></a></li>
+                    <li><a href="#"><i class="fas fa-map-marker-alt"></i> Central Region, Ghana</a></li>
+                    <li><a href="#"><i class="fas fa-phone"></i> Contact Form</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p class="footer-copyright"> 2025 RICH&BLACK STUDIO. All rights reserved. Designed by PAAED.</p>
+        </div>
+    </footer>
+
+    <!-- Popup Container -->
+    <div class="overlay" id="popup-overlay"></div>
+    <div class="popup" id="new-songs-popup">
+        <h4>Latest Releases</h4>
+        <p>Our latest songs are out now! Stream <span class="highlight">"Cash Down"</span>, <span class="highlight">"Paid"</span>, and <span class="highlight">"A Lot"</span> in our music player or download them from your favorite digital platform.</p>
+        <p>Each track showcases a different aspect of ACJ's versatile style, from energetic beats to soulful melodies. These releases represent our commitment to pushing the boundaries of Ghana's music scene.</p>
+        <p>Head to the music player now to experience these tracks in our immersive cosmic audio interface.</p>
+        <button class="close-btn">Close</button>
     </div>
-    <img src="https://images.pexels.com/photos/7551617/pexels-photo-7551617.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Caregiver helping senior woman" class="hero-image" data-aos="fade-left">
-  </section>
-
-  <!-- About Section -->
-  <section id="about" class="section">
-    <div class="container">
-      <div class="section-header" data-aos="fade-up">
-        <h2 class="text-gradient">About Us</h2>
-        <p>At Yvonne's Home Care Service, we are committed to providing personalized and compassionate care to ensure our clients' comfort and well-being.</p>
-      </div>
-      
-      <div class="about-grid">
-        <div class="about-card glass-card" data-aos="fade-up" data-aos-delay="100">
-          <img src="founder.svg" alt="Yvonne Nkansah">
-          <h3>Yvonne Nkansah</h3>
-          <p>Founder & Certified Home Care Specialist</p>
-          <p>With over 10 years of experience in home care services, Yvonne is dedicated to providing the highest quality care for your loved ones.</p>
-        </div>
-        
-        <div class="about-card glass-card" data-aos="fade-up" data-aos-delay="200">
-          <img src="mission.svg" alt="Our Mission">
-          <h3>Our Mission</h3>
-          <p>To enhance the quality of life for our clients by providing personalized care that promotes independence, dignity, and well-being in the comfort of their own homes.</p>
-        </div>
-        
-        <div class="about-card glass-card" data-aos="fade-up" data-aos-delay="300">
-          <img src="values.svg" alt="Our Values">
-          <h3>Our Values</h3>
-          <p>Compassion, Respect, Integrity, and Excellence guide everything we do. We treat each client as a member of our own family.</p>
-        </div>
-      </div>
+    <div class="popup" id="upcoming-event-popup">
+        <h4>Accra Live Concert</h4>
+        <p>Join us for an unforgettable night of music and culture at our live concert in Accra on June 15th, 2025 at 7 PM at the Accra Music Arena.</p>
+        <p>Experience the best of Ghana's music scene with performances by ACJ and special guests. This event will feature live performances of all our latest tracks, including the new release "Sikasem".</p>
+        <p>Tickets will be available starting May 30th through our website and authorized vendors. Early bird pricing ends June 5th, so mark your calendars!</p>
+        <p>For VIP packages and group bookings, please contact us directly.</p>
+        <button class="close-btn">Close</button>
     </div>
-  </section>
-
-  <!-- Services Section -->
-  <section id="services" class="section">
-    <div class="container">
-      <div class="section-header" data-aos="fade-up">
-        <h2 class="text-gradient">Our Services</h2>
-        <p>We offer a comprehensive range of home care services tailored to meet the unique needs of each client.</p>
-      </div>
-      
-      <div class="services-grid">
-        <div class="service-card glass-card" data-aos="fade-up" data-aos-delay="100">
-          <div class="service-icon">
-            <i class="fas fa-hands-helping"></i>
-          </div>
-          <h3>Personal Care</h3>
-          <p>Assistance with bathing, dressing, grooming, and other personal hygiene needs to help maintain dignity and comfort.</p>
-        </div>
-        
-        <div class="service-card glass-card" data-aos="fade-up" data-aos-delay="200">
-          <div class="service-icon">
-            <i class="fas fa-pills"></i>
-          </div>
-          <h3>Medication Management</h3>
-          <p>Reminders and support to ensure proper medication intake according to prescribed schedules and dosages.</p>
-        </div>
-        
-        <div class="service-card glass-card" data-aos="fade-up" data-aos-delay="300">
-          <div class="service-icon">
-            <i class="fas fa-home"></i>
-          </div>
-          <h3>Household Help</h3>
-          <p>Light housekeeping, laundry, and meal preparation to maintain a clean, comfortable, and safe living environment.</p>
-        </div>
-        
-        <div class="service-card glass-card" data-aos="fade-up" data-aos-delay="400">
-          <div class="service-icon">
-            <i class="fas fa-heart"></i>
-          </div>
-          <h3>Companionship</h3>
-          <p>Emotional support, engaging activities, and meaningful conversation to combat loneliness and enhance quality of life.</p>
-        </div>
-        
-        <div class="service-card glass-card" data-aos="fade-up" data-aos-delay="500">
-          <div class="service-icon">
-            <i class="fas fa-car"></i>
-          </div>
-          <h3>Transportation</h3>
-          <p>Assistance with errands, shopping, and attending medical appointments to maintain independence and access to community resources.</p>
-        </div>
-        
-        <div class="service-card glass-card" data-aos="fade-up" data-aos-delay="600">
-          <div class="service-icon">
-            <i class="fas fa-clock"></i>
-          </div>
-          <h3>Respite Care</h3>
-          <p>Temporary relief for family caregivers, allowing them to take a break while ensuring their loved ones receive proper care.</p>
-        </div>
-        
-        <div class="service-card glass-card" data-aos="fade-up" data-aos-delay="700">
-          <div class="service-icon">
-            <i class="fas fa-stethoscope"></i>
-          </div>
-          <h3>Colostomy Care</h3>
-          <p>Specialized assistance with colostomy maintenance, including bag changes, skin care, and proper hygiene to ensure comfort and prevent complications.</p>
-        </div>
-      </div>
+    <div class="popup" id="immediate-release-popup">
+        <h4>Sikasem - Out Now</h4>
+        <p>Acclaimed artist ACJ has just released his latest track, <span class="highlight">"Sikasem"</span>. This powerful new song showcases ACJ's unique sound and is now available to stream on our music player and all major digital platforms.</p>
+        <p>Sikasem represents a bold new direction for ACJ, blending traditional Ghanaian sounds with modern production techniques to create something truly unique.</p>
+        <p class="highlight">"Sikasem is a project that's been in the works for a long time, and I'm thrilled to finally share it with my fans," says ACJ. "This track represents my roots and my vision for the future of music in Ghana."</p>
+        <p>Stream Sikasem now in our music player or download it from your favorite digital platform.</p>
+        <p><strong>CEO</strong><br>PAAED</p>
+        <button class="close-btn">Close</button>
     </div>
-  </section>
 
-  <!-- Care in Action Section -->
-  <section id="care-gallery" class="section">
-    <div class="container">
-      <div class="section-header" data-aos="fade-up">
-        <h2 class="text-gradient">Our Care in Action</h2>
-        <p>See how our dedicated caregivers provide personalized support to our clients in various aspects of daily living.</p>
-      </div>
-      
-      <div class="care-gallery">
-        <div class="care-item glass-card" data-aos="fade-up" data-aos-delay="100">
-          <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Medication Assistance & Companionship">
-          <div class="care-caption">
-            <h3>Medication Assistance</h3>
-            <p>Our caregivers ensure clients take the right medications at the right time while providing companionship.</p>
-          </div>
-        </div>
-        
+    <button id="theme-toggle" style="position: fixed; bottom: 20px; right: 20px; padding: 10px 15px; background-color: #ff6f61; color: #fff; border: none; border-radius: 5px; cursor: pointer; font-family: 'Poppins', sans-serif;">Toggle Dark Mode</button>
 
-        
-        <div class="care-item glass-card" data-aos="fade-up" data-aos-delay="200">
-          <img src="https://images.unsplash.com/photo-1624727828489-a1e03b79bba8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80" alt="Personal Care & Bathing Assistance">
-          <div class="care-caption">
-            <h3>Personal Care</h3>
-            <p>Dignified assistance with bathing, grooming, and other personal hygiene needs.</p>
-          </div>
+    <!-- Authentication Modal -->
+    <div class="modal-overlay" id="auth-modal">
+        <div class="modal" id="auth-modal-container">
+            <button id="close-auth-modal" class="modal-close"><i class="fas fa-times"></i></button>
+            
+            <!-- Login Form -->
+            <div id="login-form-container">
+                <div class="modal-header">
+                    <h2 class="modal-title">Welcome Back</h2>
+                    <p class="modal-subtitle">Sign in to your RICH&BLACK STUDIO account</p>
+                </div>
+                
+                <form id="login-form" class="auth-form">
+                    <div class="form-group">
+                        <label for="login-username" class="form-label">Username</label>
+                        <input type="text" id="login-username" class="form-input" placeholder="Enter your username" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="login-password" class="form-label">Password</label>
+                        <input type="password" id="login-password" class="form-input" placeholder="Enter your password" required>
+                    </div>
+                    
+                    <button type="submit" class="form-submit">Sign In</button>
+                </form>
+                
+                <div class="form-options">
+                    <a href="#" id="forgot-password">Forgot password?</a>
+                    <a href="#" id="forgot-username">Forgot username?</a>
+                </div>
+                <div class="form-footer">
+                    Don't have an account? <a href="#" id="switch-to-signup">Sign up</a>
+                </div>
+            </div>
+            
+            <!-- Signup Form -->
+            <div id="signup-form-container" style="display: none;">
+                <div class="modal-header">
+                    <h2 class="modal-title">Join RICH&BLACK STUDIO</h2>
+                    <p class="modal-subtitle">Create your account to connect with other fans</p>
+                </div>
+                
+                <form id="signup-form" class="auth-form">
+                    <div class="form-group">
+                        <label for="signup-username" class="form-label">Username</label>
+                        <input type="text" id="signup-username" class="form-input" placeholder="Choose a username" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="signup-email" class="form-label">Email</label>
+                        <input type="email" id="signup-email" class="form-input" placeholder="Enter your email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="signup-password" class="form-label">Password</label>
+                        <input type="password" id="signup-password" class="form-input" placeholder="Create a password" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="signup-confirm-password" class="form-label">Confirm Password</label>
+                        <input type="password" id="signup-confirm-password" class="form-input" placeholder="Confirm your password" required>
+                    </div>
+                    
+                    <button type="submit" class="form-submit">Create Account</button>
+                </form>
+                
+                <div class="form-footer">
+                    Already have an account? <a href="#" id="switch-to-login">Sign in</a>
+                </div>
+            </div>
         </div>
-        
-        <div class="care-item glass-card" data-aos="fade-up" data-aos-delay="300">
-          <img src="outdoor.jpg" alt="Outdoor Recreation & Nature Activities">
-          <div class="care-caption">
-            <h3>Outdoor Recreation</h3>
-            <p>We encourage clients to connect with nature and enjoy outdoor activities that promote physical and mental well-being.</p>
-          </div>
-        </div>
-        
-        <div class="care-item glass-card" data-aos="fade-up" data-aos-delay="400">
-          <img src="healthy.jpg" alt="Healthy Lifestyle & Nutrition Support">
-          <div class="care-caption">
-            <h3>Healthy Lifestyle</h3>
-            <p>Our caregivers promote nutritious eating habits and wellness activities to support overall health and vitality.</p>
-          </div>
-        </div>
-      </div>
     </div>
-  </section>
-
-  <!-- Testimonials Section -->
-  <section id="testimonials" class="section testimonials">
-    <div class="container">
-      <div class="section-header" data-aos="fade-up">
-        <h2 class="text-gradient">Client Testimonials</h2>
-        <p>Don't just take our word for it. Here's what families we've helped have to say about our services.</p>
-      </div>
-      
-      <div class="testimonial-slider" data-aos="fade-up">
-        <div class="testimonial-card glass-card">
-          <div class="testimonial-content">
-            <p>"The home care service has been a blessing for our family. The caregivers are compassionate, dedicated, and truly care about my mother's well-being. I can finally have peace of mind knowing she's in good hands."</p>
-          </div>
-          <div class="testimonial-author">
-            <img src="https://images.pexels.com/photos/762020/pexels-photo-762020.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Sarah J.">
-            <div class="author-info">
-              <h4>Sarah Johnson</h4>
-              <p>Daughter of Client</p>
+    
+    <!-- Forgot Password Modal -->
+    <div class="modal-overlay" id="forgot-password-modal">
+        <div class="modal">
+            <button class="modal-close close-btn"><i class="fas fa-times"></i></button>
+            
+            <div class="modal-header">
+                <h2 class="modal-title">Reset Your Password</h2>
+                <p class="modal-subtitle">We'll help you recover your password</p>
             </div>
-          </div>
-        </div>
-        
-        <div class="testimonial-card glass-card">
-          <div class="testimonial-content">
-            <p>"Professional, reliable, and caring. The staff goes above and beyond to ensure my father receives the best care possible. I highly recommend their services to anyone looking for quality home care."</p>
-          </div>
-          <div class="testimonial-author">
-            <img src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Mark T.">
-            <div class="author-info">
-              <h4>Mark Thompson</h4>
-              <p>Son of Client</p>
+            
+            <form id="forgot-password-form" class="auth-form">
+                <div class="form-group">
+                    <label for="recovery-email" class="form-label">Email Address</label>
+                    <input type="email" id="recovery-email" class="form-input" placeholder="Enter your email address" required>
+                </div>
+                
+                <button type="submit" class="form-submit">Reset Password</button>
+            </form>
+            
+            <div class="form-footer">
+                <a href="#" id="back-to-login-from-password">Back to Login</a>
             </div>
-          </div>
         </div>
-        
-        <div class="testimonial-card glass-card">
-          <div class="testimonial-content">
-            <p>"As someone who values independence, I was hesitant about home care. But the care team has been respectful of my wishes while providing the support I need. They've helped me maintain my dignity and quality of life."</p>
-          </div>
-          <div class="testimonial-author">
-            <img src="https://images.pexels.com/photos/2050994/pexels-photo-2050994.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Eleanor P.">
-            <div class="author-info">
-              <h4>Eleanor Parker</h4>
-              <p>Client</p>
-            </div>
-          </div>
-        </div>
-        
-        <div class="testimonial-card glass-card">
-          <div class="testimonial-content">
-            <p>"Finding quality care for my aunt was challenging until we discovered this exceptional service. Their personalized approach and attention to detail has made all the difference. My aunt looks forward to her caregiver's visits and has shown remarkable improvement in her overall well-being."</p>
-          </div>
-          <div class="testimonial-author">
-            <img src="https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="James D.">
-            <div class="author-info">
-              <h4>James Davis</h4>
-              <p>Nephew of Client</p>
-            </div>
-          </div>
-        </div>
-        
-        <div class="testimonial-card glass-card">
-          <div class="testimonial-content">
-            <p>"After my surgery, I needed temporary assistance at home. Yvonne's team provided exceptional care during my recovery. They were punctual, professional, and genuinely concerned about my comfort. I'm grateful for their support during a challenging time in my life."</p>
-          </div>
-          <div class="testimonial-author">
-            <img src="https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Rebecca L.">
-            <div class="author-info">
-              <h4>Rebecca Lewis</h4>
-              <p>Recovery Client</p>
-            </div>
-          </div>
-        </div>
-        
-        <div class="testimonial-card glass-card">
-          <div class="testimonial-content">
-            <p>"The peace of mind that comes from knowing my grandmother is in capable, caring hands is priceless. Yvonne's caregivers have become like family to us. They go beyond basic care tasks and truly engage with her, bringing joy and companionship into her daily life."</p>
-          </div>
-          <div class="testimonial-author">
-            <img src="https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Amanda M.">
-            <div class="author-info">
-              <h4>Amanda Martinez</h4>
-              <p>Granddaughter of Client</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      
-      <div class="slider-nav">
-        <button class="active"></button>
-        <button></button>
-        <button></button>
-        <button></button>
-        <button></button>
-        <button></button>
-      </div>
     </div>
-  </section>
+    
+    <!-- Forgot Username Modal -->
+    <div class="modal-overlay" id="forgot-username-modal">
+        <div class="modal">
+            <button class="modal-close close-btn"><i class="fas fa-times"></i></button>
+            
+            <div class="modal-header">
+                <h2 class="modal-title">Recover Your Username</h2>
+                <p class="modal-subtitle">We'll help you find your username</p>
+            </div>
+            
+            <form id="forgot-username-form" class="auth-form">
+                <div class="form-group">
+                    <label for="username-recovery-email" class="form-label">Email Address</label>
+                    <input type="email" id="username-recovery-email" class="form-input" placeholder="Enter your email address" required>
+                </div>
+                
+                <button type="submit" class="form-submit">Recover Username</button>
+            </form>
+            
+            <div class="form-footer">
+                <a href="#" id="back-to-login-from-username">Back to Login</a>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Comment Management Modal -->
+    <div class="modal-overlay" id="comment-management-modal">
+        <div class="modal">
+            <button class="modal-close close-btn"><i class="fas fa-times"></i></button>
+            
+            <div class="modal-header">
+                <h2 class="modal-title">Manage Your Comments</h2>
+                <p class="modal-subtitle">Edit or delete your comments</p>
+            </div>
+            
+            <div id="user-comments-container" class="user-comments-list">
+                <!-- Comments will be loaded dynamically here -->
+                <div class="empty-comments-message" style="text-align: center; padding: 2rem;">
+                    <i class="fas fa-comments" style="font-size: 3rem; color: var(--text-muted); margin-bottom: 1rem;"></i>
+                    <p>You haven't made any comments yet.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Onboarding Modal -->
+    <div class="modal-overlay" id="onboarding-modal">
+        <div class="modal">
+            <button class="modal-close close-btn"><i class="fas fa-times"></i></button>
+            
+            <div class="modal-header">
+                <h2 class="modal-title">Welcome to RICH&BLACK STUDIO</h2>
+                <p class="modal-subtitle">Your cosmic journey begins now</p>
+            </div>
+            
+            <div class="onboarding-steps">
+                <div class="onboarding-step">
+                    <div class="step-number">1</div>
+                    <div class="step-title">Join</div>
+                </div>
+                <div class="onboarding-step">
+                    <div class="step-number">2</div>
+                    <div class="step-title">Connect</div>
+                </div>
+                <div class="onboarding-step">
+                    <div class="step-number">3</div>
+                    <div class="step-title">Engage</div>
+                </div>
+            </div>
+            
+            <div class="onboarding-content">
+                <h3 class="onboarding-title">Connect with other fans</h3>
+                <p class="onboarding-description">Comment on songs, share your thoughts, and connect with other RICH&BLACK STUDIO fans through our P2P network. Your comments sync directly with other fans in real-time!</p>
+            </div>
+            
+            <div class="onboarding-actions">
+                <button class="onboarding-btn primary">Get Started</button>
+            </div>
+        </div>
+    </div>
 
-  <!-- Contact Section -->
-  <section id="contact" class="section contact">
-    <div class="container">
-      <div class="section-header" data-aos="fade-up">
-        <h2 class="text-gradient">Contact Us</h2>
-        <p>Have questions or ready to discuss your care needs? Reach out to us today.</p>
-      </div>
+    <script>
+      // Remove no-js class if JavaScript is enabled
+      document.body.classList.remove('no-js');
+
+      // Dark Mode Toggle
+      const prefersDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      const body = document.body;
+      if (prefersDarkMode) body.classList.add('dark-mode');
+      const themeToggle = document.getElementById('theme-toggle');
+      if (themeToggle) {
+        themeToggle.addEventListener('click', () => {
+          document.body.classList.toggle('dark-mode');
+        });
+      }
       
-      <div class="contact-grid">
-        <div class="contact-info" data-aos="fade-up" data-aos-delay="100">
-          <div class="contact-item glass-card">
-            <div class="contact-icon">
-              <i class="fas fa-user"></i>
-            </div>
-            <div class="contact-text">
-              <h4>Yvonne Nkansah</h4>
-              <p>Founder & Certified Home Care Specialist</p>
-            </div>
-          </div>
+      // Email reveal functionality
+      const revealEmailBtn = document.getElementById('reveal-email');
+      if (revealEmailBtn) {
+        revealEmailBtn.addEventListener('click', (e) => {
+          e.preventDefault();
+          const placeholder = document.getElementById('email-placeholder');
+          const actualEmail = document.getElementById('actual-email');
+          if (placeholder && actualEmail) {
+            placeholder.style.display = 'none';
+            actualEmail.style.display = 'inline';
+            // Update the href to be a mailto link after revealing
+            revealEmailBtn.href = 'mailto:' + actualEmail.textContent;
+          }
+        });
+      }
+
+      // Blog/News Popups
+      const blogCards = document.querySelectorAll('.blog-card');
+      const overlay = document.getElementById('popup-overlay');
+      const popups = document.querySelectorAll('.popup');
+      const closeButtons = document.querySelectorAll('.popup .close-btn');
+
+      function closePopups() {
+        overlay.classList.remove('active');
+        popups.forEach(popup => popup.classList.remove('active'));
+      }
+
+      blogCards.forEach(card => {
+        card.addEventListener('click', () => {
+          const popupId = card.getAttribute('data-popup') + '-popup';
+          const popup = document.getElementById(popupId);
+          if (popup) {
+            overlay.classList.add('active');
+            popup.classList.add('active');
+          }
+        });
+      });
+
+      closeButtons.forEach(btn => {
+        btn.addEventListener('click', closePopups);
+      });
+
+      overlay.addEventListener('click', closePopups);
+
+      // Music Player
+      const playButton = document.getElementById('play');
+      const pauseButton = document.getElementById('pause');
+      const stopButton = document.getElementById('stop');
+      const shuffleButton = document.getElementById('shuffle');
+      const currentSongDisplay = document.getElementById('current-song');
+      const progressBar = document.getElementById('progress');
+      const currentTimeDisplay = document.getElementById('current-time');
+      const durationDisplay = document.getElementById('duration');
+      const playlistLinks = document.querySelectorAll('.playlist ul li a');
+      const visualizationBars = document.querySelectorAll('.visualization-bars .bar');
+
+      let audio = new Audio();
+      let isPlaying = false;
+      let visualizationInterval;
+
+      function formatTime(seconds) {
+        if (isNaN(seconds)) return '0:00';
+        const minutes = Math.floor(seconds / 60);
+        const secs = Math.floor(seconds % 60);
+        return `${minutes}:${secs < 10 ? '0' + secs : secs}`;
+      }
+
+      function updateProgress() {
+        if (audio.duration && !isNaN(audio.duration)) {
+          const progressPercent = (audio.currentTime / audio.duration) * 100;
+          progressBar.style.width = `${progressPercent}%`;
+          currentTimeDisplay.textContent = formatTime(audio.currentTime);
+          durationDisplay.textContent = formatTime(audio.duration);
+        }
+        if (isPlaying) {
+          requestAnimationFrame(updateProgress);
+        }
+      }
+
+      // Animate visualization bars
+      function animateVisualization() {
+        if (!visualizationBars || visualizationBars.length === 0) return;
+        
+        clearInterval(visualizationInterval);
+        
+        if (isPlaying) {
+          visualizationInterval = setInterval(() => {
+            visualizationBars.forEach(bar => {
+              const height = Math.floor(Math.random() * 35) + 5;
+              bar.style.height = `${height}px`;
+            });
+          }, 100);
+        } else {
+          visualizationBars.forEach(bar => {
+            bar.style.height = '5px';
+          });
+        }
+      }
+
+      if (playButton) {
+        playButton.addEventListener('click', () => {
+          if (audio.src) {
+            audio.play().catch(err => console.error('Playback error:', err));
+            isPlaying = true;
+            updateProgress();
+            animateVisualization();
+          } else {
+            alert('Select a track from the playlist to begin!');
+          }
+        });
+      }
+
+      if (pauseButton) {
+        pauseButton.addEventListener('click', () => {
+          audio.pause();
+          isPlaying = false;
+          animateVisualization();
+        });
+      }
+
+      if (stopButton) {
+        stopButton.addEventListener('click', () => {
+          audio.pause();
+          audio.currentTime = 0;
+          isPlaying = false;
+          progressBar.style.width = '0%';
+          currentTimeDisplay.textContent = '0:00';
+          durationDisplay.textContent = audio.duration ? formatTime(audio.duration) : '0:00';
+          animateVisualization();
+        });
+      }
+
+      if (shuffleButton) {
+        shuffleButton.addEventListener('click', () => {
+          const songs = Array.from(playlistLinks);
+          if (songs.length === 0) return;
           
-          <div class="contact-item glass-card">
-            <div class="contact-icon">
-              <i class="fas fa-phone"></i>
-            </div>
-            <div class="contact-text">
-              <h4>Phone</h4>
-              <p><a href="tel:6469724202">646-972-4202</a></p>
-            </div>
-          </div>
+          const randomSong = songs[Math.floor(Math.random() * songs.length)];
+          if (!randomSong) return;
           
-          <div class="contact-item glass-card">
-            <div class="contact-icon">
-              <i class="fas fa-envelope"></i>
-            </div>
-            <div class="contact-text">
-              <h4>Email</h4>
-              <p><a href="mailto:yvonnen409@gmail.com">yvonnen409@gmail.com</a></p>
-            </div>
-          </div>
+          const songSrc = randomSong.getAttribute('data-src');
+          if (!songSrc) return;
           
-          <div class="contact-item glass-card">
-            <div class="contact-icon">
-              <i class="fas fa-map-marker-alt"></i>
-            </div>
-            <div class="contact-text">
-              <h4>Service Area</h4>
-              <p>Serving all surrounding areas</p>
-            </div>
-          </div>
-        </div>
-        
-        <div class="contact-form glass-card" data-aos="fade-up" data-aos-delay="200">
-          <form id="contact-form">
-            <div class="form-group">
-              <label for="name">Your Name</label>
-              <input type="text" id="name" name="name" required>
-            </div>
-            
-            <div class="form-group">
-              <label for="email">Your Email</label>
-              <input type="email" id="email" name="email" required>
-            </div>
-            
-            <div class="form-group">
-              <label for="phone">Phone Number</label>
-              <input type="tel" id="phone" name="phone">
-            </div>
-            
-            <div class="form-group">
-              <label for="message">Your Message</label>
-              <textarea id="message" name="message" required></textarea>
-            </div>
-            
-            <button type="submit" class="btn">Send Message</button>
-          </form>
-        </div>
-      </div>
-    </div>
-  </section>
+          audio.src = songSrc;
+          audio.play().catch(err => console.error('Playback error:', err));
+          isPlaying = true;
+          
+          // Get track info from the clicked link
+          const trackTitle = randomSong.querySelector('.track-title');
+          const trackArtist = randomSong.querySelector('.track-artist');
+          
+          if (trackTitle && trackArtist) {
+            currentSongDisplay.textContent = `${trackTitle.textContent} - ${trackArtist.textContent}`;
+          } else {
+            currentSongDisplay.textContent = randomSong.textContent;
+          }
+          
+          playlistLinks.forEach(link => link.classList.remove('active'));
+          randomSong.classList.add('active');
+          updateProgress();
+          animateVisualization();
+        });
+      }
 
-  <!-- Newsletter Section -->
-  <section class="newsletter">
-    <div class="container">
-      <h3 data-aos="fade-up">Subscribe to Our Newsletter</h3>
-      <p data-aos="fade-up" data-aos-delay="100">Stay updated with the latest news, care tips, and special offers from Yvonne's Home Care Service.</p>
+      if (playlistLinks) {
+        playlistLinks.forEach(link => {
+          link.addEventListener('click', (e) => {
+            e.preventDefault();
+            const songSrc = link.getAttribute('data-src');
+            if (songSrc) {
+              if (audio.src !== songSrc) {
+                audio.src = songSrc;
+                audio.currentTime = 0;
+              }
+              audio.play().catch(err => console.error('Playback error:', err));
+              isPlaying = true;
+              
+              // Get track info from the clicked link
+              const trackTitle = link.querySelector('.track-title');
+              const trackArtist = link.querySelector('.track-artist');
+              
+              if (trackTitle && trackArtist) {
+                currentSongDisplay.textContent = `${trackTitle.textContent} - ${trackArtist.textContent}`;
+              } else {
+                currentSongDisplay.textContent = link.textContent;
+              }
+              
+              playlistLinks.forEach(l => l.classList.remove('active'));
+              link.classList.add('active');
+              // Remove mixtape highlights
+              document.querySelectorAll('.mixtape-tracklist a').forEach(l => l.classList.remove('active'));
+              updateProgress();
+              animateVisualization();
+            }
+          });
+        });
+      }
+
+      audio.addEventListener('ended', () => {
+        isPlaying = false;
+        progressBar.style.width = '0%';
+        currentTimeDisplay.textContent = '0:00';
+        durationDisplay.textContent = audio.duration ? formatTime(audio.duration) : '0:00';
+        animateVisualization();
+      });
+
+      audio.addEventListener('error', () => {
+        console.error('Audio error:', audio.error);
+        currentSongDisplay.textContent = 'Error loading track';
+        isPlaying = false;
+        progressBar.style.width = '0%';
+        currentTimeDisplay.textContent = '0:00';
+        durationDisplay.textContent = '0:00';
+        playlistLinks.forEach(l => l.classList.remove('active'));
+        document.querySelectorAll('.mixtape-tracklist a').forEach(l => l.classList.remove('active'));
+        animateVisualization();
+      });
+
+      // Make progress bar clickable for seeking
+      if (progressBar && progressBar.parentElement) {
+        progressBar.parentElement.addEventListener('click', function(e) {
+          if (!audio.duration) return;
+          const rect = this.getBoundingClientRect();
+          const percent = (e.clientX - rect.left) / rect.width;
+          audio.currentTime = percent * audio.duration;
+          updateProgress();
+        });
+      }
+
+      // Play mixtape song in main player
+      function playMixtapeSong(event, src, title) {
+        if (!event || !src || !title) return;
+        
+        event.preventDefault();
+        if (typeof audio === 'undefined') {
+          alert('Music player not initialized. Please refresh the page.');
+          return;
+        }
+        if (audio.src !== src) {
+          audio.src = src;
+          audio.currentTime = 0;
+        }
+        audio.play().catch(err => console.error('Playback error:', err));
+        isPlaying = true;
+        
+        const currentSongElement = document.getElementById('current-song');
+        if (currentSongElement) {
+          currentSongElement.textContent = title;
+        }
+        
+        // Remove active from all playlist links
+        if (typeof playlistLinks !== 'undefined') {
+          playlistLinks.forEach(link => link.classList.remove('active'));
+        }
+        
+        // Remove any mixtape active highlights
+        document.querySelectorAll('.mixtape-tracklist a').forEach(link => link.classList.remove('active'));
+        
+        // Highlight the clicked mixtape link
+        event.currentTarget.classList.add('active');
+        
+        updateProgress();
+        animateVisualization();
+      }
+
+      // Show Hidden Sections
+      let hideTimeout;
+      document.querySelectorAll('nav ul li a').forEach(link => {
+        link.addEventListener('click', (e) => {
+          e.preventDefault();
+          const targetId = link.getAttribute('href').substring(1);
+          const targetSection = document.getElementById(targetId);
+          if (targetSection.classList.contains('hidden-section')) {
+            targetSection.classList.add('visible');
+            clearTimeout(hideTimeout);
+            hideTimeout = setTimeout(() => targetSection.classList.remove('visible'), 5000);
+          }
+          window.scrollTo({ top: targetSection.offsetTop - 20, behavior: 'smooth' });
+        });
+      });
+
+      // Mixtape expand/collapse logic
+      function toggleMixtapeTracks() {
+        const tracklist = document.getElementById('brotherhood-tracklist');
+        const arrow = document.getElementById('mixtape-arrow');
+        if (!tracklist || !arrow) return;
+        
+        if (tracklist.style.display === 'none' || tracklist.style.display === '') {
+          tracklist.style.display = 'block';
+          arrow.style.transform = 'rotate(180deg)';
+        } else {
+          tracklist.style.display = 'none';
+          arrow.style.transform = 'rotate(0deg)';
+        }
+      }
+
+      // Sikasem song expand/collapse logic
+      function toggleSikasemTracks() {
+        const tracklist = document.getElementById('sikasem-tracklist');
+        const arrow = document.getElementById('sikasem-arrow');
+        if (!tracklist || !arrow) return;
+        
+        if (tracklist.style.display === 'none' || tracklist.style.display === '') {
+          tracklist.style.display = 'block';
+          arrow.style.transform = 'rotate(180deg)';
+        } else {
+          tracklist.style.display = 'none';
+          arrow.style.transform = 'rotate(0deg)';
+        }
+      }
+
+      // Cosmic Animated Background
+      const canvas = document.getElementById('cosmic-bg');
+      if (canvas) {
+        const ctx = canvas.getContext('2d');
+        let w, h, stars = [];
+        function resize() {
+          w = canvas.width = canvas.offsetWidth;
+          h = canvas.height = canvas.offsetHeight;
+        }
+        function createStars() {
+          stars = [];
+          for (let i = 0; i < 120; i++) {
+            stars.push({ x: Math.random() * w, y: Math.random() * h, r: Math.random() * 1.8 + 0.2, dx: (Math.random() - 0.5) * 0.2, dy: (Math.random() - 0.5) * 0.2, opacity: Math.random() * 0.7 + 0.3 });
+          }
+        }
+        function animate() {
+          ctx.clearRect(0, 0, w, h);
+          for (const s of stars) {
+            ctx.globalAlpha = s.opacity;
+            ctx.beginPath();
+            ctx.arc(s.x, s.y, s.r, 0, 2 * Math.PI);
+            ctx.fillStyle = '#fff';
+            ctx.shadowColor = '#a7c7f9';
+            ctx.shadowBlur = 8;
+            ctx.fill();
+            s.x += s.dx; s.y += s.dy;
+            if (s.x < 0 || s.x > w) s.x = Math.random() * w;
+            if (s.y < 0 || s.y > h) s.y = Math.random() * h;
+          }
+          ctx.globalAlpha = 1;
+          requestAnimationFrame(animate);
+        }
+        window.addEventListener('resize', () => { resize(); createStars(); });
+        setTimeout(() => { resize(); createStars(); animate(); }, 200);
+      }
+
+      // Create particles for hero section
+      function createParticles() {
+        const particlesContainer = document.getElementById('particles');
+        if (!particlesContainer) return;
+        
+        // Clear existing particles
+        particlesContainer.innerHTML = '';
+        
+        // Create new particles
+        for (let i = 0; i < 30; i++) {
+          const particle = document.createElement('span');
+          particle.className = 'particle';
+          
+          // Random position
+          const posX = Math.random() * 100;
+          const posY = Math.random() * 100;
+          particle.style.left = `${posX}%`;
+          particle.style.top = `${posY}%`;
+          
+          // Random size
+          const size = Math.random() * 5 + 2;
+          particle.style.width = `${size}px`;
+          particle.style.height = `${size}px`;
+          
+          // Random animation duration
+          const duration = Math.random() * 15 + 10;
+          particle.style.animationDuration = `${duration}s`;
+          
+          // Random delay
+          const delay = Math.random() * 5;
+          particle.style.animationDelay = `${delay}s`;
+          
+          // Random color
+          const colors = ['#6366f1', '#ec4899', '#10b981', '#ffffff'];
+          const color = colors[Math.floor(Math.random() * colors.length)];
+          particle.style.background = color;
+          particle.style.boxShadow = `0 0 10px 2px ${color}`;
+          
+          particlesContainer.appendChild(particle);
+        }
+      }
       
-      <form id="newsletter-form" class="newsletter-form" data-aos="fade-up" data-aos-delay="200">
-        <input type="email" placeholder="Your Email Address" required>
-        <button type="submit">Subscribe</button>
-      </form>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer>
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-col">
-          <h4>Yvonne's Home Care</h4>
-          <p>Providing compassionate and professional home care services to help individuals maintain their independence and quality of life in the comfort of their own homes.</p>
-        </div>
-        
-        <div class="footer-col">
-          <h4>Quick Links</h4>
-          <ul class="footer-links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About Us</a></li>
-            <li><a href="#services">Our Services</a></li>
-            <li><a href="#testimonials">Testimonials</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </div>
-        
-        <div class="footer-col">
-          <h4>Services</h4>
-          <ul class="footer-links">
-            <li><a href="#services">Personal Care</a></li>
-            <li><a href="#services">Medication Management</a></li>
-            <li><a href="#services">Household Help</a></li>
-            <li><a href="#services">Companionship</a></li>
-            <li><a href="#services">Transportation</a></li>
-          </ul>
-        </div>
-        
-        <div class="footer-col">
-          <h4>Connect With Us</h4>
-          <p>Follow us on social media for updates, tips, and more.</p>
-          <div class="social-links">
-            <a href="https://www.facebook.com/YvonneHomeCare" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-            <a href="https://www.twitter.com/YvonneHomeCare" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-            <a href="https://www.instagram.com/YvonneHomeCare" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-            <a href="https://www.linkedin.com/company/yvonne-home-care" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-          </div>
-        </div>
-      </div>
+      // Typewriter Headline
+      const headlines = [
+        "Welcome to RICH&BLACK STUDIO",
+        "Where Ghana's sound meets the world",
+        "New drops. Fresh vibes. All for you",
+        "Feel the rhythm. Join the movement"
+      ];
+      let headlineIdx = 0, charIdx = 0, deleting = false;
+      const headlineElem = document.getElementById('typewriter-headline');
+      function typeLoop() {
+        if (!headlineElem) return;
+        const current = headlines[headlineIdx];
+        if (!deleting && charIdx < current.length) {
+          headlineElem.textContent = current.slice(0, ++charIdx);
+          setTimeout(typeLoop, 40);
+        } else if (deleting && charIdx > 0) {
+          headlineElem.textContent = current.slice(0, --charIdx);
+          setTimeout(typeLoop, 25);
+        } else if (!deleting && charIdx === current.length) {
+          setTimeout(() => { deleting = true; typeLoop(); }, 1200);
+        } else {
+          deleting = false;
+          headlineIdx = (headlineIdx + 1) % headlines.length;
+          setTimeout(typeLoop, 400);
+        }
+      }
       
-      <div class="footer-bottom">
-        <p>&copy; 2025 Yvonne's Home Care Service. All rights reserved.</p>
-      </div>
-    </div>
-  </footer>
+      // Initialize animations
+      window.addEventListener('DOMContentLoaded', () => {
+        createParticles();
+        setTimeout(typeLoop, 400);
+      });
+      
+      // Recreate particles on window resize
+      window.addEventListener('resize', createParticles);
 
-  <!-- Scroll to Top Button -->
-  <a href="#" class="scroll-top">
-    <i class="fas fa-arrow-up"></i>
-  </a>
+      // CTA Button scrolls to Blog/News
+      document.getElementById('cta-btn').onclick = () => {
+        const blog = document.getElementById('blog');
+        if (blog) blog.scrollIntoView({ behavior: 'smooth' });
+      };
 
-  <!-- Custom JS -->
-  <script src="main.js"></script>
-  <script src="chatbot.js"></script>
+      // Video Carousel Logic
+      const slides = document.querySelectorAll('.video-slide');
+      const leftArrow = document.querySelector('.carousel-arrow.left');
+      const rightArrow = document.querySelector('.carousel-arrow.right');
+      const dotsContainer = document.querySelector('.carousel-dots');
+      let currentSlide = 0;
+      function showSlide(idx) {
+        slides.forEach((slide,i)=>{
+          slide.classList.toggle('active', i === idx);
+        });
+        document.querySelectorAll('.carousel-dot').forEach((dot,i)=>{
+          dot.classList.toggle('active', i === idx);
+        });
+        currentSlide = idx;
+      }
+      // Create dots
+      slides.forEach((_,i)=>{
+        const dot = document.createElement('button');
+        dot.className = 'carousel-dot'+(i===0?' active':'');
+        dot.setAttribute('aria-label','Go to video '+(i+1));
+        dot.onclick = ()=>showSlide(i);
+        dotsContainer.appendChild(dot);
+      });
+      leftArrow.onclick = ()=>showSlide((currentSlide-1+slides.length)%slides.length);
+      rightArrow.onclick = ()=>showSlide((currentSlide+1)%slides.length);
+      // Optional: Pause all videos when switching
+      function pauseAllVideos() {
+        slides.forEach(slide=>{
+          const vid = slide.querySelector('video');
+          if(vid) vid.pause();
+        });
+      }
+      [leftArrow,rightArrow].forEach(btn=>btn.addEventListener('click',pauseAllVideos));
+      document.querySelectorAll('.carousel-dot').forEach(btn=>btn.addEventListener('click',pauseAllVideos));
 
-  <!-- AOS Animation Init -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-  <script>
-    AOS.init({
-      duration: 800,
-      easing: 'ease-in-out',
-      once: true
+      // Hero Slideshow Logic
+      const heroSlides = document.querySelectorAll('.slide-img');
+      let heroIdx = 0;
+      setInterval(()=>{
+        heroSlides[heroIdx].classList.remove('active');
+        heroIdx = (heroIdx+1)%heroSlides.length;
+        heroSlides[heroIdx].classList.add('active');
+      }, 3800);
+
+      // Slideshow logic
+      const slideshowSlides = document.querySelectorAll('.slide-img');
+      let slideshowCurrentSlide = 0;
+      function showSlideshowSlide(idx) {
+        slideshowSlides.forEach((slide, i) => {
+          slide.classList.toggle('active', i === idx);
+        });
+      }
+      setInterval(() => {
+        slideshowCurrentSlide = (slideshowCurrentSlide + 1) % slideshowSlides.length;
+        showSlideshowSlide(slideshowCurrentSlide);
+      }, 7000); // Change image every 7 seconds
+    </script>
+
+<!-- P2P Authentication and Comments System -->
+<script src="https://unpkg.com/peerjs@1.4.7/dist/peerjs.min.js"></script>
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+<script src="auth.js"></script>
+<script src="comments.js"></script>
+<script src="commentManager.js"></script>
+<script src="social.js"></script>
+<script src="dashboard.js"></script>
+<script src="admin.js"></script>
+
+<script>
+// Authentication and User Management
+document.addEventListener('DOMContentLoaded', function() {
+    // Forgot Password Flow
+    document.getElementById('forgot-password').addEventListener('click', function(e) {
+        e.preventDefault();
+        document.getElementById('auth-modal-container').style.display = 'none';
+        document.getElementById('forgot-password-modal').style.display = 'flex';
     });
-  </script>
+    
+    document.getElementById('back-to-login-from-password').addEventListener('click', function(e) {
+        e.preventDefault();
+        document.getElementById('forgot-password-modal').style.display = 'none';
+        document.getElementById('auth-modal-container').style.display = 'block';
+    });
+    
+    document.getElementById('forgot-password-form').addEventListener('submit', function(e) {
+        e.preventDefault();
+        const email = document.getElementById('recovery-email').value;
+        // In a real app, this would send a recovery email
+        alert(`Password recovery link sent to ${email}. Please check your inbox.`);
+        document.getElementById('forgot-password-modal').style.display = 'none';
+        document.getElementById('auth-modal-container').style.display = 'block';
+    });
+    
+    // Forgot Username Flow
+    document.getElementById('forgot-username').addEventListener('click', function(e) {
+        e.preventDefault();
+        document.getElementById('auth-modal-container').style.display = 'none';
+        document.getElementById('forgot-username-modal').style.display = 'flex';
+    });
+    
+    document.getElementById('back-to-login-from-username').addEventListener('click', function(e) {
+        e.preventDefault();
+        document.getElementById('forgot-username-modal').style.display = 'none';
+        document.getElementById('auth-modal-container').style.display = 'block';
+    });
+    
+    document.getElementById('forgot-username-form').addEventListener('submit', function(e) {
+        e.preventDefault();
+        const email = document.getElementById('username-recovery-email').value;
+        // In a real app, this would look up the username and send an email
+        alert(`Username recovery information sent to ${email}. Please check your inbox.`);
+        document.getElementById('forgot-username-modal').style.display = 'none';
+        document.getElementById('auth-modal-container').style.display = 'block';
+    });
+    
+    // Comment Management
+    // This would be populated with the user's actual comments in a real app
+    function openCommentManager() {
+        document.getElementById('comment-management-modal').style.display = 'flex';
+        if (window.loadUserComments) window.loadUserComments();
+    }
+    
+    // Add comment management to user dropdown
+    const userDropdown = document.querySelector('.user-dropdown');
+    if (userDropdown) {
+        const commentsItem = document.createElement('div');
+        commentsItem.className = 'user-dropdown-item';
+        commentsItem.innerHTML = '<i class="fas fa-comments"></i> My Comments';
+        commentsItem.addEventListener('click', openCommentManager);
+        
+        // Insert before logout
+        const logoutBtn = document.getElementById('logout-btn');
+        if (logoutBtn) {
+            userDropdown.insertBefore(commentsItem, logoutBtn);
+        } else {
+            userDropdown.appendChild(commentsItem);
+        }
+    }
+    
+    // Close all modals when clicking on their close buttons
+    document.querySelectorAll('.modal-close').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+            document.querySelectorAll('.modal-overlay').forEach(function(modal) {
+                modal.style.display = 'none';
+            });
+        });
+    });
+});
+</script>
 </body>
 </html>
