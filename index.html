@@ -32,8 +32,63 @@
   <!-- AOS Animation Library -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
   
+  <!-- EmailJS Library -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script type="text/javascript">
+    (function() {
+      emailjs.init("qKfvPL2Ys8_Jnr9Kj");
+    })();
+  </script>
+  
   <!-- Custom CSS -->
   <link rel="stylesheet" href="style.css">
+  
+  <!-- Structured Data for SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HomeAndConstructionBusiness",
+    "subType": "HomeCareService",
+    "name": "Yvonne's Home Care Service",
+    "image": "https://yvonnesprivatehomecare.com/logo.svg",
+    "url": "https://yvonnesprivatehomecare.com",
+    "telephone": "(646) 972-4202",
+    "email": "yvonnesprivatehomecare@gmail.com",
+    "description": "Yvonne's Home Care Service provides compassionate in-home care for seniors and individuals needing assistance with daily activities.",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "123 Care Street",
+      "addressLocality": "New York",
+      "addressRegion": "NY",
+      "postalCode": "10001",
+      "addressCountry": "US"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 40.7128,
+      "longitude": -74.0060
+    },
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday"
+      ],
+      "opens": "09:00",
+      "closes": "17:00"
+    },
+    "sameAs": [
+      "https://www.facebook.com/YvonneHomeCare",
+      "https://www.twitter.com/YvonneHomeCare",
+      "https://www.instagram.com/YvonneHomeCare",
+      "https://www.linkedin.com/company/yvonne-home-care"
+    ],
+    "priceRange": "$$"
+  }
+  </script>
 </head>
 <body>
   <!-- Modal -->
@@ -112,6 +167,7 @@
         <a href="#care-gallery">Care Gallery</a>
         <a href="#testimonials">Testimonials</a>
         <a href="#contact">Contact</a>
+        <a href="login.html" class="client-portal-link"><i class="fas fa-user-circle"></i> Client Portal</a>
       </div>
     </div>
   </nav>
@@ -406,7 +462,7 @@
             </div>
             <div class="contact-text">
               <h4>Email</h4>
-              <p><a href="mailto:yvonnen409@gmail.com">yvonnen409@gmail.com</a></p>
+              <p><a href="mailto:yvonnesprivatehomecare@gmail.com">yvonnesprivatehomecare@gmail.com</a></p>
             </div>
           </div>
           
@@ -443,7 +499,12 @@
               <textarea id="message" name="message" required></textarea>
             </div>
             
-            <button type="submit" class="btn">Send Message</button>
+            <div id="form-status" class="form-status" style="display: none;">
+              <p class="success-message">Thank you! Your message has been sent.</p>
+              <p class="error-message">Oops! There was a problem sending your message.</p>
+            </div>
+            
+            <button type="submit" class="btn" id="submit-btn">Send Message</button>
           </form>
         </div>
       </div>

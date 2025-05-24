@@ -87,30 +87,59 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Contact Form Submission
     const contactForm = document.getElementById('contact-form');
+    const submitBtn = document.getElementById('submit-btn');
+    const formStatus = document.getElementById('form-status');
+    
     if (contactForm) {
         contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
+            e.preventDefault(); // Always prevent default form submission
             
             const nameInput = this.querySelector('input[name="name"]');
             const emailInput = this.querySelector('input[name="email"]');
+            const phoneInput = this.querySelector('input[name="phone"]');
             const messageInput = this.querySelector('textarea[name="message"]');
             
             const name = nameInput.value.trim();
             const email = emailInput.value.trim();
+            const phone = phoneInput.value.trim();
             const message = messageInput.value.trim();
             
-            if (name && validateEmail(email) && message) {
-                // Show success modal
-                showModal('Message Sent', 'Thank you for reaching out! We\'ll get back to you as soon as possible.');
-                
-                // Reset form
-                nameInput.value = '';
-                emailInput.value = '';
-                messageInput.value = '';
-            } else {
-                // Show error modal
-                showModal('Form Error', 'Please fill in all fields correctly.');
+            // Validate the form
+            if (!(name && validateEmail(email) && message)) {
+                showModal('Form Error', 'Please fill in all required fields correctly.');
+                return;
             }
+            
+            // Disable the submit button and show loading state
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = 'Sending...';
+            
+            // Prepare the data to send
+            const formData = {
+                name: name,
+                email: email,
+                phone: phone,
+                message: message,
+                _subject: 'New message from Yvonne\'s Home Care website'
+            };
+            
+            // Direct mailto approach - most reliable for simple sites
+            const mailtoLink = `mailto:yvonnesprivatehomecare@gmail.com?subject=Website Contact: ${encodeURIComponent(name)}&body=${encodeURIComponent('Name: ' + name + '\nEmail: ' + email + '\nPhone: ' + phone + '\n\nMessage:\n' + message)}`;
+            
+            // Open the user's email client
+            window.location.href = mailtoLink;
+            
+            // Show success message
+            setTimeout(() => {
+                showModal('Message Ready to Send', 'We\'ve opened your email app with your message ready to send. Just click send in your email app to complete the process.');
+                
+                // Reset the form
+                contactForm.reset();
+                
+                // Re-enable the submit button
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = 'Send Message';
+            }, 1000);
         });
     }
 
