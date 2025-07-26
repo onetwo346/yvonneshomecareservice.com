@@ -859,13 +859,16 @@ nav a:hover::after {
 /* Services Section */
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 30px;
 }
 
 .service-card {
   text-align: left;
   padding: 30px;
+  min-height: 280px;
+  display: flex;
+  flex-direction: column;
 }
 
 .service-icon {
@@ -889,6 +892,7 @@ nav a:hover::after {
 .service-card p {
   color: #666;
   margin-bottom: 15px;
+  flex: 1;
 }
 
 /* Care Gallery Section */
@@ -903,14 +907,19 @@ nav a:hover::after {
   overflow: hidden;
   transition: var(--transition);
   position: relative;
+  min-height: 280px;
+  display: flex;
+  flex-direction: column;
 }
 
 .care-item img {
   width: 100%;
-  height: auto;
+  height: 200px;
+  object-fit: cover;
   border-radius: 10px 10px 0 0;
   transition: var(--transition);
   display: block;
+  flex-shrink: 0;
 }
 
 .care-item:hover img {
@@ -919,6 +928,10 @@ nav a:hover::after {
 
 .care-caption {
   padding: 20px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
 .care-caption h3 {
@@ -1802,7 +1815,7 @@ footer {
     font-size: 2.5rem;
   }
   
-  .service-grid, .testimonial-grid, .contact-grid, .footer-grid {
+  .services-grid, .testimonial-grid, .contact-grid, .footer-grid {
     grid-template-columns: repeat(2, 1fr);
   }
   
@@ -1857,7 +1870,7 @@ footer {
     display: block;
   }
   
-  .service-grid, .testimonial-grid, .contact-grid, .footer-grid {
+  .services-grid, .testimonial-grid, .contact-grid, .footer-grid {
     grid-template-columns: 1fr;
     gap: 20px;
   }
