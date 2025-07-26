@@ -96,7 +96,7 @@
     <div class="modal-content">
       <div class="modal-header">
         <h3 class="modal-title">Thank You!</h3>
-        <button class="modal-close">&times;</button>
+        <button class="modal-close" aria-label="Close modal">&times;</button>
       </div>
       <div class="modal-body">
         <p class="modal-message">Your message has been sent successfully!</p>
@@ -115,7 +115,7 @@
     <div class="chatbot-box">
       <div class="chatbot-header">
         <h4>Care Assistant</h4>
-        <button class="chatbot-close">&times;</button>
+        <button class="chatbot-close" aria-label="Close chatbot">&times;</button>
       </div>
       <div class="chatbot-messages">
         <div class="message bot-message">
@@ -129,7 +129,7 @@
       </div>
       <div class="chatbot-input">
         <input type="text" placeholder="Type your message here..." id="chatbot-input-field">
-        <button class="chatbot-send">
+        <button class="chatbot-send" aria-label="Send message">
           <i class="fas fa-paper-plane"></i>
         </button>
       </div>
@@ -157,7 +157,7 @@
   <!-- Navigation -->
   <nav>
     <div class="container">
-      <button class="mobile-toggle">
+      <button class="mobile-toggle" aria-label="Toggle navigation menu">
         <i class="fas fa-bars"></i>
       </button>
       <div class="nav-links">
@@ -167,7 +167,6 @@
         <a href="#care-gallery">Care Gallery</a>
         <a href="#testimonials">Testimonials</a>
         <a href="#contact">Contact</a>
-        <a href="login.html" class="client-portal-link"><i class="fas fa-user-circle"></i> Client Portal</a>
       </div>
     </div>
   </nav>
@@ -190,24 +189,107 @@
         <p>At Yvonne's Home Care Service, we are committed to providing personalized and compassionate care to ensure our clients' comfort and well-being.</p>
       </div>
       
-      <div class="about-grid">
-        <div class="about-card glass-card" data-aos="fade-up" data-aos-delay="100">
-          <img src="founder.svg" alt="Yvonne Nkansah">
-          <h3>Yvonne Nkansah</h3>
-          <p>Founder & Certified Home Care Specialist</p>
-          <p>With over 10 years of experience in home care services, Yvonne is dedicated to providing the highest quality care for your loved ones.</p>
+      <!-- Founder Profile Section -->
+      <div class="founder-profile" data-aos="fade-up" data-aos-delay="100">
+        <div class="founder-card glass-card">
+          <div class="founder-image">
+            <img src="vonn.png" alt="Yvonne Nkansah">
+          </div>
+          <div class="founder-info">
+            <h3>Meet Our Founder</h3>
+            <h4>Yvonne Nkansah</h4>
+            <p class="founder-title">Certified Home Care Specialist</p>
+            <p class="founder-description">With over 10 years of experience in home care services, Yvonne is dedicated to providing the highest quality care for your loved ones. Her passion for helping others and commitment to excellence drives our mission to deliver compassionate, personalized care that makes a real difference in people's lives.</p>
+            <div class="founder-credentials">
+              <div class="credential">
+                <i class="fas fa-certificate"></i>
+                <span>Certified Home Care Specialist</span>
+              </div>
+              <div class="credential">
+                <i class="fas fa-clock"></i>
+                <span>10+ Years Experience</span>
+              </div>
+              <div class="credential">
+                <i class="fas fa-heart"></i>
+                <span>Passionate About Care</span>
+              </div>
+            </div>
+          </div>
         </div>
-        
-        <div class="about-card glass-card" data-aos="fade-up" data-aos-delay="200">
-          <img src="mission.svg" alt="Our Mission">
+      </div>
+      
+      <!-- Mission and Values Section -->
+      <div class="mission-values-grid">
+        <div class="mission-card glass-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="card-icon">
+            <i class="fas fa-bullseye"></i>
+          </div>
           <h3>Our Mission</h3>
-          <p>To enhance the quality of life for our clients by providing personalized care that promotes independence, dignity, and well-being in the comfort of their own homes.</p>
+          <p class="mission-intro">To enhance the quality of life for our clients by providing personalized care that promotes independence, dignity, and well-being in the comfort of their own homes.</p>
+          
+          <div class="mission-highlights">
+            <div class="mission-item">
+              <i class="fas fa-home"></i>
+              <div>
+                <strong>Home-Centered Care</strong>
+                <p>Delivering professional services in the familiar comfort of your own home</p>
+              </div>
+            </div>
+            <div class="mission-item">
+              <i class="fas fa-users"></i>
+              <div>
+                <strong>Personalized Approach</strong>
+                <p>Tailored care plans that respect individual needs and preferences</p>
+              </div>
+            </div>
+            <div class="mission-item">
+              <i class="fas fa-hands-helping"></i>
+              <div>
+                <strong>Independence & Dignity</strong>
+                <p>Supporting autonomy while maintaining the highest standards of care</p>
+              </div>
+            </div>
+          </div>
+          
+          <p class="mission-footer">We believe that everyone deserves to age gracefully while maintaining their connection to the community they love.</p>
         </div>
         
-        <div class="about-card glass-card" data-aos="fade-up" data-aos-delay="300">
-          <img src="values.svg" alt="Our Values">
+        <div class="values-card glass-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="card-icon">
+            <i class="fas fa-gem"></i>
+          </div>
           <h3>Our Values</h3>
-          <p>Compassion, Respect, Integrity, and Excellence guide everything we do. We treat each client as a member of our own family.</p>
+          <div class="values-list">
+            <div class="value-item">
+              <i class="fas fa-heart"></i>
+              <div>
+                <strong>Compassion</strong>
+                <p>We approach every interaction with empathy and understanding</p>
+              </div>
+            </div>
+            <div class="value-item">
+              <i class="fas fa-handshake"></i>
+              <div>
+                <strong>Respect</strong>
+                <p>We honor the dignity and preferences of every individual</p>
+              </div>
+            </div>
+            <div class="value-item">
+              <i class="fas fa-shield-alt"></i>
+              <div>
+                <strong>Integrity</strong>
+                <p>We maintain the highest ethical standards in all we do</p>
+              </div>
+            </div>
+            <div class="value-item">
+              <i class="fas fa-star"></i>
+              <div>
+                <strong>Excellence</strong>
+                <p>We strive for outstanding quality in every aspect of care</p>
+              </div>
+            </div>
+          </div>
+          <p class="values-footer">We treat each client as a member of our own family, ensuring they receive the care and attention they deserve.</p>
         </div>
       </div>
     </div>
@@ -416,12 +498,12 @@
       </div>
       
       <div class="slider-nav">
-        <button class="active"></button>
-        <button></button>
-        <button></button>
-        <button></button>
-        <button></button>
-        <button></button>
+        <button class="active" aria-label="Go to testimonial 1"></button>
+        <button aria-label="Go to testimonial 2"></button>
+        <button aria-label="Go to testimonial 3"></button>
+        <button aria-label="Go to testimonial 4"></button>
+        <button aria-label="Go to testimonial 5"></button>
+        <button aria-label="Go to testimonial 6"></button>
       </div>
     </div>
   </section>
@@ -476,37 +558,6 @@
             </div>
           </div>
         </div>
-        
-        <div class="contact-form glass-card" data-aos="fade-up" data-aos-delay="200">
-          <form id="contact-form">
-            <div class="form-group">
-              <label for="name">Your Name</label>
-              <input type="text" id="name" name="name" required>
-            </div>
-            
-            <div class="form-group">
-              <label for="email">Your Email</label>
-              <input type="email" id="email" name="email" required>
-            </div>
-            
-            <div class="form-group">
-              <label for="phone">Phone Number</label>
-              <input type="tel" id="phone" name="phone">
-            </div>
-            
-            <div class="form-group">
-              <label for="message">Your Message</label>
-              <textarea id="message" name="message" required></textarea>
-            </div>
-            
-            <div id="form-status" class="form-status" style="display: none;">
-              <p class="success-message">Thank you! Your message has been sent.</p>
-              <p class="error-message">Oops! There was a problem sending your message.</p>
-            </div>
-            
-            <button type="submit" class="btn" id="submit-btn">Send Message</button>
-          </form>
-        </div>
       </div>
     </div>
   </section>
@@ -554,17 +605,6 @@
             <li><a href="#services">Transportation</a></li>
           </ul>
         </div>
-        
-        <div class="footer-col">
-          <h4>Connect With Us</h4>
-          <p>Follow us on social media for updates, tips, and more.</p>
-          <div class="social-links">
-            <a href="https://www.facebook.com/YvonneHomeCare" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-            <a href="https://www.twitter.com/YvonneHomeCare" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-            <a href="https://www.instagram.com/YvonneHomeCare" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-            <a href="https://www.linkedin.com/company/yvonne-home-care" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-          </div>
-        </div>
       </div>
       
       <div class="footer-bottom">
@@ -586,10 +626,10 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
   <script>
     AOS.init({
-      duration: 800,
+      duration:800,
       easing: 'ease-in-out',
       once: true
     });
   </script>
-</body>
+</body> 
 </html>

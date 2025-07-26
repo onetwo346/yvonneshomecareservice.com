@@ -16,6 +16,11 @@ document.addEventListener('DOMContentLoaded', function() {
         'hello': 'Hello! How can I assist you with our home care services today?',
         'hi': 'Hi there! How can I help you with our home care services?',
         'services': 'We offer a range of services including personal care, medication management, meal preparation, companionship, and transportation assistance. Would you like more details about any specific service?',
+        'personal care': 'Our personal care services include assistance with bathing, dressing, grooming, and mobility. We focus on maintaining dignity and independence. Do you have any specific needs in mind?',
+        'medication': 'We provide medication reminders and management to ensure proper dosage and timing. Our caregivers can also coordinate with pharmacies. Is there a particular aspect you\'d like to know more about?',
+        'meal': 'Our meal preparation service includes planning nutritious meals, grocery shopping, and cooking based on dietary needs. We can accommodate special diets. What kind of dietary requirements do you have?',
+        'companionship': 'Companionship services include conversation, games, walks, and emotional support to combat loneliness. We match caregivers based on interests. What activities does your loved one enjoy?',
+        'transportation': 'We offer safe transportation for appointments, errands, and social outings. All drivers are licensed and insured. How often would you need this service?',
         'cost': 'Our service costs vary depending on the level of care needed and the number of hours required. We\'d be happy to provide a personalized quote after a brief assessment. Would you like to schedule a free consultation?',
         'hours': 'We provide care services 24/7, including weekends and holidays. Our caregivers can be scheduled for as little as 4 hours or up to 24-hour live-in care.',
         'caregivers': 'All our caregivers are thoroughly vetted, trained, and certified. They undergo background checks and are selected for their compassion, reliability, and experience in home care.',
@@ -24,8 +29,14 @@ document.addEventListener('DOMContentLoaded', function() {
         'contact': 'You can reach us at (646) 972-4202 or by filling out the contact form on our website. Would you like me to have someone call you back?',
         'location': 'We serve the greater New York area, including all five boroughs and parts of New Jersey. Do you need care in a specific location?',
         'covid': 'We take COVID-19 precautions very seriously. All our caregivers are vaccinated, use appropriate PPE, and follow strict safety protocols to protect our clients.',
-        'emergency': 'If this is a medical emergency, please call 911 immediately. For urgent care needs, please call our 24/7 support line at (646) 972-4202.'
+        'emergency': 'If this is a medical emergency, please call 911 immediately. For urgent care needs, please call our 24/7 support line at (646) 972-4202.',
+        'consultation': 'Great! To schedule a free consultation, please provide your phone number or email, and we\'ll get back to you shortly.',
+        'thanks': 'You\'re welcome! Is there anything else I can help you with?',
+        'bye': 'Thank you for chatting with me. Have a wonderful day! If you need any further assistance, feel free to return.'
     };
+
+    // Add simple state management
+    let conversationState = '';
 
     // Toggle chatbot visibility
     chatbotToggle.addEventListener('click', function() {
@@ -126,9 +137,20 @@ document.addEventListener('DOMContentLoaded', function() {
     function getResponse(message) {
         message = message.toLowerCase();
         
+        // Handle state-based responses
+        if (conversationState === 'service_details') {
+            if (responses[message]) {
+                conversationState = '';
+                return responses[message] + ' Is there more I can help with?';
+            }
+        }
+        
         // Check for keyword matches
         for (const [keyword, response] of Object.entries(responses)) {
             if (message.includes(keyword)) {
+                if (keyword === 'services') {
+                    conversationState = 'service_details';
+                }
                 return response;
             }
         }
@@ -148,12 +170,14 @@ document.addEventListener('DOMContentLoaded', function() {
         return "Thank you for your message. If you'd like to learn more about our services or schedule a free consultation, please call us at (646) 972-4202 or use the contact form below.";
     }
 
-    // Pre-defined suggested questions
+    // Expand suggested questions
     const suggestedQuestions = [
         "What services do you offer?",
         "How much do your services cost?",
         "How do I get started?",
-        "Are your caregivers certified?"
+        "Are your caregivers certified?",
+        "Do you accept insurance?",
+        "What areas do you serve?"
     ];
 
     // Add suggested questions after a delay
