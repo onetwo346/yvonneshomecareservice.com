@@ -25,10 +25,13 @@ document.addEventListener('DOMContentLoaded', function() {
     // Smooth Scrolling for Navigation Links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
+            const href = this.getAttribute('href');
+            if (href === '#') return;
+            
             e.preventDefault();
             navLinks.classList.remove('active');
             
-            const target = document.querySelector(this.getAttribute('href'));
+            const target = document.querySelector(href);
             if (target) {
                 window.scrollTo({
                     top: target.offsetTop - 80,
@@ -372,5 +375,68 @@ document.addEventListener('DOMContentLoaded', function() {
             
             showDetailModal(title, expandedContent, imageSrc);
         });
+    });
+
+    // Animated Stat Counters
+    const statNumbers = document.querySelectorAll('.stat-number');
+    if (statNumbers.length > 0 && 'IntersectionObserver' in window) {
+        const animateCounter = (el) => {
+            const target = parseInt(el.getAttribute('data-count'), 10);
+            const duration = 1500;
+            const start = performance.now();
+            const step = (now) => {
+                const progress = Math.min((now - start) / duration, 1);
+                const eased = 1 - Math.pow(1 - progress, 3);
+                el.textContent = Math.round(eased * target);
+                if (progress < 1) {
+                    requestAnimationFrame(step);
+                }
+            };
+            requestAnimationFrame(step);
+        };
+        
+        const counterObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateCounter(entry.target);
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+        
+        statNumbers.forEach(el => counterObserver.observe(el));
+    } else {
+        statNumbers.forEach(el => {
+            el.textContent = el.getAttribute('data-count');
+        });
+    }
+
+    // FAQ Accordion
+    const faqItems = document.querySelectorAll('.faq-item');
+    faqItems.forEach(item => {
+        const question = item.querySelector('.faq-question');
+        const answer = item.querySelector('.faq-answer');
+        
+        if (question && answer) {
+            question.addEventListener('click', () => {
+                const isOpen = item.classList.contains('open');
+                
+                // Close all other items
+                faqItems.forEach(other => {
+                    other.classList.remove('open');
+                    const otherAnswer = other.querySelector('.faq-answer');
+                    const otherQuestion = other.querySelector('.faq-question');
+                    if (otherAnswer) otherAnswer.style.maxHeight = null;
+                    if (otherQuestion) otherQuestion.setAttribute('aria-expanded', 'false');
+                });
+                
+                // Toggle clicked item
+                if (!isOpen) {
+                    item.classList.add('open');
+                    answer.style.maxHeight = answer.scrollHeight + 'px';
+                    question.setAttribute('aria-expanded', 'true');
+                }
+            });
+        }
     });
 });

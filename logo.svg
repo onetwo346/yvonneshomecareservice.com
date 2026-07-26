@@ -1,17 +1,11 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
   <defs>
-    <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#6b8e23;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#557a1d;stop-opacity:1" />
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6b8e23"/>
+      <stop offset="100%" stop-color="#557a1d"/>
     </linearGradient>
   </defs>
-  <circle cx="60" cy="60" r="58" fill="white" stroke="url(#logoGradient)" stroke-width="4"/>
-  <g transform="translate(30, 30)">
-    <path d="M30,0 C13.4315,0 0,13.4315 0,30 C0,46.5685 13.4315,60 30,60 C46.5685,60 60,46.5685 60,30 C60,13.4315 46.5685,0 30,0 Z M30,54 C16.7452,54 6,43.2548 6,30 C6,16.7452 16.7452,6 30,6 C43.2548,6 54,16.7452 54,30 C54,43.2548 43.2548,54 30,54 Z" fill="url(#logoGradient)"/>
-    <path d="M30,12 C20.0589,12 12,20.0589 12,30 C12,39.9411 20.0589,48 30,48 C39.9411,48 48,39.9411 48,30 C48,20.0589 39.9411,12 30,12 Z M30,42 C23.3726,42 18,36.6274 18,30 C18,23.3726 23.3726,18 30,18 C36.6274,18 42,23.3726 42,30 C42,36.6274 36.6274,42 30,42 Z" fill="url(#logoGradient)"/>
-    <path d="M30,24 C26.6863,24 24,26.6863 24,30 C24,33.3137 26.6863,36 30,36 C33.3137,36 36,33.3137 36,30 C36,26.6863 33.3137,24 30,24 Z" fill="url(#logoGradient)"/>
-    <path d="M44,16 L48,12 M12,48 L16,44 M16,16 L12,12 M44,44 L48,48" stroke="url(#logoGradient)" stroke-width="2" stroke-linecap="round"/>
-    <path d="M30,0 L30,6 M30,54 L30,60 M0,30 L6,30 M54,30 L60,30" stroke="url(#logoGradient)" stroke-width="2" stroke-linecap="round"/>
-  </g>
+  <circle cx="50" cy="50" r="48" fill="url(#bg)"/>
+  <path d="M50 22 L24 44 L24 74 L42 74 L42 56 L58 56 L58 74 L76 74 L76 44 Z" fill="white" opacity="0.95"/>
+  <path d="M50 68 C47 65 40 60 40 54.5 C40 51 42.8 48.5 46 48.5 C47.8 48.5 49.2 49.4 50 50.6 C50.8 49.4 52.2 48.5 54 48.5 C57.2 48.5 60 51 60 54.5 C60 60 53 65 50 68 Z" fill="#6b8e23"/>
 </svg>
