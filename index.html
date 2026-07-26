@@ -1,0 +1,908 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Yvonne's Home Care Service provides compassionate in-home care for seniors and individuals needing assistance with daily activities.">
+  <meta name="keywords" content="home care, senior care, personal care, companion care, in-home care, elderly care">
+  <meta name="author" content="Yvonne Nkansah">
+  <title>Yvonne's Home Care Service | Professional In-Home Care</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="logo.svg">
+  <link rel="apple-touch-icon" href="logo.svg">
+  
+  <!-- Open Graph / Social Media Meta Tags -->
+  <meta property="og:title" content="Yvonne's Home Care Service | Professional In-Home Care">
+  <meta property="og:description" content="Compassionate in-home care for seniors and individuals needing assistance with daily activities.">
+  <meta property="og:image" content="logo.svg">
+  <meta property="og:url" content="https://yvonnesprivatehomecare.com/">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- AOS Animation Library -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+  
+  <!-- EmailJS Library -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script type="text/javascript">
+    (function() {
+      emailjs.init("qKfvPL2Ys8_Jnr9Kj");
+    })();
+  </script>
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+  
+  <!-- Structured Data for SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HomeAndConstructionBusiness",
+    "subType": "HomeCareService",
+    "name": "Yvonne's Home Care Service",
+    "image": "https://yvonnesprivatehomecare.com/logo.svg",
+    "url": "https://yvonnesprivatehomecare.com",
+    "telephone": "(646) 972-4202",
+    "email": "yvonnesprivatehomecare@gmail.com",
+    "description": "Yvonne's Home Care Service provides compassionate in-home care for seniors and individuals needing assistance with daily activities.",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "123 Care Street",
+      "addressLocality": "New York",
+      "addressRegion": "NY",
+      "postalCode": "10001",
+      "addressCountry": "US"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 40.7128,
+      "longitude": -74.0060
+    },
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday"
+      ],
+      "opens": "09:00",
+      "closes": "17:00"
+    },
+    "sameAs": [
+      "https://www.facebook.com/YvonneHomeCare",
+      "https://www.twitter.com/YvonneHomeCare",
+      "https://www.instagram.com/YvonneHomeCare",
+      "https://www.linkedin.com/company/yvonne-home-care"
+    ],
+    "priceRange": "$$"
+  }
+  </script>
+</head>
+<body>
+  <!-- Modal -->
+  <div class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title">Thank You!</h3>
+        <button class="modal-close" aria-label="Close modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <p class="modal-message">Your message has been sent successfully!</p>
+      </div>
+      <div class="modal-footer">
+        <button class="btn">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Chatbot -->
+  <div class="chatbot-container">
+    <div class="chatbot-toggle">
+      <i class="fas fa-comments"></i>
+    </div>
+    <div class="chatbot-box">
+      <div class="chatbot-header">
+        <h4>Care Assistant</h4>
+        <button class="chatbot-close" aria-label="Close chatbot">&times;</button>
+      </div>
+      <div class="chatbot-messages">
+        <div class="message bot-message">
+          <div class="message-avatar">
+            <img src="logo.svg" alt="Care Assistant">
+          </div>
+          <div class="message-content">
+            <p>Hello! I'm your Care Assistant. How can I help you today?</p>
+          </div>
+        </div>
+      </div>
+      <div class="chatbot-input">
+        <input type="text" placeholder="Type your message here..." id="chatbot-input-field">
+        <button class="chatbot-send" aria-label="Send message">
+          <i class="fas fa-paper-plane"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <div class="header-content">
+        <div class="logo-container">
+          <img src="logo.svg" alt="Home Care Logo" class="logo-img">
+          <div class="logo-text">
+            <h1>Yvonne's Home Care</h1>
+            <p>Professional In-Home Care Services</p>
+          </div>
+        </div>
+        <div class="header-contact">
+          <div class="header-hours">
+            <i class="far fa-clock"></i>
+            <div>
+              <strong>Available 24/7</strong>
+              <span>Flexible scheduling</span>
+            </div>
+          </div>
+          <a href="tel:6469724202" class="header-phone">
+            <span class="phone-icon"><i class="fas fa-phone"></i></span>
+            <span class="phone-text">
+              <span>Call us today</span>
+              <strong>(646) 972-4202</strong>
+            </span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Navigation -->
+  <nav>
+    <div class="container">
+      <button class="mobile-toggle" aria-label="Toggle navigation menu">
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#about">About Us</a>
+        <a href="#services">Our Services</a>
+        <a href="#care-gallery">Care Gallery</a>
+        <a href="#testimonials">Testimonials</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact" class="nav-cta">Free Consultation</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="hero-inner container">
+      <div class="hero-content" data-aos="fade-right">
+        <span class="hero-badge"><i class="fas fa-shield-heart"></i> Trusted, Compassionate In-Home Care</span>
+        <h2>Care That Feels Like <span class="hero-highlight">Family</span></h2>
+        <p>Compassionate care delivered with dignity and respect in the comfort of your own home. We're dedicated to improving quality of life for your loved ones.</p>
+        <div class="hero-cta-group">
+          <a href="#contact" class="btn btn-lg">Book a Free Consultation</a>
+          <a href="tel:6469724202" class="btn btn-outline btn-lg"><i class="fas fa-phone"></i> (646) 972-4202</a>
+        </div>
+        <ul class="hero-trust">
+          <li><i class="fas fa-check-circle"></i> Certified Caregivers</li>
+          <li><i class="fas fa-check-circle"></i> Personalized Care Plans</li>
+          <li><i class="fas fa-check-circle"></i> Flexible Scheduling</li>
+        </ul>
+      </div>
+      <div class="hero-visual" data-aos="fade-left">
+        <div class="hero-image-wrap">
+          <img src="https://images.pexels.com/photos/7551617/pexels-photo-7551617.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Caregiver helping senior woman" class="hero-image">
+          <div class="hero-float-card hero-float-rating">
+            <div class="hero-float-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+            <span>Loved by 100+ families</span>
+          </div>
+          <div class="hero-float-card hero-float-exp">
+            <i class="fas fa-heart"></i>
+            <span>10+ Years of Care</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Bar -->
+  <section class="stats-bar">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-item" data-aos="fade-up">
+          <span class="stat-number" data-count="10">0</span><span class="stat-suffix">+</span>
+          <p>Years of Experience</p>
+        </div>
+        <div class="stat-item" data-aos="fade-up" data-aos-delay="100">
+          <span class="stat-number" data-count="100">0</span><span class="stat-suffix">+</span>
+          <p>Families Served</p>
+        </div>
+        <div class="stat-item" data-aos="fade-up" data-aos-delay="200">
+          <span class="stat-number" data-count="24">0</span><span class="stat-suffix">/7</span>
+          <p>Care Availability</p>
+        </div>
+        <div class="stat-item" data-aos="fade-up" data-aos-delay="300">
+          <span class="stat-number" data-count="100">0</span><span class="stat-suffix">%</span>
+          <p>Personalized Care Plans</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="section">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <h2 class="text-gradient">About Us</h2>
+        <p>At Yvonne's Home Care Service, we are committed to providing personalized and compassionate care to ensure our clients' comfort and well-being.</p>
+      </div>
+      
+      <!-- Founder Profile Section -->
+      <div class="founder-profile" data-aos="fade-up" data-aos-delay="100">
+        <div class="founder-card glass-card">
+          <div class="founder-image">
+            <img src="vonn.png" alt="Yvonne Nkansah">
+          </div>
+          <div class="founder-info">
+            <h3>Meet Our Founder</h3>
+            <h4>Yvonne Nkansah</h4>
+            <p class="founder-title">Certified Home Care Specialist</p>
+            <p class="founder-description">With over 10 years of experience in home care services, Yvonne is dedicated to providing the highest quality care for your loved ones. Her passion for helping others and commitment to excellence drives our mission to deliver compassionate, personalized care that makes a real difference in people's lives.</p>
+            <div class="founder-credentials">
+              <div class="credential">
+                <i class="fas fa-certificate"></i>
+                <span>Certified Home Care Specialist</span>
+              </div>
+              <div class="credential">
+                <i class="fas fa-clock"></i>
+                <span>10+ Years Experience</span>
+              </div>
+              <div class="credential">
+                <i class="fas fa-heart"></i>
+                <span>Passionate About Care</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Mission and Values Section -->
+      <div class="mission-values-grid">
+        <div class="mission-card glass-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="card-icon">
+            <i class="fas fa-bullseye"></i>
+          </div>
+          <h3>Our Mission</h3>
+          <p class="mission-intro">To enhance the quality of life for our clients by providing personalized care that promotes independence, dignity, and well-being in the comfort of their own homes.</p>
+          
+          <div class="mission-highlights">
+            <div class="mission-item">
+              <i class="fas fa-home"></i>
+              <div>
+                <strong>Home-Centered Care</strong>
+                <p>Delivering professional services in the familiar comfort of your own home</p>
+              </div>
+            </div>
+            <div class="mission-item">
+              <i class="fas fa-users"></i>
+              <div>
+                <strong>Personalized Approach</strong>
+                <p>Tailored care plans that respect individual needs and preferences</p>
+              </div>
+            </div>
+            <div class="mission-item">
+              <i class="fas fa-hands-helping"></i>
+              <div>
+                <strong>Independence & Dignity</strong>
+                <p>Supporting autonomy while maintaining the highest standards of care</p>
+              </div>
+            </div>
+          </div>
+          
+          <p class="mission-footer">We believe that everyone deserves to age gracefully while maintaining their connection to the community they love.</p>
+        </div>
+        
+        <div class="values-card glass-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="card-icon">
+            <i class="fas fa-gem"></i>
+          </div>
+          <h3>Our Values</h3>
+          <div class="values-list">
+            <div class="value-item">
+              <i class="fas fa-heart"></i>
+              <div>
+                <strong>Compassion</strong>
+                <p>We approach every interaction with empathy and understanding</p>
+              </div>
+            </div>
+            <div class="value-item">
+              <i class="fas fa-handshake"></i>
+              <div>
+                <strong>Respect</strong>
+                <p>We honor the dignity and preferences of every individual</p>
+              </div>
+            </div>
+            <div class="value-item">
+              <i class="fas fa-shield-alt"></i>
+              <div>
+                <strong>Integrity</strong>
+                <p>We maintain the highest ethical standards in all we do</p>
+              </div>
+            </div>
+            <div class="value-item">
+              <i class="fas fa-star"></i>
+              <div>
+                <strong>Excellence</strong>
+                <p>We strive for outstanding quality in every aspect of care</p>
+              </div>
+            </div>
+          </div>
+          <p class="values-footer">We treat each client as a member of our own family, ensuring they receive the care and attention they deserve.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="section">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <h2 class="text-gradient">Our Services</h2>
+        <p>We offer a comprehensive range of home care services tailored to meet the unique needs of each client.</p>
+      </div>
+      
+      <div class="services-grid">
+        <div class="service-card glass-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="service-icon">
+            <i class="fas fa-hands-helping"></i>
+          </div>
+          <h3>Personal Care</h3>
+          <p>Assistance with bathing, dressing, grooming, and other personal hygiene needs to help maintain dignity and comfort.</p>
+        </div>
+        
+        <div class="service-card glass-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="service-icon">
+            <i class="fas fa-pills"></i>
+          </div>
+          <h3>Medication Management</h3>
+          <p>Reminders and support to ensure proper medication intake according to prescribed schedules and dosages.</p>
+        </div>
+        
+        <div class="service-card glass-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="service-icon">
+            <i class="fas fa-home"></i>
+          </div>
+          <h3>Household Help</h3>
+          <p>Light housekeeping, laundry, and meal preparation to maintain a clean, comfortable, and safe living environment.</p>
+        </div>
+        
+        <div class="service-card glass-card" data-aos="fade-up" data-aos-delay="400">
+          <div class="service-icon">
+            <i class="fas fa-heart"></i>
+          </div>
+          <h3>Companionship</h3>
+          <p>Emotional support, engaging activities, and meaningful conversation to combat loneliness and enhance quality of life.</p>
+        </div>
+        
+        <div class="service-card glass-card" data-aos="fade-up" data-aos-delay="500">
+          <div class="service-icon">
+            <i class="fas fa-car"></i>
+          </div>
+          <h3>Transportation</h3>
+          <p>Assistance with errands, shopping, and attending medical appointments to maintain independence and access to community resources.</p>
+        </div>
+        
+        <div class="service-card glass-card" data-aos="fade-up" data-aos-delay="600">
+          <div class="service-icon">
+            <i class="fas fa-clock"></i>
+          </div>
+          <h3>Respite Care</h3>
+          <p>Temporary relief for family caregivers, allowing them to take a break while ensuring their loved ones receive proper care.</p>
+        </div>
+        
+        <div class="service-card glass-card" data-aos="fade-up" data-aos-delay="700">
+          <div class="service-icon">
+            <i class="fas fa-stethoscope"></i>
+          </div>
+          <h3>Colostomy Care</h3>
+          <p>Specialized assistance with colostomy maintenance, including bag changes, skin care, and proper hygiene to ensure comfort and prevent complications.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Care in Action Section -->
+  <section id="care-gallery" class="section">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <h2 class="text-gradient">Our Care in Action</h2>
+        <p>See how our dedicated caregivers provide personalized support to our clients in various aspects of daily living.</p>
+      </div>
+      
+      <div class="care-gallery">
+        <div class="care-item glass-card" data-aos="fade-up" data-aos-delay="100">
+          <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Medication Assistance & Companionship">
+          <div class="care-caption">
+            <h3>Medication Assistance</h3>
+            <p>Our caregivers ensure clients take the right medications at the right time while providing companionship.</p>
+          </div>
+        </div>
+        
+
+        
+        <div class="care-item glass-card" data-aos="fade-up" data-aos-delay="200">
+          <img src="https://images.unsplash.com/photo-1624727828489-a1e03b79bba8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80" alt="Personal Care & Bathing Assistance">
+          <div class="care-caption">
+            <h3>Personal Care</h3>
+            <p>Dignified assistance with bathing, grooming, and other personal hygiene needs.</p>
+          </div>
+        </div>
+        
+        <div class="care-item glass-card" data-aos="fade-up" data-aos-delay="300">
+          <img src="https://images.pexels.com/photos/7551677/pexels-photo-7551677.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Outdoor Recreation & Nature Activities">
+          <div class="care-caption">
+            <h3>Outdoor Recreation</h3>
+            <p>We encourage clients to connect with nature and enjoy outdoor activities that promote physical and mental well-being.</p>
+          </div>
+        </div>
+        
+        <div class="care-item glass-card" data-aos="fade-up" data-aos-delay="400">
+          <img src="https://images.pexels.com/photos/6942018/pexels-photo-6942018.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Healthy Lifestyle & Nutrition Support">
+          <div class="care-caption">
+            <h3>Healthy Lifestyle</h3>
+            <p>Our caregivers promote nutritious eating habits and wellness activities to support overall health and vitality.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works Section -->
+  <section id="how-it-works" class="section how-it-works">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <h2 class="text-gradient">How It Works</h2>
+        <p>Getting started with quality home care is simple. Three easy steps to peace of mind.</p>
+      </div>
+      <div class="steps-grid">
+        <div class="step-card glass-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="step-number">1</div>
+          <div class="step-icon"><i class="fas fa-phone-volume"></i></div>
+          <h3>Reach Out</h3>
+          <p>Call us or request a free consultation. We'll listen to your needs and answer all your questions with no obligation.</p>
+        </div>
+        <div class="step-card glass-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="step-number">2</div>
+          <div class="step-icon"><i class="fas fa-clipboard-list"></i></div>
+          <h3>Get a Care Plan</h3>
+          <p>We create a personalized care plan tailored to your loved one's needs, preferences, schedule, and budget.</p>
+        </div>
+        <div class="step-card glass-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="step-number">3</div>
+          <div class="step-icon"><i class="fas fa-heart"></i></div>
+          <h3>Care Begins</h3>
+          <p>A compassionate, certified caregiver starts providing care — with ongoing check-ins to make sure everything is perfect.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Care Plans Section -->
+  <section id="care-plans" class="section care-plans">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <h2 class="text-gradient">Flexible Care Plans</h2>
+        <p>Every family is different. Choose the level of care that fits your needs — all plans are fully customizable.</p>
+      </div>
+      <div class="plans-grid">
+        <div class="plan-card glass-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="plan-icon"><i class="fas fa-hourglass-half"></i></div>
+          <h3>Hourly Care</h3>
+          <p class="plan-tagline">Support when you need it</p>
+          <ul class="plan-features">
+            <li><i class="fas fa-check"></i> Flexible scheduling from a few hours a week</li>
+            <li><i class="fas fa-check"></i> Companionship &amp; errands</li>
+            <li><i class="fas fa-check"></i> Meal prep &amp; light housekeeping</li>
+            <li><i class="fas fa-check"></i> Medication reminders</li>
+          </ul>
+          <a href="#contact" class="btn plan-btn">Get a Custom Quote</a>
+        </div>
+        <div class="plan-card glass-card plan-featured" data-aos="fade-up" data-aos-delay="200">
+          <span class="plan-badge">Most Popular</span>
+          <div class="plan-icon"><i class="fas fa-sun"></i></div>
+          <h3>Daily Care</h3>
+          <p class="plan-tagline">Consistent everyday support</p>
+          <ul class="plan-features">
+            <li><i class="fas fa-check"></i> Daily visits on a reliable schedule</li>
+            <li><i class="fas fa-check"></i> Personal care &amp; hygiene assistance</li>
+            <li><i class="fas fa-check"></i> Transportation to appointments</li>
+            <li><i class="fas fa-check"></i> Full household support</li>
+          </ul>
+          <a href="#contact" class="btn plan-btn">Get a Custom Quote</a>
+        </div>
+        <div class="plan-card glass-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="plan-icon"><i class="fas fa-house-user"></i></div>
+          <h3>Live-In / 24-7 Care</h3>
+          <p class="plan-tagline">Around-the-clock peace of mind</p>
+          <ul class="plan-features">
+            <li><i class="fas fa-check"></i> Continuous care day &amp; night</li>
+            <li><i class="fas fa-check"></i> Specialized care (incl. colostomy care)</li>
+            <li><i class="fas fa-check"></i> Overnight monitoring &amp; safety</li>
+            <li><i class="fas fa-check"></i> Respite relief for family caregivers</li>
+          </ul>
+          <a href="#contact" class="btn plan-btn">Get a Custom Quote</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section id="testimonials" class="section testimonials">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <h2 class="text-gradient">Client Testimonials</h2>
+        <p>Don't just take our word for it. Here's what families we've helped have to say about our services.</p>
+      </div>
+      
+      <div class="testimonial-slider" data-aos="fade-up">
+        <div class="testimonial-card glass-card">
+          <div class="testimonial-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+          <div class="testimonial-content">
+            <p>"The home care service has been a blessing for our family. The caregivers are compassionate, dedicated, and truly care about my mother's well-being. I can finally have peace of mind knowing she's in good hands."</p>
+          </div>
+          <div class="testimonial-author">
+            <img src="https://images.pexels.com/photos/762020/pexels-photo-762020.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Sarah J.">
+            <div class="author-info">
+              <h4>Sarah Johnson</h4>
+              <p>Daughter of Client</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="testimonial-card glass-card">
+          <div class="testimonial-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+          <div class="testimonial-content">
+            <p>"Professional, reliable, and caring. The staff goes above and beyond to ensure my father receives the best care possible. I highly recommend their services to anyone looking for quality home care."</p>
+          </div>
+          <div class="testimonial-author">
+            <img src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Mark T.">
+            <div class="author-info">
+              <h4>Mark Thompson</h4>
+              <p>Son of Client</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="testimonial-card glass-card">
+          <div class="testimonial-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+          <div class="testimonial-content">
+            <p>"As someone who values independence, I was hesitant about home care. But the care team has been respectful of my wishes while providing the support I need. They've helped me maintain my dignity and quality of life."</p>
+          </div>
+          <div class="testimonial-author">
+            <img src="https://images.pexels.com/photos/2050994/pexels-photo-2050994.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Eleanor P.">
+            <div class="author-info">
+              <h4>Eleanor Parker</h4>
+              <p>Client</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="testimonial-card glass-card">
+          <div class="testimonial-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+          <div class="testimonial-content">
+            <p>"Finding quality care for my aunt was challenging until we discovered this exceptional service. Their personalized approach and attention to detail has made all the difference. My aunt looks forward to her caregiver's visits and has shown remarkable improvement in her overall well-being."</p>
+          </div>
+          <div class="testimonial-author">
+            <img src="https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="James D.">
+            <div class="author-info">
+              <h4>James Davis</h4>
+              <p>Nephew of Client</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="testimonial-card glass-card">
+          <div class="testimonial-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+          <div class="testimonial-content">
+            <p>"After my surgery, I needed temporary assistance at home. Yvonne's team provided exceptional care during my recovery. They were punctual, professional, and genuinely concerned about my comfort. I'm grateful for their support during a challenging time in my life."</p>
+          </div>
+          <div class="testimonial-author">
+            <img src="https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Rebecca L.">
+            <div class="author-info">
+              <h4>Rebecca Lewis</h4>
+              <p>Recovery Client</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="testimonial-card glass-card">
+          <div class="testimonial-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+          <div class="testimonial-content">
+            <p>"The peace of mind that comes from knowing my grandmother is in capable, caring hands is priceless. Yvonne's caregivers have become like family to us. They go beyond basic care tasks and truly engage with her, bringing joy and companionship into her daily life."</p>
+          </div>
+          <div class="testimonial-author">
+            <img src="https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Amanda M.">
+            <div class="author-info">
+              <h4>Amanda Martinez</h4>
+              <p>Granddaughter of Client</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="slider-nav">
+        <button class="active" aria-label="Go to testimonial 1"></button>
+        <button aria-label="Go to testimonial 2"></button>
+        <button aria-label="Go to testimonial 3"></button>
+        <button aria-label="Go to testimonial 4"></button>
+        <button aria-label="Go to testimonial 5"></button>
+        <button aria-label="Go to testimonial 6"></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section id="faq" class="section faq">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <h2 class="text-gradient">Frequently Asked Questions</h2>
+        <p>Answers to the questions families ask us most often.</p>
+      </div>
+      <div class="faq-list" data-aos="fade-up" data-aos-delay="100">
+        <div class="faq-item glass-card">
+          <button class="faq-question" aria-expanded="false">
+            <span>What services do you provide?</span>
+            <i class="fas fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer">
+            <p>We provide personal care, medication management, household help, companionship, transportation, respite care, and specialized colostomy care. Every care plan is tailored to your loved one's specific needs.</p>
+          </div>
+        </div>
+        <div class="faq-item glass-card">
+          <button class="faq-question" aria-expanded="false">
+            <span>How do I get started with home care?</span>
+            <i class="fas fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer">
+            <p>Simply call us at (646) 972-4202 or fill out the consultation form below. We'll schedule a free, no-obligation consultation to understand your needs and design a personalized care plan.</p>
+          </div>
+        </div>
+        <div class="faq-item glass-card">
+          <button class="faq-question" aria-expanded="false">
+            <span>Are your caregivers certified and experienced?</span>
+            <i class="fas fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer">
+            <p>Yes. Our care is led by a certified home care specialist with over 10 years of experience. We hold ourselves to the highest standards of professionalism and compassion.</p>
+          </div>
+        </div>
+        <div class="faq-item glass-card">
+          <button class="faq-question" aria-expanded="false">
+            <span>Can care schedules be flexible?</span>
+            <i class="fas fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer">
+            <p>Absolutely. We offer hourly care, daily care, and live-in/24-7 arrangements. Schedules can be adjusted as your loved one's needs change over time.</p>
+          </div>
+        </div>
+        <div class="faq-item glass-card">
+          <button class="faq-question" aria-expanded="false">
+            <span>How much does home care cost?</span>
+            <i class="fas fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer">
+            <p>Cost depends on the level and frequency of care needed. Contact us for a free consultation and we'll provide a transparent, customized quote with no hidden fees.</p>
+          </div>
+        </div>
+        <div class="faq-item glass-card">
+          <button class="faq-question" aria-expanded="false">
+            <span>What areas do you serve?</span>
+            <i class="fas fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer">
+            <p>We serve New York and all surrounding areas. Reach out to confirm availability in your neighborhood — we'll do our best to accommodate you.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Band -->
+  <section class="cta-band">
+    <div class="container">
+      <div class="cta-band-content" data-aos="fade-up">
+        <h3>Ready to Give Your Loved One the Care They Deserve?</h3>
+        <p>Book a free consultation today — no obligation, just honest answers.</p>
+        <div class="cta-band-buttons">
+          <a href="#contact" class="btn btn-white btn-lg">Book a Free Consultation</a>
+          <a href="tel:6469724202" class="btn btn-outline-white btn-lg"><i class="fas fa-phone"></i> Call (646) 972-4202</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section contact">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <h2 class="text-gradient">Book Your Free Consultation</h2>
+        <p>Have questions or ready to discuss your care needs? Send us a message or give us a call — we respond quickly.</p>
+      </div>
+      
+      <div class="contact-grid">
+        <div class="contact-form-wrapper glass-card" data-aos="fade-up">
+          <h3>Request a Consultation</h3>
+          <form id="contact-form" class="contact-form">
+            <div class="form-group">
+              <label for="contact-name">Full Name *</label>
+              <input type="text" id="contact-name" name="name" placeholder="Your name" required>
+            </div>
+            <div class="form-group">
+              <label for="contact-email">Email Address *</label>
+              <input type="email" id="contact-email" name="email" placeholder="you@example.com" required>
+            </div>
+            <div class="form-group">
+              <label for="contact-phone">Phone Number</label>
+              <input type="tel" id="contact-phone" name="phone" placeholder="(555) 555-5555">
+            </div>
+            <div class="form-group">
+              <label for="contact-message">How can we help? *</label>
+              <textarea id="contact-message" name="message" placeholder="Tell us about your care needs..." required></textarea>
+            </div>
+            <div id="form-status" class="form-status">
+              <p class="success-message">Your message has been sent successfully!</p>
+              <p class="error-message">Something went wrong. Please try again or call us.</p>
+            </div>
+            <button type="submit" id="submit-btn" class="btn btn-lg btn-block">Send Message</button>
+          </form>
+        </div>
+        <div class="contact-info" data-aos="fade-up" data-aos-delay="100">
+          <div class="contact-item glass-card">
+            <div class="contact-icon">
+              <i class="fas fa-user"></i>
+            </div>
+            <div class="contact-text">
+              <h4>Yvonne Nkansah</h4>
+              <p>Founder & Certified Home Care Specialist</p>
+            </div>
+          </div>
+          
+          <div class="contact-item glass-card">
+            <div class="contact-icon">
+              <i class="fas fa-phone"></i>
+            </div>
+            <div class="contact-text">
+              <h4>Phone</h4>
+              <p><a href="tel:6469724202">646-972-4202</a></p>
+            </div>
+          </div>
+          
+          <div class="contact-item glass-card">
+            <div class="contact-icon">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <div class="contact-text">
+              <h4>Email</h4>
+              <p><a href="mailto:yvonnesprivatehomecare@gmail.com">yvonnesprivatehomecare@gmail.com</a></p>
+            </div>
+          </div>
+          
+          <div class="contact-item glass-card">
+            <div class="contact-icon">
+              <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <div class="contact-text">
+              <h4>Service Area</h4>
+              <p>Serving all surrounding areas</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter Section -->
+  <section class="newsletter">
+    <div class="container">
+      <h3 data-aos="fade-up">Subscribe to Our Newsletter</h3>
+      <p data-aos="fade-up" data-aos-delay="100">Stay updated with the latest news, care tips, and special offers from Yvonne's Home Care Service.</p>
+      
+      <form id="newsletter-form" class="newsletter-form" data-aos="fade-up" data-aos-delay="200">
+        <input type="email" placeholder="Your Email Address" required>
+        <button type="submit">Subscribe</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4>Yvonne's Home Care</h4>
+          <p>Providing compassionate and professional home care services to help individuals maintain their independence and quality of life in the comfort of their own homes.</p>
+          <div class="social-links">
+            <a href="https://www.facebook.com/YvonneHomeCare" aria-label="Facebook" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/YvonneHomeCare" aria-label="Instagram" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/company/yvonne-home-care" aria-label="LinkedIn" target="_blank" rel="noopener"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+        
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#services">Our Services</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul class="footer-links">
+            <li><a href="#services">Personal Care</a></li>
+            <li><a href="#services">Medication Management</a></li>
+            <li><a href="#services">Household Help</a></li>
+            <li><a href="#services">Companionship</a></li>
+            <li><a href="#services">Transportation</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-col">
+          <h4>Get in Touch</h4>
+          <ul class="footer-links footer-contact">
+            <li><a href="tel:6469724202"><i class="fas fa-phone"></i> (646) 972-4202</a></li>
+            <li><a href="mailto:yvonnesprivatehomecare@gmail.com"><i class="fas fa-envelope"></i> yvonnesprivatehomecare@gmail.com</a></li>
+            <li><span><i class="fas fa-map-marker-alt"></i> New York &amp; surrounding areas</span></li>
+            <li><span><i class="fas fa-clock"></i> Care available 24/7</span></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2025 Yvonne's Home Care Service. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll to Top Button -->
+  <a href="#" class="scroll-top">
+    <i class="fas fa-arrow-up"></i>
+  </a>
+
+  <!-- Sticky Mobile Call Bar -->
+  <div class="sticky-call-bar">
+    <a href="tel:6469724202" class="sticky-call-btn"><i class="fas fa-phone"></i> Call Now</a>
+    <a href="#contact" class="sticky-book-btn"><i class="fas fa-calendar-check"></i> Free Consultation</a>
+  </div>
+
+  <!-- Custom JS -->
+  <script src="main.js"></script>
+  <script src="chatbot.js"></script>
+
+  <!-- AOS Animation Init -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script>
+    AOS.init({
+      duration:800,
+      easing: 'ease-in-out',
+      once: true
+    });
+  </script>
+</body> 
+</html>
