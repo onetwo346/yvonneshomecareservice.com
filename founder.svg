@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="300" height="300" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#6b8e23;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#4a90e2;stop-opacity:1" />
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+      <stop offset="0%" style="stop-color:white;stop-opacity:0.3" />
+      <stop offset="100%" style="stop-color:white;stop-opacity:0" />
+    </radialGradient>
+  </defs>
+  <rect width="300" height="300" rx="20" fill="url(#grad)"/>
+  <circle cx="150" cy="120" r="60" fill="#f5f5f5"/>
+  <circle cx="150" cy="100" r="25" fill="#555"/>
+  <path d="M110,180 Q150,230 190,180 Q190,240 150,260 Q110,240 110,180 Z" fill="#f5f5f5"/>
+  <circle cx="150" cy="150" r="100" fill="url(#glow)" opacity="0.7"/>
+  <text x="150" y="290" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="white" text-anchor="middle">Yvonne Nkansah</text>
+</svg>

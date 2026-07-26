@@ -1,0 +1,969 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Premium Client Portal | Yvonne's Home Care</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #6B8E23;
+      --primary-dark: #556B2F;
+      --primary-gradient: linear-gradient(135deg, #6B8E23, #556B2F);
+      --secondary: #F8F9FA;
+      --accent: #FFC107;
+      --text-dark: #212529;
+      --text-muted: #6C757D;
+      --border: #DEE2E6;
+      --shadow-sm: 0 .125rem .25rem rgba(0,0,0,.075);
+      --shadow: 0 .5rem 1rem rgba(0,0,0,.15);
+      --shadow-lg: 0 1rem 3rem rgba(0,0,0,.175);
+      --radius: 10px;
+      --radius-lg: 20px;
+      --transition: all 0.3s ease;
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #F8F9FA;
+      color: var(--text-dark);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .premium-header {
+      background-color: white;
+      box-shadow: var(--shadow-sm);
+      padding: 15px 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    
+    .container {
+      width: 100%;
+      max-width: 1320px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    
+    .header-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .brand {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+    }
+    
+    .brand img {
+      height: 40px;
+      margin-right: 10px;
+    }
+    
+    .brand-text {
+      font-weight: 600;
+      font-size: 20px;
+      color: var(--primary);
+    }
+    
+    .nav-links {
+      display: flex;
+      gap: 30px;
+    }
+    
+    .nav-link {
+      color: var(--text-dark);
+      text-decoration: none;
+      font-weight: 500;
+      transition: var(--transition);
+      position: relative;
+      padding: 5px 0;
+    }
+    
+    .nav-link:hover {
+      color: var(--primary);
+    }
+    
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background-color: var(--primary);
+      transition: var(--transition);
+    }
+    
+    .nav-link:hover::after {
+      width: 100%;
+    }
+    
+    /* Main Content */
+    .main-content {
+      flex: 1;
+      display: flex;
+      padding: 40px 0;
+    }
+    
+    /* Auth Section */
+    .auth-section {
+      display: flex;
+      width: 100%;
+      max-width: 1320px;
+      margin: 0 auto;
+      background-color: white;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+    }
+    
+    /* Left Panel */
+    .auth-panel {
+      flex: 1;
+      padding: 60px;
+      position: relative;
+      background: var(--primary-gradient);
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    
+    .auth-panel::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-image: url('pattern.svg');
+      background-size: cover;
+      opacity: 0.1;
+    }
+    
+    .panel-content {
+      position: relative;
+      z-index: 1;
+    }
+    
+    .panel-title {
+      font-size: 32px;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+    
+    .panel-text {
+      font-size: 16px;
+      line-height: 1.6;
+      margin-bottom: 30px;
+      opacity: 0.9;
+    }
+    
+    .feature-list {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    
+    .feature-item {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+    
+    .feature-icon {
+      width: 36px;
+      height: 36px;
+      background-color: rgba(255, 255, 255, 0.2);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .feature-icon i {
+      font-size: 16px;
+    }
+    
+    .feature-text {
+      font-weight: 500;
+    }
+    
+    /* Right Panel - Auth Forms */
+    .auth-forms {
+      flex: 1;
+      padding: 60px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    
+    .auth-tabs {
+      display: flex;
+      margin-bottom: 40px;
+      border-bottom: 1px solid var(--border);
+    }
+    
+    .auth-tab {
+      padding: 15px 30px;
+      font-weight: 600;
+      color: var(--text-muted);
+      cursor: pointer;
+      position: relative;
+      transition: var(--transition);
+    }
+    
+    .auth-tab.active {
+      color: var(--primary);
+    }
+    
+    .auth-tab.active::after {
+      content: '';
+      position: absolute;
+      bottom: -1px;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background-color: var(--primary);
+    }
+    
+    .auth-form-container {
+      display: none;
+    }
+    
+    .auth-form-container.active {
+      display: block;
+      animation: fadeIn 0.5s ease;
+    }
+    
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    
+    .auth-title {
+      font-size: 24px;
+      font-weight: 700;
+      margin-bottom: 10px;
+      color: var(--text-dark);
+    }
+    
+    .auth-subtitle {
+      font-size: 14px;
+      color: var(--text-muted);
+      margin-bottom: 30px;
+    }
+    
+    .form-group {
+      margin-bottom: 25px;
+    }
+    
+    .form-label {
+      display: block;
+      font-size: 14px;
+      font-weight: 500;
+      margin-bottom: 8px;
+      color: var(--text-dark);
+    }
+    
+    .form-control {
+      width: 100%;
+      padding: 14px 16px;
+      font-size: 14px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background-color: var(--secondary);
+      transition: var(--transition);
+    }
+    
+    .form-control:focus {
+      outline: none;
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(107, 142, 35, 0.1);
+      background-color: white;
+    }
+    
+    .form-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 25px;
+    }
+    
+    .form-check {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    
+    .form-check-input {
+      width: 16px;
+      height: 16px;
+      accent-color: var(--primary);
+    }
+    
+    .form-check-label {
+      font-size: 14px;
+      color: var(--text-muted);
+    }
+    
+    .forgot-link {
+      font-size: 14px;
+      color: var(--primary);
+      text-decoration: none;
+      transition: var(--transition);
+    }
+    
+    .forgot-link:hover {
+      text-decoration: underline;
+    }
+    
+    .btn {
+      display: inline-block;
+      padding: 14px 24px;
+      font-size: 14px;
+      font-weight: 600;
+      text-align: center;
+      border: none;
+      border-radius: var(--radius);
+      cursor: pointer;
+      transition: var(--transition);
+    }
+    
+    .btn-primary {
+      background-color: var(--primary);
+      color: white;
+      width: 100%;
+    }
+    
+    .btn-primary:hover {
+      background-color: var(--primary-dark);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-sm);
+    }
+    
+    .btn-primary:active {
+      transform: translateY(0);
+    }
+    
+    .divider {
+      display: flex;
+      align-items: center;
+      margin: 30px 0;
+      color: var(--text-muted);
+      font-size: 14px;
+    }
+    
+    .divider::before,
+    .divider::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background-color: var(--border);
+    }
+    
+    .divider::before {
+      margin-right: 15px;
+    }
+    
+    .divider::after {
+      margin-left: 15px;
+    }
+    
+    .social-buttons {
+      display: flex;
+      gap: 15px;
+    }
+    
+    .social-btn {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 12px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background-color: white;
+      color: var(--text-dark);
+      font-weight: 500;
+      font-size: 14px;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+    
+    .social-btn:hover {
+      background-color: var(--secondary);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-sm);
+    }
+    
+    .social-btn i {
+      font-size: 18px;
+    }
+    
+    .google-btn i {
+      color: #DB4437;
+    }
+    
+    .apple-btn i {
+      color: #000000;
+    }
+    
+    /* Dashboard Styles */
+    .dashboard {
+      width: 100%;
+      max-width: 1320px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+    
+    .dashboard-header {
+      margin-bottom: 40px;
+    }
+    
+    .welcome-title {
+      font-size: 28px;
+      font-weight: 700;
+      margin-bottom: 10px;
+      color: var(--text-dark);
+    }
+    
+    .welcome-subtitle {
+      font-size: 16px;
+      color: var(--text-muted);
+    }
+    
+    .dashboard-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 30px;
+      margin-bottom: 40px;
+    }
+    
+    .dashboard-card {
+      background-color: white;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      transition: var(--transition);
+    }
+    
+    .dashboard-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-lg);
+    }
+    
+    .card-header {
+      padding: 20px;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+    
+    .card-icon {
+      width: 40px;
+      height: 40px;
+      background-color: rgba(107, 142, 35, 0.1);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--primary);
+    }
+    
+    .card-icon i {
+      font-size: 18px;
+    }
+    
+    .card-title {
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--text-dark);
+    }
+    
+    .card-body {
+      padding: 20px;
+    }
+    
+    .card-text {
+      font-size: 14px;
+      color: var(--text-muted);
+      margin-bottom: 20px;
+    }
+    
+    .appointment-empty,
+    .document-empty {
+      padding: 30px 20px;
+      text-align: center;
+      color: var(--text-muted);
+      font-style: italic;
+      background-color: var(--secondary);
+      border-radius: var(--radius);
+      margin-bottom: 20px;
+    }
+    
+    .message-form textarea {
+      width: 100%;
+      padding: 15px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background-color: var(--secondary);
+      resize: vertical;
+      min-height: 120px;
+      margin-bottom: 20px;
+      font-family: 'Poppins', sans-serif;
+      font-size: 14px;
+      transition: var(--transition);
+    }
+    
+    .message-form textarea:focus {
+      outline: none;
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(107, 142, 35, 0.1);
+      background-color: white;
+    }
+    
+    .message-status {
+      padding: 15px;
+      border-radius: var(--radius);
+      font-size: 14px;
+      margin-top: 20px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    
+    .message-status.success {
+      background-color: rgba(25, 135, 84, 0.1);
+      color: #198754;
+      border: 1px solid rgba(25, 135, 84, 0.2);
+    }
+    
+    .message-status.error {
+      background-color: rgba(220, 53, 69, 0.1);
+      color: #dc3545;
+      border: 1px solid rgba(220, 53, 69, 0.2);
+    }
+    
+    .btn-logout {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px 24px;
+      background-color: var(--secondary);
+      color: var(--text-dark);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      font-weight: 500;
+      font-size: 14px;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+    
+    .btn-logout:hover {
+      background-color: #e9ecef;
+    }
+    
+    .btn-logout i {
+      font-size: 16px;
+    }
+    
+    /* Responsive Styles */
+    @media (max-width: 992px) {
+      .auth-section {
+        flex-direction: column;
+      }
+      
+      .auth-panel, .auth-forms {
+        padding: 40px;
+      }
+      
+      .dashboard-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+      }
+      
+      .auth-panel, .auth-forms {
+        padding: 30px;
+      }
+      
+      .social-buttons {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Premium Header -->
+  <header class="premium-header">
+    <div class="container">
+      <div class="header-inner">
+        <a href="index.html" class="brand">
+          <img src="logo.svg" alt="Yvonne's Home Care">
+          <span class="brand-text">Yvonne's Home Care</span>
+        </a>
+        <nav style="display: flex; align-items: center;">
+          <div class="nav-links">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="index.html#services" class="nav-link">Services</a>
+            <a href="index.html#about" class="nav-link">About</a>
+            <a href="index.html#contact" class="nav-link">Contact</a>
+          </div>
+          <a href="login.html" class="client-portal-btn" style="margin-left: 20px; background-color: #6B8E23; color: white; padding: 8px 15px; border-radius: 5px; text-decoration: none; font-weight: 500; font-size: 14px;">Client Portal</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <div class="auth-section" id="auth-section">
+      <!-- Left Panel -->
+      <div class="auth-panel">
+        <div class="panel-content">
+          <h1 class="panel-title">Welcome Back!</h1>
+          <p class="panel-text">Access your personalized care dashboard to stay updated on your loved one's care plan, messages, and important updates.</p>
+          
+          <div class="feature-list">
+            <div class="feature-item">
+              <div class="feature-icon">
+                <i class="fas fa-chart-line"></i>
+              </div>
+              <span class="feature-text">View care updates in real-time</span>
+            </div>
+            
+            <div class="feature-item">
+              <div class="feature-icon">
+                <i class="fas fa-comments"></i>
+              </div>
+              <span class="feature-text">Message your care team</span>
+            </div>
+            
+            <div class="feature-item">
+              <div class="feature-icon">
+                <i class="fas fa-file-alt"></i>
+              </div>
+              <span class="feature-text">Access important documents</span>
+            </div>
+            
+            <div class="feature-item">
+              <div class="feature-icon">
+                <i class="fas fa-sliders-h"></i>
+              </div>
+              <span class="feature-text">Update care preferences</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Right Panel - Auth Forms -->
+      <div class="auth-forms">
+        <div class="auth-tabs">
+          <div class="auth-tab active" data-tab="login">Sign In</div>
+          <div class="auth-tab" data-tab="register">Create Account</div>
+        </div>
+        
+        <!-- Login Form -->
+        <div class="auth-form-container active" id="login-form">
+          <h2 class="auth-title">Sign In to Your Account</h2>
+          <p class="auth-subtitle">Welcome back! Please enter your details.</p>
+          
+          <form id="loginForm">
+            <div class="form-group">
+              <label for="loginEmail" class="form-label">Email Address</label>
+              <input type="email" id="loginEmail" class="form-control" placeholder="Enter your email" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="loginPassword" class="form-label">Password</label>
+              <input type="password" id="loginPassword" class="form-control" placeholder="Enter your password" required>
+            </div>
+            
+            <div class="form-footer">
+              <div class="form-check">
+                <input type="checkbox" id="rememberMe" class="form-check-input">
+                <label for="rememberMe" class="form-check-label">Remember me</label>
+              </div>
+              
+              <a href="#" class="forgot-link">Forgot password?</a>
+            </div>
+            
+            <button type="submit" class="btn btn-primary">Sign In</button>
+          </form>
+          
+          <div class="divider">or continue with</div>
+          
+          <div class="social-buttons">
+            <button class="social-btn google-btn">
+              <i class="fab fa-google"></i>
+              <span>Google</span>
+            </button>
+            
+            <button class="social-btn apple-btn">
+              <i class="fab fa-apple"></i>
+              <span>Apple</span>
+            </button>
+          </div>
+        </div>
+        
+        <!-- Register Form -->
+        <div class="auth-form-container" id="register-form">
+          <h2 class="auth-title">Create Your Account</h2>
+          <p class="auth-subtitle">Join our care community today.</p>
+          
+          <form id="registerForm">
+            <div class="form-group">
+              <label for="fullName" class="form-label">Full Name</label>
+              <input type="text" id="fullName" class="form-control" placeholder="Enter your full name" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="registerEmail" class="form-label">Email Address</label>
+              <input type="email" id="registerEmail" class="form-control" placeholder="Enter your email" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="registerPassword" class="form-label">Password</label>
+              <input type="password" id="registerPassword" class="form-control" placeholder="Create a password (min. 6 characters)" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="confirmPassword" class="form-label">Confirm Password</label>
+              <input type="password" id="confirmPassword" class="form-control" placeholder="Confirm your password" required>
+            </div>
+            
+            <button type="submit" class="btn btn-primary">Create Account</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    // Toggle between login and register forms
+    document.querySelectorAll('.auth-tab').forEach(tab => {
+      tab.addEventListener('click', function() {
+        // Remove active class from all tabs
+        document.querySelectorAll('.auth-tab').forEach(t => t.classList.remove('active'));
+        
+        // Add active class to clicked tab
+        this.classList.add('active');
+        
+        // Hide all form containers
+        document.querySelectorAll('.auth-form-container').forEach(form => {
+          form.classList.remove('active');
+        });
+        
+        // Show selected form
+        const formId = this.getAttribute('data-tab') + '-form';
+        document.getElementById(formId).classList.add('active');
+      });
+    });
+
+    // Function to show dashboard after login
+    function showDashboard(user) {
+      // Replace the auth section with dashboard
+      document.getElementById('auth-section').outerHTML = `
+        <div class="dashboard">
+          <div class="dashboard-header">
+            <h1 class="welcome-title">Welcome, ${user.fullName || user.email}</h1>
+            <p class="welcome-subtitle">You are now logged into your client portal.</p>
+          </div>
+          
+          <div class="dashboard-grid">
+            <div class="dashboard-card">
+              <div class="card-header">
+                <div class="card-icon">
+                  <i class="fas fa-calendar-alt"></i>
+                </div>
+                <h2 class="card-title">Your Upcoming Appointments</h2>
+              </div>
+              <div class="card-body">
+                <div class="appointment-empty">
+                  You don't have any upcoming appointments scheduled.
+                </div>
+                <button class="btn btn-primary">Schedule Care Visit</button>
+              </div>
+            </div>
+            
+            <div class="dashboard-card">
+              <div class="card-header">
+                <div class="card-icon">
+                  <i class="fas fa-file-medical"></i>
+                </div>
+                <h2 class="card-title">Care Documents</h2>
+              </div>
+              <div class="card-body">
+                <div class="document-empty">
+                  No documents available yet.
+                </div>
+                <button class="btn btn-primary">Upload Document</button>
+              </div>
+            </div>
+            
+            <div class="dashboard-card">
+              <div class="card-header">
+                <div class="card-icon">
+                  <i class="fas fa-envelope"></i>
+                </div>
+                <h2 class="card-title">Message Yvonne</h2>
+              </div>
+              <div class="card-body">
+                <p class="card-text">Send a private message directly to Yvonne</p>
+                <div class="message-form">
+                  <textarea id="client-message" placeholder="Type your message here..."></textarea>
+                  <button id="send-message-btn" class="btn btn-primary">Send Message</button>
+                </div>
+                <div id="message-status" class="message-status success" style="display: none;"></div>
+              </div>
+            </div>
+          </div>
+          
+          <button id="logout-btn" class="btn-logout">
+            <i class="fas fa-sign-out-alt"></i>
+            <span>Sign Out</span>
+          </button>
+        </div>
+      `;
+      
+      // Add logout functionality
+      document.getElementById('logout-btn').addEventListener('click', function() {
+        localStorage.removeItem('currentUser');
+        window.location.reload();
+      });
+      
+      // Add message sending functionality
+      document.getElementById('send-message-btn').addEventListener('click', function() {
+        const messageText = document.getElementById('client-message').value.trim();
+        const messageStatus = document.getElementById('message-status');
+        
+        if (!messageText) {
+          messageStatus.innerHTML = '<i class="fas fa-exclamation-circle"></i> Please enter a message';
+          messageStatus.className = 'message-status error';
+          messageStatus.style.display = 'flex';
+          return;
+        }
+        
+        // Prepare email with client message
+        const mailtoLink = `mailto:yvonnesprivatehomecare@gmail.com?subject=Client Portal Message from ${encodeURIComponent(user.fullName || user.email)}&body=${encodeURIComponent('Message from client portal:\n\n' + messageText)}`;
+        
+        // Open email client
+        window.location.href = mailtoLink;
+        
+        // Show success message
+        messageStatus.innerHTML = '<i class="fas fa-check-circle"></i> Message ready to send in your email app';
+        messageStatus.className = 'message-status success';
+        messageStatus.style.display = 'flex';
+        
+        // Clear the message field
+        document.getElementById('client-message').value = '';
+      });
+    }
+    
+    // Check if user is already logged in
+    function checkLoginStatus() {
+      const currentUser = JSON.parse(localStorage.getItem('currentUser'));
+      if (currentUser) {
+        showDashboard(currentUser);
+      }
+    }
+    
+    // Login form submission
+    document.getElementById('loginForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      const email = document.getElementById('loginEmail').value.trim();
+      const password = document.getElementById('loginPassword').value.trim();
+      
+      // Get users from localStorage
+      const users = JSON.parse(localStorage.getItem('users')) || [];
+      
+      // Find user with matching credentials
+      const user = users.find(u => u.email === email && u.password === password);
+      
+      if (user) {
+        // Store current user in localStorage
+        localStorage.setItem('currentUser', JSON.stringify(user));
+        
+        // Show dashboard
+        showDashboard(user);
+      } else {
+        alert('Invalid email or password. Please try again.');
+      }
+    });
+    
+    // Registration form submission
+    document.getElementById('registerForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      const fullName = document.getElementById('fullName').value.trim();
+      const email = document.getElementById('registerEmail').value.trim();
+      const password = document.getElementById('registerPassword').value.trim();
+      const confirmPassword = document.getElementById('confirmPassword').value.trim();
+      
+      // Validate form
+      if (password !== confirmPassword) {
+        alert('Passwords do not match!');
+        return;
+      }
+      
+      if (password.length < 6) {
+        alert('Password must be at least 6 characters long!');
+        return;
+      }
+      
+      // Get existing users or initialize empty array
+      const users = JSON.parse(localStorage.getItem('users')) || [];
+      
+      // Check if user already exists
+      if (users.some(user => user.email === email)) {
+        alert('An account with this email already exists!');
+        return;
+      }
+      
+      // Create new user
+      const newUser = {
+        fullName,
+        email,
+        password,
+        createdAt: new Date().toISOString()
+      };
+      
+      // Add new user to users array
+      users.push(newUser);
+      
+      // Save updated users array to localStorage
+      localStorage.setItem('users', JSON.stringify(users));
+      
+      // Set current user
+      localStorage.setItem('currentUser', JSON.stringify(newUser));
+      
+      // Show dashboard
+      showDashboard(newUser);
+    });
+    
+    // Check login status on page load
+    checkLoginStatus();
+  </script>
+</body>
+</html>

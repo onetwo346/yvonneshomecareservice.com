@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Client Portal | Yvonne's Home Care</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary-color: #6B8E23;
+      --primary-dark: #556B2F;
+      --primary-light: #8FB046;
+      --primary-bg: #F5F7F0;
+      --text-dark: #333333;
+      --text-light: #666666;
+      --border-color: #E0E0E0;
+    }
+    
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    
+    body, html {
+      height: 100%;
+      font-family: 'Inter', sans-serif;
+      background-color: white;
+      color: var(--text-dark);
+    }
+    
+    /* Header Styles */
+    header {
+      background-color: white;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      padding: 15px 0;
+      position: relative;
+      z-index: 10;
+    }
+    
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    
+    .header-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .logo {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      color: var(--primary-color);
+      font-weight: 600;
+      font-size: 18px;
+    }
+    
+    .logo img {
+      height: 40px;
+      margin-right: 10px;
+    }
+    
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 25px;
+    }
+    
+    nav a {
+      text-decoration: none;
+      color: var(--text-dark);
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+    
+    nav a:hover {
+      color: var(--primary-color);
+    }
+    
+    /* Main Content Styles */
+    .main-content {
+      display: flex;
+      height: calc(100vh - 70px);
+    }
+    
+    /* Left Side - Green Background */
+    .left-side {
+      flex: 1;
+      background-color: var(--primary-color);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      padding: 40px;
+      position: relative;
+    }
+    
+    .welcome-content {
+      max-width: 500px;
+      position: relative;
+      z-index: 2;
+    }
+    
+    .welcome-content h1 {
+      font-size: 32px;
+      margin-bottom: 20px;
+      font-weight: 700;
+    }
+    
+    .welcome-content p {
+      font-size: 16px;
+      margin-bottom: 30px;
+      line-height: 1.6;
+      opacity: 0.9;
+    }
+    
+    .features {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    
+    .feature {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    
+    .feature i {
+      color: white;
+      font-size: 16px;
+    }
+    
+    /* Right Side - Login Form */
+    .right-side {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: white;
+      padding: 20px;
+    }
+    
+    .form-container {
+      width: 100%;
+      max-width: 400px;
+      padding: 40px 20px;
+    }
+    
+    .tabs {
+      display: flex;
+      margin-bottom: 30px;
+      border-bottom: 1px solid var(--border-color);
+    }
+    
+    .tab {
+      flex: 1;
+      text-align: center;
+      padding: 15px 0;
+      font-weight: 600;
+      color: var(--text-light);
+      cursor: pointer;
+      transition: all 0.3s;
+      position: relative;
+    }
+    
+    .tab.active {
+      color: var(--primary-color);
+    }
+    
+    .tab.active::after {
+      content: '';
+      position: absolute;
+      bottom: -1px;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background-color: var(--primary-color);
+    }
+    
+    .form-content h2 {
+      font-size: 24px;
+      margin-bottom: 20px;
+      color: var(--text-dark);
+    }
+    
+    .form-content p {
+      color: var(--text-light);
+      margin-bottom: 25px;
+      font-size: 14px;
+    }
+    
+    .form-group {
+      margin-bottom: 20px;
+    }
+    
+    .form-group label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 500;
+      color: var(--text-dark);
+      font-size: 14px;
+    }
+    
+    .form-group input {
+      width: 100%;
+      padding: 12px 15px;
+      border: 1px solid var(--border-color);
+      border-radius: 6px;
+      font-size: 14px;
+      transition: all 0.3s;
+      background-color: #f9f9f9;
+    }
+    
+    .form-group input:focus {
+      outline: none;
+      border-color: var(--primary-color);
+      box-shadow: 0 0 0 3px rgba(107, 142, 35, 0.1);
+      background-color: white;
+    }
+    
+    .forgot-password {
+      text-align: right;
+      margin-top: -10px;
+      margin-bottom: 20px;
+    }
+    
+    .forgot-password a {
+      color: var(--primary-color);
+      font-size: 13px;
+      text-decoration: none;
+    }
+    
+    .btn-primary {
+      width: 100%;
+      padding: 12px;
+      background-color: var(--primary-color);
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    
+    .btn-primary:hover {
+      background-color: var(--primary-dark);
+    }
+    
+    .social-login {
+      margin-top: 25px;
+      text-align: center;
+    }
+    
+    .social-login p {
+      position: relative;
+      margin-bottom: 20px;
+      font-size: 13px;
+      color: var(--text-light);
+    }
+    
+    .social-login p::before,
+    .social-login p::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      width: 40%;
+      height: 1px;
+      background-color: var(--border-color);
+    }
+    
+    .social-login p::before {
+      left: 0;
+    }
+    
+    .social-login p::after {
+      right: 0;
+    }
+    
+    .social-buttons {
+      display: flex;
+      gap: 15px;
+    }
+    
+    .social-btn {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 10px;
+      border: 1px solid var(--border-color);
+      border-radius: 6px;
+      background-color: white;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+    
+    .social-btn:hover {
+      background-color: #f5f5f5;
+    }
+    
+    /* Dashboard Styles */
+    .dashboard {
+      padding: 30px 20px;
+    }
+    
+    .dashboard-header {
+      margin-bottom: 30px;
+    }
+    
+    .dashboard-header h2 {
+      font-size: 24px;
+      color: var(--text-dark);
+      margin-bottom: 10px;
+    }
+    
+    .dashboard-header p {
+      color: var(--text-light);
+      font-size: 14px;
+    }
+    
+    .dashboard-card {
+      background-color: white;
+      border-radius: 8px;
+      border-left: 4px solid var(--primary-color);
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
+    
+    .dashboard-card h3 {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 18px;
+      margin-bottom: 15px;
+      color: var(--text-dark);
+    }
+    
+    .dashboard-card h3 i {
+      color: var(--primary-color);
+    }
+    
+    .dashboard-card p {
+      color: var(--text-light);
+      margin-bottom: 15px;
+      font-size: 14px;
+    }
+    
+    .message-form textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid var(--border-color);
+      border-radius: 6px;
+      margin-bottom: 15px;
+      resize: vertical;
+      min-height: 100px;
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+    }
+    
+    .message-form textarea:focus {
+      outline: none;
+      border-color: var(--primary-color);
+      box-shadow: 0 0 0 3px rgba(107, 142, 35, 0.1);
+    }
+    
+    .message-status {
+      padding: 10px;
+      border-radius: 6px;
+      font-size: 14px;
+      margin-top: 15px;
+    }
+    
+    .message-status.success {
+      background-color: rgba(46, 204, 113, 0.1);
+      color: #2ecc71;
+      border: 1px solid rgba(46, 204, 113, 0.2);
+    }
+    
+    .message-status.error {
+      background-color: rgba(231, 76, 60, 0.1);
+      color: #e74c3c;
+      border: 1px solid rgba(231, 76, 60, 0.2);
+    }
+    
+    .btn-logout {
+      background-color: #f5f5f5;
+      color: var(--text-dark);
+      border: 1px solid var(--border-color);
+      padding: 10px 20px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: 500;
+      transition: all 0.3s;
+      margin-top: 20px;
+    }
+    
+    .btn-logout:hover {
+      background-color: #eee;
+    }
+    
+    /* Responsive Styles */
+    @media (max-width: 992px) {
+      .main-content {
+        flex-direction: column;
+        height: auto;
+      }
+      
+      .left-side, .right-side {
+        flex: none;
+        width: 100%;
+      }
+      
+      .left-side {
+        padding: 60px 20px;
+      }
+    }
+    
+    @media (max-width: 576px) {
+      .social-buttons {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <div class="header-content">
+        <a href="index.html" class="logo">
+          <img src="logo.svg" alt="Yvonne's Home Care">
+          <span>Yvonne's Home Care</span>
+        </a>
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#services">Services</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <!-- Left Side - Green Background with Welcome Message -->
+    <div class="left-side">
+      <div class="welcome-content">
+        <h1>Welcome Back!</h1>
+        <p>Access your personalized care dashboard to stay updated on your loved one's care plan, messages, and important updates.</p>
+        <div class="features">
+          <div class="feature">
+            <i class="fas fa-check-circle"></i>
+            <span>View care updates in real-time</span>
+          </div>
+          <div class="feature">
+            <i class="fas fa-check-circle"></i>
+            <span>Message your care team</span>
+          </div>
+          <div class="feature">
+            <i class="fas fa-check-circle"></i>
+            <span>Access important documents</span>
+          </div>
+          <div class="feature">
+            <i class="fas fa-check-circle"></i>
+            <span>Update care preferences</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right Side - Login Form -->
+    <div class="right-side">
+      <div class="form-container" id="auth-container">
+        <div class="tabs">
+          <div class="tab active" data-tab="login">Sign In</div>
+          <div class="tab" data-tab="register">Create Account</div>
+        </div>
+
+        <!-- Login Form -->
+        <div class="form-content" id="login-form">
+          <h2>Sign In to Your Account</h2>
+          <p>Welcome back! Please enter your details.</p>
+
+          <form id="loginForm">
+            <div class="form-group">
+              <label for="loginEmail">Email Address</label>
+              <input type="email" id="loginEmail" placeholder="Enter your email" required>
+            </div>
+
+            <div class="form-group">
+              <label for="loginPassword">Password</label>
+              <input type="password" id="loginPassword" placeholder="Enter your password" required>
+            </div>
+
+            <div class="forgot-password">
+              <a href="#">Forgot password?</a>
+            </div>
+
+            <button type="submit" class="btn-primary">Sign In</button>
+          </form>
+
+          <div class="social-login">
+            <p>or continue with</p>
+            <div class="social-buttons">
+              <button class="social-btn">
+                <i class="fab fa-google"></i>
+                <span>Google</span>
+              </button>
+              <button class="social-btn">
+                <i class="fab fa-apple"></i>
+                <span>Apple</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Register Form -->
+        <div class="form-content" id="register-form" style="display: none;">
+          <h2>Create Your Account</h2>
+          <p>Please fill in your information to get started.</p>
+
+          <form id="registerForm">
+            <div class="form-group">
+              <label for="fullName">Full Name</label>
+              <input type="text" id="fullName" placeholder="Enter your full name" required>
+            </div>
+
+            <div class="form-group">
+              <label for="registerEmail">Email Address</label>
+              <input type="email" id="registerEmail" placeholder="Enter your email" required>
+            </div>
+
+            <div class="form-group">
+              <label for="registerPassword">Password</label>
+              <input type="password" id="registerPassword" placeholder="Create a password" required>
+            </div>
+
+            <div class="form-group">
+              <label for="confirmPassword">Confirm Password</label>
+              <input type="password" id="confirmPassword" placeholder="Confirm your password" required>
+            </div>
+
+            <button type="submit" class="btn-primary">Create Account</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    // Toggle between login and register forms
+    document.querySelectorAll('.tab').forEach(tab => {
+      tab.addEventListener('click', function() {
+        // Remove active class from all tabs
+        document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+        
+        // Add active class to clicked tab
+        this.classList.add('active');
+        
+        // Hide all form content
+        document.querySelectorAll('.form-content').forEach(form => {
+          form.style.display = 'none';
+        });
+        
+        // Show selected form
+        const formId = this.getAttribute('data-tab') + '-form';
+        document.getElementById(formId).style.display = 'block';
+      });
+    });
+
+    // Function to show dashboard after login
+    function showDashboard(user) {
+      // Replace the auth container with dashboard
+      document.getElementById('auth-container').innerHTML = `
+        <div class="dashboard">
+          <div class="dashboard-header">
+            <h2>Welcome, ${user.fullName || user.email}</h2>
+            <p>You are now logged into your client portal.</p>
+          </div>
+          
+          <div class="dashboard-card">
+            <h3><i class="fas fa-calendar-alt"></i> Your Upcoming Appointments</h3>
+            <p>You don't have any upcoming appointments scheduled.</p>
+            <button class="btn-primary">Schedule Care Visit</button>
+          </div>
+          
+          <div class="dashboard-card">
+            <h3><i class="fas fa-file-medical"></i> Care Documents</h3>
+            <p>No documents available yet.</p>
+            <button class="btn-primary">Upload Document</button>
+          </div>
+          
+          <div class="dashboard-card">
+            <h3><i class="fas fa-envelope"></i> Message Yvonne</h3>
+            <p>Send a private message directly to Yvonne</p>
+            <div class="message-form">
+              <textarea id="client-message" placeholder="Type your message here..."></textarea>
+              <button id="send-message-btn" class="btn-primary">Send Message</button>
+            </div>
+            <div id="message-status" class="message-status" style="display: none;"></div>
+          </div>
+          
+          <button id="logout-btn" class="btn-logout">Sign Out</button>
+        </div>
+      `;
+      
+      // Add logout functionality
+      document.getElementById('logout-btn').addEventListener('click', function() {
+        localStorage.removeItem('currentUser');
+        window.location.reload();
+      });
+      
+      // Add message sending functionality
+      document.getElementById('send-message-btn').addEventListener('click', function() {
+        const messageText = document.getElementById('client-message').value.trim();
+        const messageStatus = document.getElementById('message-status');
+        
+        if (!messageText) {
+          messageStatus.textContent = 'Please enter a message';
+          messageStatus.className = 'message-status error';
+          messageStatus.style.display = 'block';
+          return;
+        }
+        
+        // Prepare email with client message
+        const mailtoLink = `mailto:yvonnesprivatehomecare@gmail.com?subject=Client Portal Message from ${encodeURIComponent(user.fullName || user.email)}&body=${encodeURIComponent('Message from client portal:\n\n' + messageText)}`;
+        
+        // Open email client
+        window.location.href = mailtoLink;
+        
+        // Show success message
+        messageStatus.textContent = 'Message ready to send in your email app';
+        messageStatus.className = 'message-status success';
+        messageStatus.style.display = 'block';
+        
+        // Clear the message field
+        document.getElementById('client-message').value = '';
+      });
+    }
+    
+    // Check if user is already logged in
+    function checkLoginStatus() {
+      const currentUser = JSON.parse(localStorage.getItem('currentUser'));
+      if (currentUser) {
+        showDashboard(currentUser);
+      }
+    }
+    
+    // Login form submission
+    document.getElementById('loginForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      const email = document.getElementById('loginEmail').value.trim();
+      const password = document.getElementById('loginPassword').value.trim();
+      
+      // Get users from localStorage
+      const users = JSON.parse(localStorage.getItem('users')) || [];
+      
+      // Find user with matching credentials
+      const user = users.find(u => u.email === email && u.password === password);
+      
+      if (user) {
+        // Store current user in localStorage
+        localStorage.setItem('currentUser', JSON.stringify(user));
+        
+        // Show dashboard
+        showDashboard(user);
+      } else {
+        alert('Invalid email or password. Please try again.');
+      }
+    });
+    
+    // Registration form submission
+    document.getElementById('registerForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      const fullName = document.getElementById('fullName').value.trim();
+      const email = document.getElementById('registerEmail').value.trim();
+      const password = document.getElementById('registerPassword').value.trim();
+      const confirmPassword = document.getElementById('confirmPassword').value.trim();
+      
+      // Validate form
+      if (password !== confirmPassword) {
+        alert('Passwords do not match!');
+        return;
+      }
+      
+      if (password.length < 6) {
+        alert('Password must be at least 6 characters long!');
+        return;
+      }
+      
+      // Get existing users or initialize empty array
+      const users = JSON.parse(localStorage.getItem('users')) || [];
+      
+      // Check if user already exists
+      if (users.some(user => user.email === email)) {
+        alert('An account with this email already exists!');
+        return;
+      }
+      
+      // Create new user
+      const newUser = {
+        fullName,
+        email,
+        password,
+        createdAt: new Date().toISOString()
+      };
+      
+      // Add new user to users array
+      users.push(newUser);
+      
+      // Save updated users array to localStorage
+      localStorage.setItem('users', JSON.stringify(users));
+      
+      // Set current user
+      localStorage.setItem('currentUser', JSON.stringify(newUser));
+      
+      // Show dashboard
+      showDashboard(newUser);
+    });
+    
+    // Check login status on page load
+    checkLoginStatus();
+  </script>
+</body>
+</html>

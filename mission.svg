@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="300" height="300" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4a90e2;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#6b8e23;stop-opacity:1" />
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="10" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+  <rect width="300" height="300" rx="20" fill="url(#grad)"/>
+  
+  <!-- Heart symbol representing care -->
+  <path d="M150,220 Q120,180 80,180 Q40,180 40,220 Q40,280 150,280 Q260,280 260,220 Q260,180 220,180 Q180,180 150,220 Z" fill="#f5f5f5" opacity="0.8"/>
+  
+  <!-- Hands representing support -->
+  <path d="M100,150 Q120,130 140,150 L150,160 L160,150 Q180,130 200,150 Q220,170 200,190 L150,240 L100,190 Q80,170 100,150 Z" fill="#f5f5f5" filter="url(#glow)"/>
+  
+  <text x="150" y="80" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="white" text-anchor="middle">Our Mission</text>
+  <text x="150" y="110" font-family="Arial, sans-serif" font-size="14" fill="white" text-anchor="middle">Compassionate Care</text>
+  <text x="150" y="130" font-family="Arial, sans-serif" font-size="14" fill="white" text-anchor="middle">for Every Individual</text>
+</svg>

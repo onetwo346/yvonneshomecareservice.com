@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="300" height="300" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#9370db;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#4a90e2;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="300" height="300" rx="20" fill="url(#grad)"/>
+  
+  <!-- Star shape representing values -->
+  <path d="M150,50 L172,116 L242,116 L186,157 L208,224 L150,183 L92,224 L114,157 L58,116 L128,116 Z" fill="white" opacity="0.8"/>
+  
+  <!-- Four circles representing core values -->
+  <circle cx="100" cy="180" r="30" fill="white" opacity="0.6"/>
+  <circle cx="200" cy="180" r="30" fill="white" opacity="0.6"/>
+  <circle cx="150" cy="230" r="30" fill="white" opacity="0.6"/>
+  <circle cx="150" cy="130" r="30" fill="white" opacity="0.6"/>
+  
+  <!-- Value labels -->
+  <text x="100" y="185" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#333" text-anchor="middle">Respect</text>
+  <text x="200" y="185" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#333" text-anchor="middle">Integrity</text>
+  <text x="150" y="235" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#333" text-anchor="middle">Excellence</text>
+  <text x="150" y="135" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#333" text-anchor="middle">Compassion</text>
+  
+  <text x="150" y="80" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="white" text-anchor="middle">Our Values</text>
+</svg>
